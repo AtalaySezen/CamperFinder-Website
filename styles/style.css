@@ -1,0 +1,10 @@
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+.search-container{
+    background-image: url('/assets/images/homepage-bg.jpg');
+    height: 60vh;
+    width: 100%;
+}

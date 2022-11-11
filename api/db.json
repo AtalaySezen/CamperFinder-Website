@@ -1,6 +1,5 @@
 {
     "places": [
-        [
             {
                 "id": 1,
                 "city": "İstanbul",
@@ -57,7 +56,6 @@
                 "campPlaceName": "",
                 "coordinate": ""
             }
-        ]
     ],
     "comments": [
         {

@@ -1,0 +1,72 @@
+{
+    "places": [
+        [
+            {
+                "id": 1,
+                "city": "İstanbul",
+                "district": "Atatürk Mahallesi, 34540 Çatalca",
+                "campPlaceName": "Çilingöz Tabiat Parkı",
+                "coordinate": "41.54654854352209, 28.22250964965878"
+            },
+            {
+                "id": 2,
+                "city": "İstanbul",
+                "district": "Test",
+                "campPlaceName": "Test Kamp Alanı",
+                "coordinate": "41.42"
+            },
+            {
+                "id": 3,
+                "city": "İstanbul",
+                "district": "Test",
+                "campPlaceName": "Test Kamp Alanı",
+                "coordinate": "41.42"
+            },
+            {
+                "id": 4,
+                "city": "İstanbul",
+                "district": "Test",
+                "campPlaceName": "Test Kamp Alanı",
+                "coordinate": "41.42"
+            },
+            {
+                "id": 5,
+                "city": "Ankara",
+                "district": "",
+                "campPlaceName": "",
+                "coordinate": ""
+            },
+            {
+                "id": 5,
+                "city": "Ankara",
+                "district": "",
+                "campPlaceName": "",
+                "coordinate": ""
+            },
+            {
+                "id": 5,
+                "city": "İzmir",
+                "district": "",
+                "campPlaceName": "",
+                "coordinate": ""
+            },
+            {
+                "id": 5,
+                "city": "Bursa",
+                "district": "",
+                "campPlaceName": "",
+                "coordinate": ""
+            }
+        ]
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
+}

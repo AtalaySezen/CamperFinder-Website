@@ -1,0 +1,257 @@
+.search-container {
+    width: 100%;
+    background-image: url('https://lh3.googleusercontent.com/pw/AL9nZEXoojSiwBo7eJMPBY3l8iFFxCy_AhHFpeO0OWVhV5MF7JliL9OLXY9BxuPSkVfhvAulJC8rhzTRUGe27W8NeubzERD9ORQJ6aTeDF8L2KDcs1By-4lafY6YdyFSqbya88SrXMMCycpBcnSVI8kZKf0=w1410-h937-no?authuser=2');
+    height: 60vh;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40%;
+    height: 9vh;
+    background: rgb(243, 242, 239);
+    border-radius: 25px;
+}
+
+.search-input {
+    width: 80%;
+    height: 5vh;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 1vw;
+    margin: 0 8px;
+    padding: padding;
+    padding: 22px 50px;
+}
+
+.icon-search {
+    position: relative;
+    left: 3rem;
+    width: 18px;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-input::placeholder {
+    font-size: 1rem;
+}
+
+.search-button {
+    height: 45px;
+    width: 70px;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    color: black;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.container-places {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 7rem 0;
+}
+
+.header-places {
+    margin-bottom: 1.3rem;
+}
+
+.places-info {
+    color: rgb(40, 64, 12);
+    font-size: 1.9rem;
+}
+
+.join-us {
+    color: rgb(40, 64, 12);
+    text-decoration: underline;
+}
+
+.card-places {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info-p {
+    font-size: 1.1rem;
+}
+
+.card {
+    margin: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 400px;
+    height: 460px;
+    padding: 15px 0;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.İstanbul {
+    background-color: #30d5c8;
+}
+
+.İzmir {
+    background-color: #ceb0b5;
+}
+
+.Bursa {
+    background-color: #009900;
+}
+
+.card:hover {
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card-image {
+    width: 100%;
+    padding-top: 5px;
+}
+
+.card-subheader {
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-discover {
+    width: 50%;
+    height: 5vh;
+    position: relative;
+    top: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.2rem;
+    color: rgb(40, 64, 12);
+}
+
+.btn-discover:hover {
+    cursor: pointer;
+}
+
+.header-card {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.camper-infos {
+
+    width: 100%;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.camping-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.camper-header {
+    color: rgb(40, 64, 12);
+}
+
+.camper-cards {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.camper-image {
+    width: 85%;
+    border-radius: 25px;
+}
+
+.image-infos {
+    color: rgb(40, 64, 12);
+    font-size: 1rem;
+    width: 88%;
+    padding-top: 1rem;
+}
+
+
+@media(max-width:900px) {
+    .card-places {
+        justify-content: center;
+    }
+
+    .search {
+        width: 90%;
+    }
+
+    .card {
+        margin: 2rem 0;
+        width: 90%;
+    }
+    .btn-discover{
+        margin-top: 2rem;
+    }
+    .icon-search {
+        left: 2rem;
+    }
+
+    .navbar-logo {
+        display: none;
+    }
+
+    .header-places {
+        text-align: center;
+    }
+
+    .camper-cards {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .camper-header {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .camper-info {
+        text-align: center;
+        font-size: 0.9rem;
+        padding-top: 1rem;
+    }
+
+    .join-us {
+        padding-top: 1rem;
+    }
+}

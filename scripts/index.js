@@ -3,29 +3,29 @@ let searchButton = document.getElementById('searchButton');
 
 
 //Get Datas
-const apiUrl = 'http://localhost:3000/places';
+// const apiUrl = 'http://localhost:3000/places';
 
-async function getApi(url){
-    const response = await fetch(url);
+// async function getApi(url){
+//     const response = await fetch(url);
 
-    data = await response.json();
-    console.log(data);    
-    show(data);
-}
+//     data = await response.json();
+//     console.log(data);    
+//     show(data);
+// }
 
-getApi(apiUrl);
+// getApi(apiUrl);
 
-//Show Data HTML
-function show(data){
-    let html = ``;
+// //Show Data HTML
+// function show(data){
+//     let html = ``;
 
-    for(let x of data){
-        html += `
-        ${x.city}
-        `;
-    }
-    document.getElementById('test').innerHTML = html;
-}
+//     for(let x of data){
+//         html += `
+//         ${x.city}
+//         `;
+//     }
+//     document.getElementById('test').innerHTML = html;
+// }
 
 //Show Cards Data: 
 let apiCards = 'http://localhost:3000/cards';

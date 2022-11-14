@@ -76,6 +76,7 @@
 }
 
 .join-us {
+    color: rgb(40, 64, 12);
     text-decoration: underline;
 }
 
@@ -129,19 +130,21 @@
     padding: 10px;
     color: white;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-discover {
-    width: 41%;
-    height: 4.4vh;
+    width: 50%;
+    height: 5vh;
     position: relative;
-    left: 7rem;
-    margin-top: 0.4rem;
-    top: 6px;
+    top: 10px;
     border-radius: 20px;
     border: none;
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    color: rgb(40, 64, 12);
 }
 
 .btn-discover:hover {
@@ -209,11 +212,17 @@
         justify-content: center;
     }
 
+    .search {
+        width: 90%;
+    }
+
     .card {
         margin: 2rem 0;
         width: 90%;
     }
-
+    .btn-discover{
+        margin-top: 2rem;
+    }
     .icon-search {
         left: 2rem;
     }
@@ -241,7 +250,8 @@
         font-size: 0.9rem;
         padding-top: 1rem;
     }
-    .join-us{
+
+    .join-us {
         padding-top: 1rem;
     }
 }

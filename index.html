@@ -5,63 +5,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CamperFinder - Home</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/ms-icon-70x70.png">
+    <title>CamperFinder - Anasayfa</title>
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/tailwind.min.css">
-
 </head>
 
 <body>
-    <nav class="container flex justify-between px-4 py-8 mx-auto bg-white">
-        <div>
-            <h3 class="text-2xl font-medium text-blue-900">LOGO</h3>
+    <div class="preloader">
+        <div id="loader">
         </div>
-        <div class="hidden space-x-8 lg:flex">
-            <a href="#">Home</a>
-            <a href="#">Home</a>
-            <a href="#">Home</a>
-            <a href="#">Home</a>
-        </div>
-        <div class="flex lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </div>
-    </nav>
-    <!---Search-->
-    <div class="search-container flex items-center justify-center ">
-        <div>
-            <label for="default-search"
-                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
-            <div class="relative">
-                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                </div>
-                <div>
-                    <input type="search" id="searchInput" style="text-transform:capitalize;"
-                        class="p-4 pl-10 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Kamp Alanı Ara">
-                    <button id="submit-search"
-                        class="h-full text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
-                </div>
+        <img class="loader-image" src="./assets/images/ms-icon-70x70.png" alt="Kamp Alanları Bul Spinner">
+      </div>    <header class="header">
+        <nav>
+            <img width="40" class="navbar-logo" src="/assets/images/ms-icon-70x70.png" alt="">
+            <a href="./index.html" class="logo">Camper Finder</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="#work">Anasayfa</a></li>
+                <li><a href="./camplaces.html">Kamp Alanları</a></li>
+                <li><a href="#about">Katkıda Bulun</a></li>
+                <li><a href="#careers">Harita</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="search-container">
+            <div class="search">
+                <img class="icon-search" src="./assets/icons/magnifying-glass-solid.svg" alt="Arama CamperFinder Kamp Bulucu">
+                <input class="search-input" id="searchInput" placeholder="Şehir Ara" type="text">
+                <button class="search-button" id="buttonSearch">Ara</button>
             </div>
         </div>
+    </section>
+    <div class="wrapper">
+        <section class="container-places">
+            <div class="header-places">
+                <h1 class="places-info">
+                    Şimdilik Sadece Üç Şehirdeyiz, Çok Yakında Diğer Şehirlerdeyiz.
+                </h1>
+                <a class="join-us">Bize Katkıda Bulun.</a>
+            </div>
+            <div class="card-places" id="card-group" >
+
+            </div>
+        </section>
+        <section class="camper-infos">
+            <div class="camping-container">
+                <h1 class="camper-header">CamperFinder kendinizi dışarıda bulmanın en basit yoludur!</h1>
+                <p class="camper-info">Senin için aradığın kamp yerini en kısa sürede bulur.</p>
+            <div class="camper-cards">
+                <div class="cards">
+                    <img class="camper-image" src="./assets/images/pexels-özgür-11782302.jpg" alt="">
+                    <p class="image-infos">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quis!
+                    </p>
+                </div>
+
+                <div class="cards">
+                    <img class="camper-image" src="./assets/images/pexels-özgür-11782302.jpg" alt="">
+                    <p class="image-infos">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quis!
+                    </p>
+                </div>
+
+                <div class="cards">
+                    <img class="camper-image" src="./assets/images/pexels-özgür-11782302.jpg" alt="">
+                    <p class="image-infos">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quis!
+                    </p>
+                </div>
+
+            </div>
+            <a class="join-us" style="padding-top:3rem;">Bize Katkıda Bulun.</a>
+        </div>
+            
+        </section>
+
+
+
+
+
+
+
+
+
     </div>
-    <div class="wrapper" id="test">
-       
-
-
-    </div>
 
 
 
-<script src="./scripts/index.js"></script>
+
+
+
+
+
+
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>

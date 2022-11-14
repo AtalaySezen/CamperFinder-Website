@@ -212,3 +212,46 @@ header a {
     display: none;
   }
   /*LOADER */
+
+  /*FOOTER*/
+  footer{
+    width: 100%;
+    height: 30vh;
+    background-color: white;
+    margin-top: 3rem;
+    border-radius: 30px;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .margin-footer{
+    margin-bottom: 0.7rem;
+  }
+  .email-us{
+    text-decoration: none;
+    color: rgb(40, 64, 12); 
+    position: relative;
+    bottom: 0.8rem;
+  }
+  .about-us,.contact-us{
+    width: 300px;
+  }
+  .about-content{
+    color: rgb(40, 64, 12); 
+  }
+  .fa-brands{
+    color: rgb(40, 64, 12); 
+    font-size: 25px;
+    margin: 0 3px;
+  }
+
+@media(max-width:900px){
+  footer{
+    flex-direction: column;
+  }
+  .contact-us,.about-us{
+    text-align: center;
+  }
+}
+  /*FOOTER*/

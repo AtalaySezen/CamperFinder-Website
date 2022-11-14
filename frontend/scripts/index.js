@@ -61,5 +61,32 @@ function showCards(data) {
     document.getElementById('card-group').innerHTML = html;
 }
 
-cardsApi(apiCards)
+cardsApi(apiCards);
 
+
+
+let apiPlaces = 'http://localhost:3000/places';
+
+async function placesApi(url) {
+    const response = await fetch(url);
+    data = await response.json();
+    console.log(data);
+    showPlaces(data);
+}
+
+function showPlaces(data) {
+    let html = ``;
+    for (let x of data) {
+        html += `
+        <div class=" ${x.city}" id="card-city">
+        <div id="card-head" class="card-head">
+        <h1 class="header-card">${x.city}</h1>
+        </div>
+        </div>
+        </div>
+        `;
+    }
+    document.getElementById('placesCard').innerHTML = html;
+}
+
+placesApi(apiPlaces);

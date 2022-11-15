@@ -75,11 +75,6 @@
     font-size: 1.9rem;
 }
 
-.join-us {
-    color: rgb(40, 64, 12);
-    text-decoration: underline;
-}
-
 .card-places {
     display: flex;
     flex-direction: row;
@@ -212,7 +207,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     border-radius: 50px;
-    height: 60vh;
+    height: 50vh;
     margin-top: 2rem;
     margin-bottom: 3rem;
     display: flex;
@@ -220,11 +215,11 @@
     justify-content: center;
 }
 .seasons{
-    color: white;
     position: relative;
     width: 30%;
-    bottom: 4rem;
-
+}
+.seasons-header{
+    color: white;
 }
 .find-next{
     color: rgb(40, 64, 12);
@@ -281,4 +276,11 @@
     .join-us {
         padding-top: 1rem;
     }
+    .seasons{
+        width: 70%;
+    }
+    .camper-seasons{
+        height: 35vh;
+    }
+   
 }

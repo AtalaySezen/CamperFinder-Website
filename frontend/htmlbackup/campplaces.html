@@ -10,11 +10,6 @@
     <link rel="stylesheet" href="./styles/campplaces.css">
 </head>
 <body>
-    <div class="preloader">
-        <div id="loader">
-        </div>
-        <img class="loader-image" src="./assets/images/ms-icon-70x70.png" alt="Kamp Alanları Bul Spinner">
-    </div>
     <header class="header">
         <nav>
             <img width="40" class="navbar-logo" src="/assets/images/ms-icon-70x70.png" alt="">
@@ -30,41 +25,17 @@
             </ul>
         </nav>
     </header>
-    <div class="places-container" id="buttonContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Hepsini Göster</button>
-        <button class="btn" onclick="filterSelection('İstanbul')"> İstanbul</button>
-        <button class="btn" onclick="filterSelection('İzmir')"> İzmir</button>
-        <button class="btn" onclick="filterSelection('Bursa')"> Bursa</button>
-      </div>
-      <div class="wrapper">
-
-      <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
-      <div class="container" id="card-group">
-    
-        <div class="filterDiv istanbul">
-            İstanbul
+    <section class="container-camplaces">
+        <div class="header-places">
+            <h1 class="places-info">
+                Şimdilik Sadece Üç Şehirdeyiz, Çok Yakında Diğer Şehirlerdeyiz.
+            </h1>
+            <a class="join-us" href="./contributeus.html">Bize Katkıda Bulunun.</a>
+        </div>
+        <div class="card-places" id="card-group2">
 
         </div>
-        <div class="filterDiv izmir">İzmir</div>
-        <div class="filterDiv bursa">Bursa</div>
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!---Wrapper Bitiş-->
-    </div>
+    </section>
 
 
     <script src="./scripts/places.js"></script>

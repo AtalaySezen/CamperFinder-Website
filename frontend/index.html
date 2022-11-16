@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/ms-icon-70x70.png">
     <title>CamperFinder | Anasayfa</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />    <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
@@ -30,7 +29,7 @@
                     <button class="dropbtn">Kamp Alanları
                         <i class="fa fa-caret-down"></i>
                     </button>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content" lang="tr">
                         <a href="./istanbul.html">İstanbul</a>
                         <a href="./izmir.html">İzmir</a>
                         <a href="./Bursa.html">Bursa</a>
@@ -45,10 +44,21 @@
     <section>
         <div class="search-container">
             <div class="search">
-                <img class="icon-search" src="./assets/icons/magnifying-glass-solid.svg"
-                    alt="Arama CamperFinder Kamp Bulucu">
-                <input class="search-input" id="searchInput" placeholder="Şehir Ara" type="text">
-                <button class="search-button" id="buttonSearch">Ara</button>
+                <input class="search-input" onkeyup="myFunction()" id="searchInput" placeholder="Şehir Ara" type="text">
+            
+                <button class="search-button" id="buttonSearch">
+                    <span class="material-symbols-outlined icon-search">
+                        search
+                        </span>
+                </button>
+               
+            </div>
+            <div id="noneSearch" >
+                <ul id="myUL">
+                    <li><a href="istanbul.html">İstanbul</a></li>
+                    <li><a href="izmir.html">İzmir</a></li>
+                    <li><a href="bursa.html">Bursa</a></li>
+                </ul>
             </div>
         </div>
     </section>

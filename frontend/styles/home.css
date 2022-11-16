@@ -7,8 +7,13 @@
     background-size: cover;
     padding-top: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+#myUL{
+    width: 100%;
+    max-width: 39%;
 }
 
 .search {
@@ -30,14 +35,42 @@
     font-size: 1vw;
     margin: 0 8px;
     padding: padding;
-    padding: 22px 50px;
+    padding: 22px 15px;
 }
 
-.icon-search {
-    position: relative;
-    left: 3rem;
-    width: 18px;
-}
+/*SEARCH LİST */
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+  
+  #myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+  }
+  
+  #myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+  }
+/*SEARCH LİST */
 
 .search-input:focus {
     outline: none;
@@ -48,14 +81,23 @@
 }
 
 .search-button {
-    height: 45px;
-    width: 70px;
+    height: 50px;
+    display: flex;
+    width: 50px;
     background-color: white;
     border: none;
     border-radius: 15px;
-    color: black;
+    background-color: rgb(0, 197, 133);
     font-weight: 500;
     font-size: 1.1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-search {
+    color: white;
+    font-size: 30px;
+    font-weight: 550;
 }
 
 .container-places {
@@ -68,6 +110,7 @@
 
 .header-places {
     margin-bottom: 1.3rem;
+    text-align: center;
 }
 
 .places-info {
@@ -158,6 +201,17 @@
     background-color: white;
     border-radius: 50px;
 }
+#noneSearch{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.camper-info {
+    color: rgb(224, 80, 40);
+    font-size: 1.2rem;
+    font-weight: 550;
+}
 
 .camping-container {
     display: flex;
@@ -214,39 +268,49 @@
     align-items: center;
     justify-content: center;
 }
-.seasons{
+
+.seasons {
     position: relative;
     width: 30%;
 }
-.seasons-header{
+
+.seasons-header {
     color: white;
 }
-.find-next{
+
+.find-next {
     color: rgb(40, 64, 12);
 }
 
 
 
 @media(max-width:900px) {
+    .container-places{
+        padding: 4rem 0;
+
+    }
     .card-places {
         justify-content: center;
+        align-items: center;
     }
-
+    .card-places a{
+        display: contents;
+    }
     .search {
         width: 90%;
     }
+    .search-input{
+        padding: 10px 10px;
+        font-size: 1rem;
+    }
 
     .card {
-        margin: 2rem 0;
         width: 90%;
+        height: 100%;
     }
 
     .btn-discover {
-        margin-top: 2rem;
-    }
-
-    .icon-search {
-        left: 2rem;
+        margin-top: 0rem;
     }
 
     .navbar-logo {
@@ -255,6 +319,9 @@
 
     .header-places {
         text-align: center;
+    }
+    .places-info {
+        font-size: 1.4rem;
     }
 
     .camper-cards {
@@ -266,21 +333,26 @@
         font-size: 1.2rem;
         text-align: center;
     }
-
+  
     .camper-info {
         text-align: center;
         font-size: 0.9rem;
         padding-top: 1rem;
+        width: 60%;
     }
-
+    .cards{
+        margin: 1rem 0;
+    }
     .join-us {
         padding-top: 1rem;
     }
-    .seasons{
+
+    .seasons {
         width: 70%;
     }
-    .camper-seasons{
+
+    .camper-seasons {
         height: 35vh;
     }
-   
+
 }

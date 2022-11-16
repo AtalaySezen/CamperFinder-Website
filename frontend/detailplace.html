@@ -8,7 +8,8 @@
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/ms-icon-70x70.png">
     <title>CamperFinder | Bize Katkıda Bulun</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/detailpage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -43,16 +44,39 @@
         </nav>
     </header>
     <div class="wrapper">
+        <div class="detail-flex">
+            <div class="detail-page" id="detail-page">
+                <div class="detailHead" id="details-info">
+                </div>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" id="swiper">
+                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="adress-info">
+            <h1 class="header-detail">Adres</h1>
+            <p class="detail-subheader">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad beatae error sunt mollitia cumque iure?
+            </p>
+        </div>
 
-    <div id="istanbul">
-   
+
+
+        <!--wrapper bitiş-->
     </div>
-</div>
 
-  
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./scripts/detailplace.js"></script>
     <script src="./scripts/main.js"></script>
+
 </body>
 
 </html>

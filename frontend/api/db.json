@@ -81,11 +81,41 @@
             "coordinate": ""
         }
     ],
-    "comments": [
+    "detailpage": [
         {
             "id": 1,
-            "body": "some comment",
-            "postId": 1
+            "header": "Çilingöz Tabiat Parkı",
+            "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
+            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            "image2":"https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "image3":"https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
+
+        },
+        {
+            "id": 2,
+            "header": "Çilingöz Tabiat Parkı2",
+            "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
+            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600"
+
+        },
+        {
+            "id": 3,
+            "header": "Çilingöz Tabiat Parkı3",
+            "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
+            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        },
+        {
+            "id": 4,
+            "header": "Test Kamp Alanı 4",
+            "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
+            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        },
+        {
+            "id": 5,
+            "header": "Test Kamp Alanı 5",
+            "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
+            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600"
         }
     ],
     "profile": {

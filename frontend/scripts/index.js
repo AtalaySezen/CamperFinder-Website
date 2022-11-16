@@ -68,28 +68,26 @@ cardsApi(apiCards);
 
 
 
-let apiPlaces = 'http://localhost:3000/places';
+document.getElementById('noneSearch').style.display = "none";
 
-async function placesApi(url) {
-    const response = await fetch(url);
-    data = await response.json();
-    console.log(data);
-    showPlaces(data);
-}
-
-function showPlaces(data) {
-    let html = ``;
-    for (let x of data) {
-        html += `
-        <div class=" ${x.city}" id="card-city">
-        <div id="card-head" class="card-head">
-        <h1 class="header-card">${x.city}</h1>
-        </div>
-        </div>
-        </div>
-        `;
+function myFunction() {
+    
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+    
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        document.getElementById('noneSearch').style.display = "flex";
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
     }
-    document.getElementById('placesCard').innerHTML = html;
-}
-
-placesApi(apiPlaces);
+  }

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/map.css">
 </head>
 <body>
-    <header class="header">
+     <header class="header">
         <nav>
             <img width="40" class="navbar-logo" src="/assets/images/ms-icon-70x70.png" alt="">
             <a href="./index.html" class="logo">Camper Finder</a>
@@ -18,7 +18,16 @@
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
             <ul class="menu">
                 <li><a href="./index.html">Anasayfa</a></li>
-                <li><a href="./camplaces.html">Kamp Alanları</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">Kamp Alanları
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./İstanbul.html">İstanbul</a>
+                        <a href="./İzmir.html">İzmir</a>
+                        <a href="./Bursa.html">Bursa</a>
+                    </div>
+                </div>
                 <li><a href="./contributeus.html">Katkıda Bulun</a></li>
                 <li><a href="./map.html">Harita</a></li>
                 <li><a href="./contact.html">İletişim</a></li>

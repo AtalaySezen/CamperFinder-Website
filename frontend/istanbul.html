@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/ms-icon-70x70.png">
-    <title>CamperFinder | İletişim</title>
+    <title>CamperFinder | Bize Katkıda Bulun</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/campplaces.css">
 </head>
+
 <body>
-     <header class="header">
+    <div class="preloader">
+        <div id="loader">
+        </div>
+        <img class="loader-image" src="./assets/images/ms-icon-70x70.png" alt="Kamp Alanları Bul Spinner">
+    </div>
+    <header class="header">
         <nav>
             <img width="40" class="navbar-logo" src="/assets/images/ms-icon-70x70.png" alt="">
             <a href="./index.html" class="logo">Camper Finder</a>
@@ -34,10 +41,33 @@
             </ul>
         </nav>
     </header>
-    
+    <div class="wrapper">
+        <div class="istanbul-header">
+
+            <h1 class="header-ist">İstanbul'da Kamp Yerleri</h1>
+        </div>
+        <div id="istanbul" class="istanbul-places">
+
+        </div>
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+        <!---Wrapper Bitiş-->
+    </div>
+
+
+    <script src="./scripts/istanbul.js"></script>
     <script src="./scripts/main.js"></script>
 </body>
+
 </html>

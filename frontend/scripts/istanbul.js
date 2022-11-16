@@ -15,9 +15,8 @@ function showPlaces(data) {
     console.log(x)
     if (x.city == "İstanbul") {
 
-
       html += `
-      <div class="card" id="card-city">
+      <div class="card" id="card-city" onclick="goDetail(${x.id})">
       <div id="card-head" class="card-head">
       <h1 class="header-card">${x.city}</h1>
       <h3 class="header-card">${x.campPlaceName}</h3>
@@ -39,4 +38,15 @@ function showPlaces(data) {
 
 //Start APİ
 placesApi(apiPlaces);
+
+function goDetail(id) {
+  console.log(id);
+  //1-Detay sayfasına yönlendirilecek 
+
+  //2-Detay sayfasında query`de idyi verecek. 
+
+  //3-Detay sayfası yüklenirken, idye bakılacak. O id ile get atılacak. (Detay Sayfası Yükleme Fonksiyonudur.)
+
+  
+}
 

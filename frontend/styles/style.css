@@ -201,7 +201,10 @@ header a {
 .topnav .icon {
   display: none;
 }
-
+a{
+  text-decoration: none;
+  color: none;
+}
 /* Dropdown container - needed to position the dropdown content */
 .dropdown {
   float: left;
@@ -333,14 +336,14 @@ header a {
   margin: -76px 0 0 -76px;
   border: 8px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 8px solid #3498db;
+  border-top: 10px solid rgb(40, 64, 12);
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
 
 .loader-image {
   position: relative;
-  bottom: 0.4rem;
+  bottom: 0.6rem;
   right: 0.5rem;
 }
 

@@ -28,7 +28,9 @@
     align-items: center;
     justify-content: center;
 }
-
+.card:hover{
+    cursor: pointer;
+}
 .card-head {
     text-align: center;
 }

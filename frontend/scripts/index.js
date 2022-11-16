@@ -42,6 +42,7 @@ function showCards(data) {
     
     for (let x of data) {
         html += `
+        <a href="${x.city}.html">
         <div class="card ${x.city}" id="card-city">
         <div id="card-head" class="card-head">
         <h1 class="header-card">${x.city}</h1>
@@ -56,6 +57,8 @@ function showCards(data) {
         <button class="btn-discover" href="javascript:void">Keşfet</button>
         </div>
         </div>
+        </a>
+
         `;
     }
     document.getElementById('card-group').innerHTML = html;

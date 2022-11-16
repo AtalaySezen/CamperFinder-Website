@@ -1,8 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="istanbul">
+
+    </div>
+
+    <!-- <script>
 let apiPlaces = "http://localhost:3000/places";
+
+if ('URLSearchParams' in window) {
+  var searchParams = new URLSearchParams(window.location.search);
+  searchParams.get("?",id)
+  window.location.search = searchParams.toString();
+  window.location.href = "detailplace.html"+searchParams
+  console.log(searchParams)
+}else if (
+    searchParams.get(id)==x.id
+){
+
 
 async function placesApi(url) {
   const response = await fetch(url);
-
   data = await response.json();
   console.log(data);
   showPlaces(data);
@@ -35,22 +61,15 @@ function showPlaces(data) {
     document.getElementById('istanbul').innerHTML = html;
   }
 }
+}
+
 
 //Start APİ
 placesApi(apiPlaces);
 
 
 
-function goDetail(id) {
-  let params = new URLSearchParams(`id=${id}`);
-  params.get('?id'); // 'node'
-  params.get(id); // '2'
-  window.location.href=('detailplaces.html'+"?"+params)
-  
-  //1-Detay sayfasına yönlendirilecek 
-  //2-Detay sayfasında query`de idyi verecek. 
-  //3-Detay sayfası yüklenirken, idye bakılacak. O id ile get atılacak. (Detay Sayfası Yükleme Fonksiyonudur.)
+    </script> -->
+</body>
 
-  
-}
-
+</html>

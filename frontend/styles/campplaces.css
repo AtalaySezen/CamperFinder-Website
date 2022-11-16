@@ -1,49 +1,75 @@
 .istanbul-places {
+    width: 100%;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 1rem;
-    padding: 3rem 0;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
     background-color: white;
-    border-radius: 40px;
+    border-radius: 25px;
 }
-
+.places-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 .header-ist {
-    color: rgb(40, 64, 12);
+    color: rgb(216, 70, 39);
     text-align: center;
     padding-top: 3rem;
     font-size: 3rem;
-
+}
+.subheader-ist{
+    color: rgb(40, 64, 12);
+    text-align: left;
+    font-size: 1.3rem;
+    padding: 1rem 0;
 }
 
 .card {
-    background-color: rgb(243, 242, 239);
+    background-color: rgb(154, 157, 104);
     width: 400px;
-    height: 400px;
-    border-radius: 30px;
+    height: 420px;
+    border-radius: 35px;
     display: flex;
     flex-direction: column;
-    margin: 2rem 1rem;
+    margin: 2rem 1.3rem;
     align-items: center;
     justify-content: center;
 }
-.card:hover{
-    cursor: pointer;
+.info-p{
+    font-size: 1rem;
+    font-weight: 550;
+    position: relative;
+    color: white;
+    top: 0.4rem;
 }
+
+.card:hover {
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 .card-head {
     text-align: center;
+    position: relative;
+    bottom: 0.6rem;
 }
 
 .header-card {
-    color: rgb(40, 64, 12);
+    color: white;
     text-align: center;
 }
 
 p {
     font-size: 1rem;
     font-weight: 550;
-    color: rgb(40, 64, 12);
+    color: white;
 }
 
 .card-image {

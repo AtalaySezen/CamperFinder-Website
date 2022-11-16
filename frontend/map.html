@@ -5,11 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/ms-icon-70x70.png">
-    <title>CamperFinder | Harita</title>
+    <title>CamperFinder | Detay</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+
 </head>
 <body>
+    <div class="preloader">
+        <div id="loader">
+        </div>
+        <img class="loader-image" src="./assets/images/ms-icon-70x70.png" alt="Kamp Alanları Bul Spinner">
+    </div>
      <header class="header">
         <nav>
             <img width="40" class="navbar-logo" src="/assets/images/ms-icon-70x70.png" alt="">
@@ -24,7 +31,7 @@
                     </button>
                     <div class="dropdown-content">
                         <a href="./istanbul.html">İstanbul</a>
-                        <a href="./İzmir.html">İzmir</a>
+                        <a href="./izmir.html">İzmir</a>
                         <a href="./Bursa.html">Bursa</a>
                     </div>
                 </div>
@@ -34,9 +41,12 @@
             </ul>
         </nav>
     </header>
-    
+    <div class="wrapper">
+        <div id="map"></div>
 
+    </div>
 
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script src="./scripts/map.js"></script>
     <script src="./scripts/main.js"></script>
 </body>

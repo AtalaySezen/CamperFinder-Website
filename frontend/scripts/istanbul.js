@@ -8,7 +8,7 @@ async function placesApi(url) {
   showPlaces(data);
 }
 function showPlaces(data) {
-  let html = ``;
+  let html = ``; 1
 
   for (let x of data) {
 
@@ -22,7 +22,7 @@ function showPlaces(data) {
       <h3 class="header-card">${x.campPlaceName}</h3>
       </div>
       <div id="card-image" class="image">
-      <img class="card-image" src="./assets/images/pexels-bayu-jefri-743765.jpg" alt="Kamp Yerleri Bul">                
+      <img class="card-image" src="./assets/images/homepage-bg.jpg" alt="${x.alt}">                
       </div>
       <div class="card-subheader">
       <p class="info-p">
@@ -45,12 +45,11 @@ function goDetail(id) {
   let params = new URLSearchParams(`id=${id}`);
   params.get('?id'); // 'node'
   params.get(id); // '2'
-  window.location.href=('detailplaces.html'+"?"+params)
-  
+  window.location.href = ('detailplace.html' + "?" + params)
   //1-Detay sayfasına yönlendirilecek 
   //2-Detay sayfasında query`de idyi verecek. 
   //3-Detay sayfası yüklenirken, idye bakılacak. O id ile get atılacak. (Detay Sayfası Yükleme Fonksiyonudur.)
 
-  
+
 }
 

@@ -3,69 +3,79 @@
         {
             "id": 1,
             "city": "İstanbul",
-            "district": "Atatürk Mahallesi, 34540 Çatalca",
-            "campPlaceName": "Çilingöz Tabiat Parkı",
-            "coordinate": "41.54654854352209, 28.22250964965878"
-        },
-        {
-            "id": 1,
-            "city": "İstanbul",
-            "district": "Atatürk Mahallesi, 34540 Çatalca",
-            "campPlaceName": "Çilingöz Tabiat Parkı",
-            "coordinate": "41.54654854352209, 28.22250964965878"
-        },
-        {
-            "id": 1,
-            "city": "İstanbul",
-            "district": "Atatürk Mahallesi, 34540 Çatalca",
+            "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
+            "district": "Atatürk Mahallesi, 34540 Çatalca 1",
             "campPlaceName": "Çilingöz Tabiat Parkı",
             "coordinate": "41.54654854352209, 28.22250964965878"
         },
         {
             "id": 2,
             "city": "İstanbul",
-            "district": "Test",
-            "campPlaceName": "Test Kamp Alanı",
-            "coordinate": "41.42"
+            "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
+            "district": "Atatürk Mahallesi, 34540 Çatalca 2",
+            "campPlaceName": "Çilingöz Tabiat Parkı",
+            "coordinate": "41.54654854352209, 28.22250964965878"
         },
         {
             "id": 3,
             "city": "İstanbul",
-            "district": "Test",
-            "campPlaceName": "Test Kamp Alanı",
-            "coordinate": "41.42"
+            "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
+            "district": "Atatürk Mahallesi, 34540 Çatalca 3",
+            "campPlaceName": "Çilingöz Tabiat Parkı",
+            "coordinate": "41.54654854352209, 28.22250964965878"
         },
         {
             "id": 4,
             "city": "İstanbul",
+            "alt":"İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Test",
-            "campPlaceName": "Test Kamp Alanı",
+            "campPlaceName": "Test Kamp Alanı 4",
             "coordinate": "41.42"
         },
         {
             "id": 5,
+            "city": "İstanbul",
+            "alt":"İstanbula Yakın Kamp Alanları KampYeriBul",
+            "district": "Test",
+            "campPlaceName": "Test Kamp Alanı 5 ",
+            "coordinate": "41.42"
+        },
+        {
+            "id": 6,
+            "city": "İstanbul",
+            "alt":"İstanbula Yakın Kamp Alanları KampYeriBul",
+            "district": "Test",
+            "campPlaceName": "Test Kamp Alanı 6",
+            "coordinate": "41.42"
+        },
+        {
+            "id": 7,
             "city": "Ankara",
+            "alt":"İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "",
             "campPlaceName": "",
             "coordinate": ""
         },
         {
-            "id": 5,
+            "id": 8,
             "city": "Ankara",
+            "alt":"İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "",
             "campPlaceName": "",
             "coordinate": ""
         },
         {
-            "id": 5,
+            "id": 9,
             "city": "İzmir",
-            "district": "",
-            "campPlaceName": "",
-            "coordinate": ""
+            "alt":"İstanbula Yakın Kamp Alanları KampYeriBul",
+            "district": "Test",
+            "campPlaceName": "test metini",
+            "coordinate": "test"
         },
         {
-            "id": 5,
+            "id": 10,
             "city": "Bursa",
+            "alt":"İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "",
             "campPlaceName": "",
             "coordinate": ""

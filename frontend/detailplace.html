@@ -5,71 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/ms-icon-70x70.png">
+    <title>CamperFinder | Bize Katkıda Bulun</title>
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div id="istanbul">
-
+    <div class="preloader">
+        <div id="loader">
+        </div>
+        <img class="loader-image" src="./assets/images/ms-icon-70x70.png" alt="Kamp Alanları Bul Spinner">
     </div>
+    <header class="header">
+        <nav>
+            <img width="40" class="navbar-logo" src="/assets/images/ms-icon-70x70.png" alt="">
+            <a href="./index.html" class="logo">Camper Finder</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="./index.html">Anasayfa</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">Kamp Alanları
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./istanbul.html">İstanbul</a>
+                        <a href="./izmir.html">İzmir</a>
+                        <a href="./Bursa.html">Bursa</a>
+                    </div>
+                </div>
+                <li><a href="./contributeus.html">Katkıda Bulun</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./map.html">Harita</a></li>
+                <li><a href="./contact.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
 
-    <!-- <script>
-let apiPlaces = "http://localhost:3000/places";
+    <div id="istanbul">
+   
+    </div>
+</div>
 
-if ('URLSearchParams' in window) {
-  var searchParams = new URLSearchParams(window.location.search);
-  searchParams.get("?",id)
-  window.location.search = searchParams.toString();
-  window.location.href = "detailplace.html"+searchParams
-  console.log(searchParams)
-}else if (
-    searchParams.get(id)==x.id
-){
+  
 
-
-async function placesApi(url) {
-  const response = await fetch(url);
-  data = await response.json();
-  console.log(data);
-  showPlaces(data);
-}
-function showPlaces(data) {
-  let html = ``;
-
-  for (let x of data) {
-
-    console.log(x)
-    if (x.city == "İstanbul") {
-
-      html += `
-      <div class="card" id="card-city" onclick="goDetail(${x.id})">
-      <div id="card-head" class="card-head">
-      <h1 class="header-card">${x.city}</h1>
-      <h3 class="header-card">${x.campPlaceName}</h3>
-      </div>
-      <div id="card-image" class="image">
-      <img class="card-image" src="./assets/images/pexels-bayu-jefri-743765.jpg" alt="Kamp Yerleri Bul">                
-      </div>
-      <div class="card-subheader">
-      <p class="info-p">
-      ${x.district}
-      </p>
-      </div>
-      </div>
-      `;
-    }
-    document.getElementById('istanbul').innerHTML = html;
-  }
-}
-}
-
-
-//Start APİ
-placesApi(apiPlaces);
-
-
-
-    </script> -->
+    <script src="./scripts/detailplace.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>

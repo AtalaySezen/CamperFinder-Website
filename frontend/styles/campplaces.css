@@ -1,57 +1,49 @@
-.container {
-    overflow: hidden;
+.istanbul-places {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 3rem 0;
+    background-color: white;
+    border-radius: 40px;
 }
 
-.places-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
-
-}
-
-.filterDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #2196F3;
-    color: #ffffff;
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
+.header-ist {
+    color: rgb(40, 64, 12);
     text-align: center;
-    margin: 10px;
-    display: none;
-    /* Hidden by default */
+    padding-top: 3rem;
+    font-size: 3rem;
+
 }
 
-/* The "show" class is added to the filtered elements */
-.show {
-    display: block;
+.card {
+    background-color: rgb(243, 242, 239);
+    width: 400px;
+    height: 400px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Style the buttons */
-.btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    background-color: #f1f1f1;
-    color: red !important;
-    cursor: pointer;
+.card-head {
+    text-align: center;
 }
 
-/* Add a light grey background on mouse-over */
-.btn:hover {
-    background-color: #ddd;
+.header-card {
+    color: rgb(40, 64, 12);
+    text-align: center;
 }
 
-/* Add a dark background to the active button */
-.btn.active {
-    background-color: #666;
-    color: white !important;
+p {
+    font-size: 1rem;
+    font-weight: 550;
+    color: rgb(40, 64, 12);
+}
+
+.card-image {
+    width: 100%;
 }

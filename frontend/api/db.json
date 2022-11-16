@@ -1,61 +1,75 @@
 {
     "places": [
-            {
-                "id": 1,
-                "city": "İstanbul",
-                "district": "Atatürk Mahallesi, 34540 Çatalca",
-                "campPlaceName": "Çilingöz Tabiat Parkı",
-                "coordinate": "41.54654854352209, 28.22250964965878"
-            },
-            {
-                "id": 2,
-                "city": "İstanbul",
-                "district": "Test",
-                "campPlaceName": "Test Kamp Alanı",
-                "coordinate": "41.42"
-            },
-            {
-                "id": 3,
-                "city": "İstanbul",
-                "district": "Test",
-                "campPlaceName": "Test Kamp Alanı",
-                "coordinate": "41.42"
-            },
-            {
-                "id": 4,
-                "city": "İstanbul",
-                "district": "Test",
-                "campPlaceName": "Test Kamp Alanı",
-                "coordinate": "41.42"
-            },
-            {
-                "id": 5,
-                "city": "Ankara",
-                "district": "",
-                "campPlaceName": "",
-                "coordinate": ""
-            },
-            {
-                "id": 5,
-                "city": "Ankara",
-                "district": "",
-                "campPlaceName": "",
-                "coordinate": ""
-            },
-            {
-                "id": 5,
-                "city": "İzmir",
-                "district": "",
-                "campPlaceName": "",
-                "coordinate": ""
-            },
-            {
-                "id": 5,
-                "city": "Bursa",
-                "district": "",
-                "campPlaceName": "",
-                "coordinate": ""
-            }
+        {
+            "id": 1,
+            "city": "İstanbul",
+            "district": "Atatürk Mahallesi, 34540 Çatalca",
+            "campPlaceName": "Çilingöz Tabiat Parkı",
+            "coordinate": "41.54654854352209, 28.22250964965878"
+        },
+        {
+            "id": 1,
+            "city": "İstanbul",
+            "district": "Atatürk Mahallesi, 34540 Çatalca",
+            "campPlaceName": "Çilingöz Tabiat Parkı",
+            "coordinate": "41.54654854352209, 28.22250964965878"
+        },
+        {
+            "id": 1,
+            "city": "İstanbul",
+            "district": "Atatürk Mahallesi, 34540 Çatalca",
+            "campPlaceName": "Çilingöz Tabiat Parkı",
+            "coordinate": "41.54654854352209, 28.22250964965878"
+        },
+        {
+            "id": 2,
+            "city": "İstanbul",
+            "district": "Test",
+            "campPlaceName": "Test Kamp Alanı",
+            "coordinate": "41.42"
+        },
+        {
+            "id": 3,
+            "city": "İstanbul",
+            "district": "Test",
+            "campPlaceName": "Test Kamp Alanı",
+            "coordinate": "41.42"
+        },
+        {
+            "id": 4,
+            "city": "İstanbul",
+            "district": "Test",
+            "campPlaceName": "Test Kamp Alanı",
+            "coordinate": "41.42"
+        },
+        {
+            "id": 5,
+            "city": "Ankara",
+            "district": "",
+            "campPlaceName": "",
+            "coordinate": ""
+        },
+        {
+            "id": 5,
+            "city": "Ankara",
+            "district": "",
+            "campPlaceName": "",
+            "coordinate": ""
+        },
+        {
+            "id": 5,
+            "city": "İzmir",
+            "district": "",
+            "campPlaceName": "",
+            "coordinate": ""
+        },
+        {
+            "id": 5,
+            "city": "Bursa",
+            "district": "",
+            "campPlaceName": "",
+            "coordinate": ""
+        }
     ],
     "comments": [
         {
@@ -67,29 +81,27 @@
     "profile": {
         "name": "typicode"
     },
-    "cards":[
+    "cards": [
         {
             "id": 1,
             "city": "İstanbul",
-            "cardInfo":"Şehirden kaçıp, huzurlu bir haftasonu için İstanbul kamp alanlarını",
-            "href":"",
-            "cardImage":"https://lh3.googleusercontent.com/pw/AL9nZEVPCB1c7ZnYqvGPkMW5L2h_ppwXMq_NRE4GBTR1YRMidDjTJfevxu1fCQCdqJ0B0nh2mMbHU5aB9rWjyn3-XJXJQLFcUMJB6MaXEQ8r6x62Qzxdud5l2xfYiE7qgDjEV1z7RhzEIaWcMj-Sx_Mb0LQ=w703-h937-no?authuser=0"
+            "cardInfo": "Şehirden kaçıp, huzurlu bir haftasonu için İstanbul kamp alanlarını",
+            "href": "",
+            "cardImage": "https://lh3.googleusercontent.com/pw/AL9nZEVPCB1c7ZnYqvGPkMW5L2h_ppwXMq_NRE4GBTR1YRMidDjTJfevxu1fCQCdqJ0B0nh2mMbHU5aB9rWjyn3-XJXJQLFcUMJB6MaXEQ8r6x62Qzxdud5l2xfYiE7qgDjEV1z7RhzEIaWcMj-Sx_Mb0LQ=w703-h937-no?authuser=0"
         },
         {
             "id": 1,
             "city": "İzmir",
-            "cardInfo":"Şehirden kaçıp, huzurlu bir haftasonu için İzmir kamp alanlarını",
-            "herf":"",
-            "cardImage":"https://lh3.googleusercontent.com/pw/AL9nZEXv7lUjGSVVliudvmmN0xKGfW8qE-pImkzQa8ZyGB8iH6DyUtQaLGxGelBCqaS2AvYTUvdrTZk5Gpyp3Dfn6_aoLZmsGArDqpWFicaojxRk5Ko9uBi6ywfITJmReklE-1Ohz1FFfxfTzi6_yY5606w=w750-h937-no?authuser=2"
-
+            "cardInfo": "Şehirden kaçıp, huzurlu bir haftasonu için İzmir kamp alanlarını",
+            "herf": "",
+            "cardImage": "https://lh3.googleusercontent.com/pw/AL9nZEXv7lUjGSVVliudvmmN0xKGfW8qE-pImkzQa8ZyGB8iH6DyUtQaLGxGelBCqaS2AvYTUvdrTZk5Gpyp3Dfn6_aoLZmsGArDqpWFicaojxRk5Ko9uBi6ywfITJmReklE-1Ohz1FFfxfTzi6_yY5606w=w750-h937-no?authuser=2"
         },
         {
             "id": 1,
             "city": "Bursa",
-            "cardInfo":"Şehirden kaçıp, huzurlu bir haftasonu için Bursa kamp alanlarını",
-            "herf":"",
-            "cardImage":"https://images.pexels.com/photos/1061640/pexels-photo-1061640.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            "cardInfo": "Şehirden kaçıp, huzurlu bir haftasonu için Bursa kamp alanlarını",
+            "herf": "",
+            "cardImage": "https://images.pexels.com/photos/1061640/pexels-photo-1061640.jpeg?auto=compress&cs=tinysrgb&w=1600"
         }
     ]
-      
 }

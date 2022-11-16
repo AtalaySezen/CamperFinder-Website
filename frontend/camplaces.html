@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/campplaces.css">
 </head>
+
 <body>
     <div class="preloader">
         <div id="loader">
@@ -23,32 +25,30 @@
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
             <ul class="menu">
                 <li><a href="./index.html">Anasayfa</a></li>
-                <li><a href="./camplaces.html">Kamp Alanları</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">Kamp Alanları
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./İstanbul.html">İstanbul</a>
+                        <a href="./İzmir.html">İzmir</a>
+                        <a href="./Bursa.html">Bursa</a>
+                    </div>
+                </div>
                 <li><a href="./contributeus.html">Katkıda Bulun</a></li>
                 <li><a href="./map.html">Harita</a></li>
                 <li><a href="./contact.html">İletişim</a></li>
             </ul>
         </nav>
     </header>
-    <div class="places-container" id="buttonContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Hepsini Göster</button>
-        <button class="btn" onclick="filterSelection('İstanbul')"> İstanbul</button>
-        <button class="btn" onclick="filterSelection('İzmir')"> İzmir</button>
-        <button class="btn" onclick="filterSelection('Bursa')"> Bursa</button>
-      </div>
-      <div class="wrapper">
+    <div class="wrapper">
+        <div class="istanbul-header">
 
-      <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
-      <div class="container" id="card-group">
-    
-        <div class="filterDiv istanbul">
-            İstanbul
+            <h1 class="header-ist">İstanbul'da Kamp Yerleri</h1>
+        </div>
+        <div id="istanbul" class="istanbul-places">
 
         </div>
-        <div class="filterDiv izmir">İzmir</div>
-        <div class="filterDiv bursa">Bursa</div>
-
-      </div>
 
 
 
@@ -62,12 +62,12 @@
 
 
 
-
-<!---Wrapper Bitiş-->
+        <!---Wrapper Bitiş-->
     </div>
 
 
     <script src="./scripts/places.js"></script>
     <script src="./scripts/main.js"></script>
 </body>
+
 </html>

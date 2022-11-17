@@ -11,9 +11,15 @@
     align-items: center;
     justify-content: center;
 }
-#myUL{
+
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     width: 100%;
     max-width: 39%;
+    position: absolute;
+    top: 0rem;
 }
 
 .search {
@@ -40,36 +46,31 @@
 
 /*SEARCH LİST */
 #myInput {
-    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-    background-position: 10px 12px; /* Position the search icon */
-    background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 100%; /* Full-width */
-    font-size: 16px; /* Increase font-size */
-    padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
-    margin-bottom: 12px; /* Add some space below the input */
-  }
-  
-  #myUL {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  #myUL li a {
-    border: 1px solid #ddd; /* Add a border to all links */
-    margin-top: -1px; /* Prevent double borders */
-    background-color: #f6f6f6; /* Grey background color */
-    padding: 12px; /* Add some padding */
-    text-decoration: none; /* Remove default text underline */
-    font-size: 18px; /* Increase the font-size */
-    color: black; /* Add a black text color */
-    display: block; /* Make it into a block element to fill the whole list */
-  }
-  
-  #myUL li a:hover:not(.header) {
-    background-color: #eee; /* Add a hover effect to all links, except for headers */
-  }
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+
+#myUL li a {
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    margin-top: -1px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee;
+    }
+
 /*SEARCH LİST */
 
 .search-input:focus {
@@ -81,9 +82,9 @@
 }
 
 .search-button {
-    height: 50px;
+    height: 60%;
     display: flex;
-    width: 50px;
+    width: 7%;
     background-color: white;
     border: none;
     border-radius: 15px;
@@ -95,9 +96,8 @@
 }
 
 .icon-search {
-    color: white;
-    font-size: 30px;
-    font-weight: 550;
+    fill: white;
+    width: 50%;
 }
 
 .container-places {
@@ -201,12 +201,15 @@
     background-color: white;
     border-radius: 50px;
 }
-#noneSearch{
+
+#noneSearch {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
+
 .camper-info {
     color: rgb(224, 80, 40);
     font-size: 1.2rem;
@@ -256,7 +259,7 @@
 
 .camper-seasons {
     width: 100%;
-    background-image: url('/frontend/assets/images/pexels-bianca-gasparoto-1752806.jpg');
+    background-image: url('/frontend/assets/images/pexels-uriel-mont-6271649.jpg');
     background-size: cover;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -270,8 +273,9 @@
 }
 
 .seasons {
+    text-align: center;
     position: relative;
-    width: 30%;
+    width: 100%;
 }
 
 .seasons-header {
@@ -285,21 +289,25 @@
 
 
 @media(max-width:900px) {
-    .container-places{
+    .container-places {
         padding: 4rem 0;
 
     }
+
     .card-places {
         justify-content: center;
         align-items: center;
     }
-    .card-places a{
+
+    .card-places a {
         display: contents;
     }
+
     .search {
         width: 90%;
     }
-    .search-input{
+
+    .search-input {
         padding: 10px 10px;
         font-size: 1rem;
     }
@@ -320,6 +328,7 @@
     .header-places {
         text-align: center;
     }
+
     .places-info {
         font-size: 1.4rem;
     }
@@ -333,16 +342,18 @@
         font-size: 1.2rem;
         text-align: center;
     }
-  
+
     .camper-info {
         text-align: center;
         font-size: 0.9rem;
         padding-top: 1rem;
         width: 60%;
     }
-    .cards{
+
+    .cards {
         margin: 1rem 0;
     }
+
     .join-us {
         padding-top: 1rem;
     }
@@ -353,6 +364,8 @@
 
     .camper-seasons {
         height: 35vh;
+        padding-bottom: 3rem;
+        margin-bottom: 0;
     }
 
 }

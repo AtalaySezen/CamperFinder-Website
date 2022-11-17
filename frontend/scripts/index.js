@@ -9,7 +9,6 @@ async function cardsApi(url) {
   const response = await fetch(url);
 
   data = await response.json();
-  console.log(data);
   showCards(data);
 }
 function showCards(data) {
@@ -41,8 +40,6 @@ function showCards(data) {
 
 cardsApi(apiCards);
 
-
-
 document.getElementById('noneSearch').style.display = "none";
 
 function myFunction() {
@@ -53,13 +50,11 @@ function myFunction() {
   filter = input.value.toUpperCase();
   ul = document.getElementById("myUL");
   li = ul.getElementsByTagName('li');
-
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
     document.getElementById('noneSearch').style.display = "flex";
     a = li[i].getElementsByTagName("a")[0];
     txtValue = a.textContent || a.innerText;
-    console.log(txtValue, "a")
     txtValue.replace("I", "İ")
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
       li[i].style.display = "";

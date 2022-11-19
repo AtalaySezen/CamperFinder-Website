@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,18 @@
     <title>CamperFinder | Kamp Yerleri Haritası</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/map.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
 
 </head>
+
 <body>
     <div class="preloader">
         <div id="loader">
         </div>
         <img class="loader-image" src="./assets/images/ms-icon-70x70.png" alt="Kamp Alanları Bul Spinner">
     </div>
-     <header class="header">
+    <header class="header">
         <nav>
             <img width="40" class="navbar-logo" src="/assets/images/ms-icon-70x70.png" alt="">
             <a href="./index.html" class="logo">Camper Finder</a>
@@ -42,12 +45,26 @@
         </nav>
     </header>
     <div class="wrapper">
+
+        <div class="istanbul-places">
+            <div class="istanbul-header">
+                <h1 class="header-ist">Kamp Yerleri Haritası</h1>
+                <p class="subheader-ist">CamperFinder şehirindeki kamp alanlarını bulur ve sana gösterir. Gerisinde
+                    çadırını ve çantanı hazırlamak sana kalır.
+                </p>
+            </div>
         <div id="map"></div>
+
+            <a class="join-us" href="contributeus.html" style="padding-top:3rem;">Bize Katkıda Bulunun.</a>
+        </div>
+
 
     </div>
 
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script src="./scripts/map.js"></script>
     <script src="./scripts/main.js"></script>
 </body>
+
 </html>

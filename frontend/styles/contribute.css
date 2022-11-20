@@ -67,6 +67,7 @@
 .avatars img{
     width: 300px;
     margin: 0 1rem;
+    border-radius: 25px;
 }
 .linkedin{
     fill: #0072b1;

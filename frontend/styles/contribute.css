@@ -68,6 +68,12 @@
     width: 300px;
     margin: 0 1rem;
 }
+.linkedin{
+    fill: #0072b1;
+}
+.github{
+    fill: #171515;
+}
 
 @media(max-width:900px) {
     .header-us {

@@ -33,7 +33,9 @@ button:hover {
 /*NAVBAR*/
 .navbar-logo {
   position: relative;
-  top: 0.5rem;
+  width: 30px;
+  top: 1.1rem;
+  fill: rgb(0, 197, 133);
 }
 
 header a {

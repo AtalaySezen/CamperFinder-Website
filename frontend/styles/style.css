@@ -69,7 +69,6 @@ header a:hover{
 .header li a {
   display: block;
   padding: 20px 20px;
-  border-right: 1px solid #f4f4f4;
   text-decoration: none;
 }
 
@@ -141,8 +140,9 @@ header a:hover{
 }
 
 .header .menu-btn:checked~.menu {
-  max-height: 240px;
-}
+  max-height: 320px;
+  display: flex;
+  flex-direction: column;}
 
 .header .menu-btn:checked~.menu-icon .navicon {
   background: transparent;
@@ -352,6 +352,7 @@ a {
   position: relative;
   bottom: 0.6rem;
   right: 0.5rem;
+  width: 60px;
 }
 
 @-webkit-keyframes spin {
@@ -462,6 +463,7 @@ footer {
 
   .info {
     top: 1.5rem;
+    left: 0;
   }
 
   .footer-camper {

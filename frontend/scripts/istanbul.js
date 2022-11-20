@@ -22,7 +22,6 @@ function showPlaces(data) {
     document.getElementById('istanbul').innerHTML = html;
   }
 }
-
 //Start APİ
 placesApi(apiPlaces);
 

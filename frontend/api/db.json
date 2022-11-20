@@ -25,7 +25,7 @@
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Atatürk Mahallesi, 34540 Çatalca 3",
-            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
             "campPlaceName": "Çilingöz Tabiat Parkı",
             "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sapiente fugiat voluptatem eaque laboriosam debitis?",
             "coordinate": "41.54654854352209, 28.22250964965878"
@@ -35,7 +35,7 @@
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Test",
-            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
             "campPlaceName": "Test Kamp Alanı 4",
             "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sapiente fugiat voluptatem eaque laboriosam debitis?",
             "coordinate": "41.42"
@@ -45,7 +45,7 @@
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Test",
-            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
             "campPlaceName": "Test Kamp Alanı 5 ",
             "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sapiente fugiat voluptatem eaque laboriosam debitis?",
             "coordinate": "41.42"
@@ -55,7 +55,7 @@
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Test",
-            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
             "campPlaceName": "Test Kamp Alanı 6",
             "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sapiente fugiat voluptatem eaque laboriosam debitis?",
             "coordinate": "41.42"
@@ -65,7 +65,7 @@
             "city": "Ankara",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "",
-            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
             "campPlaceName": "Test Ankara",
             "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sapiente fugiat voluptatem eaque laboriosam debitis?",
             "coordinate": ""
@@ -84,7 +84,7 @@
             "city": "İzmir",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Test",
-            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
             "campPlaceName": "test metini",
             "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sapiente fugiat voluptatem eaque laboriosam debitis?",
             "coordinate": "test"
@@ -94,7 +94,7 @@
             "city": "İzmir",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Test",
-            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
             "campPlaceName": "test metini",
             "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sapiente fugiat voluptatem eaque laboriosam debitis?",
             "coordinate": "test"
@@ -104,7 +104,7 @@
             "city": "Bursa",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "",
-            "image":"https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
             "campPlaceName": "Test Bursa",
             "info": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sapiente fugiat voluptatem eaque laboriosam debitis?",
             "coordinate": ""
@@ -168,6 +168,26 @@
             "cardInfo": "Şehirden kaçıp, huzurlu bir haftasonu için Bursa kamp alanlarını",
             "href": "bursa",
             "cardImage": "https://images.pexels.com/photos/1061640/pexels-photo-1061640.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        }
+    ],
+    "blogs": [
+        {
+            "id": 1,
+            "cardImage":"https://images.pexels.com/photos/7563672/pexels-photo-7563672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 1 ",
+            "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
+        },
+        {
+            "id": 2,
+            "cardImage":"https://images.pexels.com/photos/7563672/pexels-photo-7563672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 2",
+            "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
+        },
+        {
+            "id": 3,
+            "cardImage":"https://images.pexels.com/photos/7563672/pexels-photo-7563672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
+            "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         }
     ]
 }

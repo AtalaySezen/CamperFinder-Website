@@ -24,7 +24,6 @@ function showPlaces(data) {
     let html2 = ``;
     for (let x of data) {
         if (window.location.href[51] == x.id) {
-            console.log(x)
             html += `
              <div class="swiper-slide">
              <img src="${x.image}" alt="">
@@ -52,5 +51,4 @@ function showPlaces(data) {
 //Start APİ
 placesApi(apiPlaces);
 
-//
 

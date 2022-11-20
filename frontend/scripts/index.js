@@ -38,20 +38,18 @@ function showCards(data) {
   }
   document.getElementById('card-group').innerHTML = html;
 }
-
 cardsApi(apiCards);
 
+//SEARCH
 document.getElementById('noneSearch').style.display = "none";
 
 function myFunction() {
 
-  // Declare variables
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById('searchInput');
   filter = input.value.toUpperCase();
   ul = document.getElementById("myUL");
   li = ul.getElementsByTagName('li');
-  // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
     document.getElementById('noneSearch').style.display = "flex";
     a = li[i].getElementsByTagName("a")[0];
@@ -65,11 +63,9 @@ function myFunction() {
   }
 }
 
-
-let seasonsText = document.getElementById('seasons');
 //Text According To Seasons
+let seasonsText = document.getElementById('seasons');
 function getCurrentSeason() {
-  // It's plus one because January is index 0
   const now = new Date();
   const month = now.getMonth() + 1;
 
@@ -113,5 +109,46 @@ function getCurrentSeason() {
 
   console.error('Unable to calculate current season');
 }
-
+//Start seasons function
 getCurrentSeason();
+
+
+//Show Blogs From APİ
+let apiBlogs = 'http://localhost:3000/blogs';
+
+async function blogsApi(url) {
+  const response = await fetch(url);
+
+  data = await response.json();
+  showBlogs(data);
+}
+function showBlogs(data) {
+  let html = ``;
+
+  for (let x of data) {
+    console.log(x.href)
+    html += `
+    <div class="cards blogs" onclick="goDetail(${x.id})">
+    <img class="camper-image" src="${x.cardImage}" alt="">
+    <h1 class="blog-header">${x.blogHeader}</h1>
+    <p class="image-infos">
+        ${x.blogAnswer}
+    </p>
+    </div>`;
+  }
+  document.getElementById('blog-cards').innerHTML = html;
+}
+
+blogsApi(apiBlogs);
+
+//Blog Detail Page
+
+function goDetail(id) {
+  let params = new URLSearchParams(`id=${id}`);
+  params.get('?id'); 
+  params.get(id); 
+  window.location.href = ('blogdetail.html' + "?" + params)
+  //1-Detay sayfasına yönlendirilecek 
+  //2-Detay sayfasında query`de idyi verecek. 
+  //3-Detay sayfası yüklenirken, idye bakılacak. O id ile get atılacak. (Detay Sayfası Yükleme Fonksiyonudur
+}

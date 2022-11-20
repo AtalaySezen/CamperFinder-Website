@@ -125,7 +125,8 @@
 }
 
 .info-p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .card {
@@ -137,12 +138,16 @@
     width: 400px;
     height: 460px;
     padding: 15px 0;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .İstanbul {
-    background-color: #30d5c8;
+    /* background-color: #30d5c8; */
+    background-color: #819A69;
+}
+.btn-istanbul{
+    color: #819A69;
 }
 
 .İzmir {
@@ -253,7 +258,7 @@
 .image-infos {
     color: rgb(40, 64, 12);
     font-size: 1rem;
-    width: 88%;
+    width: 80%;
     padding-top: 1rem;
 }
 

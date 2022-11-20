@@ -15,6 +15,7 @@ function showCards(data) {
   let html = ``;
 
   for (let x of data) {
+    console.log(x.href)
     html += `
         <a  href="${x.href}.html">
         <div class="card ${x.city}" id="card-city">
@@ -22,7 +23,7 @@ function showCards(data) {
         <h1 class="header-card">${x.city}</h1>
         </div>
         <div id="card-image" class="image">
-        <img class="card-image" src="./assets/images/pexels-bayu-jefri-743765.jpg" alt="Kamp Yerleri Bul">                
+        <img class="card-image" src="${x.cardImage}" alt="Kamp Yerleri Bul">                
         </div>
         <div class="card-subheader">
         <p class="info-p">

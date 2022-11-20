@@ -80,6 +80,7 @@ header a:hover{
   display: block;
   float: left;
   font-size: 1.5em;
+  font-weight: 500;
   padding: 15px 20px;
   text-decoration: none;
 }
@@ -382,7 +383,8 @@ footer {
   width: 100%;
   background-color: white;
   border-radius: 25px;
-  padding: 7rem;}
+  padding: 7rem;
+}
 
 .info {
   display: flex;

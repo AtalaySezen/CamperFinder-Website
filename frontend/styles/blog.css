@@ -55,6 +55,7 @@
 }
 .cards-blog:hover{
     cursor: pointer;
+    width: 301px;
 }
 .blogcard-header{
     font-size: 1.2rem;
@@ -72,6 +73,7 @@
 
 .camper-image {
     width: 100%;
+    border-radius: 15px;
 }
 
 

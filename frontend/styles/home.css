@@ -69,7 +69,7 @@
 
 #myUL li a:hover:not(.header) {
     background-color: #eee;
-    }
+}
 
 /*SEARCH LİST */
 
@@ -146,7 +146,8 @@
     /* background-color: #30d5c8; */
     background-color: #819A69;
 }
-.btn-istanbul{
+
+.btn-istanbul {
     color: #819A69;
 }
 
@@ -261,10 +262,10 @@
     width: 80%;
     padding-top: 1rem;
     overflow: hidden;
-text-overflow: ellipsis;
-display: -webkit-box;
--webkit-line-clamp: 3;
--webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .camper-seasons {
@@ -295,6 +296,7 @@ display: -webkit-box;
 .find-next {
     color: rgb(40, 64, 12);
 }
+
 .camper-blog {
     width: 100%;
     background-color: white;
@@ -302,11 +304,12 @@ display: -webkit-box;
     margin: 3rem 0;
 }
 
-.blog-header{
+.blog-header {
     color: rgb(40, 64, 12);
     text-align: center;
 }
-.blogs{
+
+.blogs {
     cursor: pointer;
 }
 
@@ -333,7 +336,8 @@ display: -webkit-box;
         padding: 10px 10px;
         font-size: 1rem;
     }
-    .blog-header{
+
+    .blog-header {
         font-size: 1.1rem;
         width: 80%;
     }
@@ -389,8 +393,8 @@ display: -webkit-box;
     }
 
     .camper-seasons {
-        height: 35vh;
-        padding-bottom: 3rem;
+        height: 100% !important;
+        padding: 3rem;
         margin-bottom: 0;
     }
 

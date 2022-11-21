@@ -15,7 +15,6 @@ function showCards(data) {
   let html = ``;
 
   for (let x of data) {
-    console.log(x.href)
     html += `
         <a  href="${x.href}.html">
         <div class="card ${x.city}" id="card-city">
@@ -50,16 +49,22 @@ function myFunction() {
   filter = input.value.toUpperCase();
   ul = document.getElementById("myUL");
   li = ul.getElementsByTagName('li');
-  for (i = 0; i < li.length; i++) {
-    document.getElementById('noneSearch').style.display = "flex";
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    txtValue.replace("I", "İ")
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
+  if (input.value == "") {
+    document.getElementById('noneSearch').style.display = "none";
+  } else {
+    setTimeout(() => {
+      for (i = 0; i < li.length; i++) {
+        document.getElementById('noneSearch').style.display = "flex";
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }, 200);
+
   }
 }
 
@@ -127,7 +132,6 @@ function showBlogs(data) {
   let array = [];
   for (let x of data) {
     array.push(x.id);
-    console.log(array.length)
     if (array.length > 3) {
       html.slice(0, 3) //SADECE 3 BLOG GÖSTER
       html += `

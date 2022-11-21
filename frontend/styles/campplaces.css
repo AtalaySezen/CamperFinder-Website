@@ -54,6 +54,7 @@
 
 .card-flex:hover {
     cursor: pointer;
+    transition: 1s;
 }
 
 .places-card {

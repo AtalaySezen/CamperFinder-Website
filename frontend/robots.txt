@@ -153,9 +153,6 @@ Disallow: /pin/*/visual-search
 Disallow: /pin/find/
 Disallow: /pin/find?url=*
 Disallow: /pin_shop/*
-Disallow: /pinterest-predicts/
-Disallow: /pinterest-wellbeing/*
-Disallow: /pinterestwellbeing/*
 Disallow: /place/*
 Disallow: /prefs/
 Disallow: /product-catalogs/
@@ -195,17 +192,6 @@ Disallow: /welcome/
 Disallow: /your-shop/
 Disallow: /your-shop/*
 
-Sitemap: https://tr.pinterest.com/v3_sitemaps/image_pin_sitemap_tr.pinterest.com.xml
-Sitemap: https://tr.pinterest.com/v3_sitemaps/user_link_sitemap_tr.pinterest.com.xml
-Sitemap: https://tr.pinterest.com/v3_sitemaps/high_score_video_pin_sitemap_tr.pinterest.com.xml
-Sitemap: https://tr.pinterest.com/v3_sitemaps/high_score_product_pin_sitemap_tr.pinterest.com.xml
-Sitemap: https://tr.pinterest.com/v3_sitemaps/video_product_pin_sitemap_tr.pinterest.com.xml
-Sitemap: https://tr.pinterest.com/v3_sitemaps/video_pin_sitemap_tr.pinterest.com.xml
-Sitemap: https://tr.pinterest.com/v3_sitemaps/high_score_image_pin_sitemap_tr.pinterest.com.xml
-Sitemap: https://tr.pinterest.com/v3_sitemaps/high_score_video_product_pin_sitemap_tr.pinterest.com.xml
-Sitemap: https://tr.pinterest.com/v3_sitemaps/board_link_sitemap_tr.pinterest.com.xml
-Sitemap: https://tr.pinterest.com/v3_sitemaps/product_pin_sitemap_tr.pinterest.com.xml
-Sitemap: https://tr.pinterest.com/v3_sitemaps/pin_readable_url_sitemap_tr.pinterest.com.xml
 
 User-agent: Googlebot
 Allow: /_ngjs/resource/*/get/

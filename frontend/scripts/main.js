@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',() => {
 }
 )
 //Emoji Console
-const emoji = ['💩', '👯‍', '😸', '🏄', '🚀', '🔥', '🎉', '😄', '🦁'];
+const emoji = ['👯‍', '😸', '🏄', '🚀', '🔥', '🎉', '😄', '🦁'];
 function randomEmoji() {
   let random = Math.floor(Math.random() * emoji.length);
   return emoji[random];

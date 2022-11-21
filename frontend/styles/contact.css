@@ -26,7 +26,7 @@
     padding: 2rem 3rem;
     border-radius: 35px;
     background-color: white;
-    
+
 }
 
 .contact-images {
@@ -56,53 +56,68 @@
     width: 50%;
     margin: 1rem 0;
 }
-.backpack-img{
+
+.backpack-img {
     border-radius: 35px;
 }
-.social-links{
+
+.social-links {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
-.contact-link{
+
+.contact-link {
     color: rgb(224, 80, 40);
     font-weight: 500;
     font-size: 1.2rem;
     width: 50%;
 }
-.mail-info{
+
+.mail-info {
     color: black;
     font-size: 1.1rem;
     font-weight: 400;
     letter-spacing: 0.7px;
 }
-.soon-info{
+
+.mail-info:hover {
+    color: rgb(224, 80, 40);
+    transition: 0.5s;
+}
+
+.soon-info {
     padding-top: 1rem;
     font-size: 1.1rem;
     font-weight: 400;
 }
 
-@media(max-width:900px){
-    .contact-header{
+@media(max-width:900px) {
+    .contact-header {
         font-size: 1.4rem;
     }
-    .contact-info{
+
+    .contact-info {
         font-size: 1.1rem;
         width: 80%;
         margin-top: 1rem;
     }
-    .contact-images{
+
+    .contact-images {
         display: none;
     }
-    .contact-backpack{
+
+    .contact-backpack {
         width: 80%;
         font-size: 1.1rem;
     }
-    .backpack-img{
+
+    .backpack-img {
         width: 100%;
         border-radius: 10px;
     }
-    .contact-link{
+
+    .contact-link {
         font-size: 1.1rem;
         width: 80%;
         margin-top: 1rem;

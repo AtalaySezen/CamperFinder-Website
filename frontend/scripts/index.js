@@ -124,19 +124,25 @@ async function blogsApi(url) {
 }
 function showBlogs(data) {
   let html = ``;
-
+  let array = [];
   for (let x of data) {
-    console.log(x.href)
-    html += `
+    array.push(x.id);
+    console.log(array.length)
+    if (array.length > 3) {
+      html.slice(0, 3) //SADECE 3 BLOG GÖSTER
+      html += `
     <div class="cards blogs" onclick="goDetail(${x.id})">
     <img class="camper-image" src="${x.cardImage}" alt="">
     <h1 class="blog-header">${x.blogHeader}</h1>
     <p class="image-infos">
         ${x.blogAnswer}
     </p>
+    <a class="read-all" onclick="goDetail(${x.id})">Devamını Oku</a>
     </div>`;
+    }
+    document.getElementById('blog-cards').innerHTML = html;
   }
-  document.getElementById('blog-cards').innerHTML = html;
+
 }
 
 blogsApi(apiBlogs);
@@ -145,8 +151,8 @@ blogsApi(apiBlogs);
 
 function goDetail(id) {
   let params = new URLSearchParams(`id=${id}`);
-  params.get('?id'); 
-  params.get(id); 
+  params.get('?id');
+  params.get(id);
   window.location.href = ('blogdetail.html' + "?" + params)
   //1-Detay sayfasına yönlendirilecek 
   //2-Detay sayfasında query`de idyi verecek. 

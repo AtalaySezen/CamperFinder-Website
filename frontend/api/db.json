@@ -188,6 +188,25 @@
             "cardImage":"https://images.pexels.com/photos/7563672/pexels-photo-7563672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
             "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
+        },
+        {
+            "id": 4,
+            "cardImage":"https://images.pexels.com/photos/7563672/pexels-photo-7563672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
+            "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
+        },
+        {
+            "id": 5,
+            "cardImage":"https://images.pexels.com/photos/7563672/pexels-photo-7563672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
+            "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         }
+        ,   {
+            "id": 6,
+            "cardImage":"https://images.pexels.com/photos/7563672/pexels-photo-7563672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
+            "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
+        }
+
     ]
 }

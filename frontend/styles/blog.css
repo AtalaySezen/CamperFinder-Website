@@ -1,0 +1,87 @@
+.blog-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    background-color: white;
+    border-radius: 25px;
+    padding: 4rem 0;
+}
+
+.places-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-blog {
+    color: rgb(40, 64, 12);
+    text-align: center;
+    font-size: 1.9rem;
+}
+
+.subheader-blog {
+    color: rgb(216, 70, 39);
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.7rem 0;
+    width: 60%;
+}
+
+.header-place {
+    font-size: 19px;
+    margin-top: 4px;
+    color: rgb(60, 60, 60);
+}
+
+.cards-blog {
+    width: 300px;
+    height: 450px;
+    margin: 0 2rem;
+}
+.cards-blog:hover{
+    cursor: pointer;
+}
+.blogcard-header{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(40, 64, 12);
+}
+
+.blog-infos {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.camper-image {
+    width: 100%;
+}
+
+
+/*MOBİLE */
+@media(max-width:900px) {
+    .header-blog {
+        font-size: 1.4rem;
+    }
+
+    .subheader-blog {
+        font-size: 0.9rem;
+    }
+}

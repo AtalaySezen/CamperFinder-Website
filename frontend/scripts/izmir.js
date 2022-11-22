@@ -17,7 +17,7 @@ function showPlaces(data) {
       <small class="click-detail">Detay İçin Tıkla</small>
       <h1 class="header-place">${x.campPlaceName}</h1>
       <p class="info-place">${x.info}</p>
-  </div>
+      </div>
   `;}
     document.getElementById('istanbul').innerHTML = html;
   }

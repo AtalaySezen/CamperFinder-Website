@@ -15,11 +15,10 @@ function showBlogs(data) {
   let html = ``;
   let paginationArray = [];
   for (let x of data) {
-    paginationArray.push(x.id)
     console.log(paginationArray.length)
 
-    if (paginationArray.length > 6) {
-      html.slice(0, 3)
+    if (paginationArray) {
+      
       html += `
       <div class="cards-blog" onclick="goDetail(${x.id})">
       <img class="camper-image" src="${x.cardImage}" alt="">

@@ -1,4 +1,4 @@
-let apiPlaces = "http://localhost:3000/places";
+let apiPlaces = "https://camperfinder.org/node/node2/";
 
 async function placesApi(url) {
   const response = await fetch(url);
@@ -17,8 +17,9 @@ function showPlaces(data) {
       <small class="click-detail">Detay İçin Tıkla</small>
       <h1 class="header-place">${x.campPlaceName}</h1>
       <p class="info-place">${x.info}</p>
-  </div>
-  `;}
+      </div>`;
+
+}
     document.getElementById('istanbul').innerHTML = html;
   }
 }

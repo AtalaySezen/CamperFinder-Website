@@ -21,7 +21,6 @@ function showPlaces(data) {
                 ${x.blogAnswer}
             </p>
             </div>`;
-      
         document.getElementById('details-info').innerHTML = html;
     }
 }

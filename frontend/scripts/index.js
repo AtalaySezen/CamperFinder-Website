@@ -117,7 +117,6 @@ function getCurrentSeason() {
 //Start seasons function
 getCurrentSeason();
 
-
 //Show Blogs From APİ
 let apiBlogs = 'http://localhost:3000/blogs';
 
@@ -132,7 +131,7 @@ function showBlogs(data) {
   let array = [];
   for (let x of data) {
     array.push(x.id);
-    if (array.length > 3) {
+    if (array.length > 12) {
       html.slice(0, 3) //SADECE 3 BLOG GÖSTER
       html += `
     <div class="cards blogs" onclick="goDetail(${x.id})">

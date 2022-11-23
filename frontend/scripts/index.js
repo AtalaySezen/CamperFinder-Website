@@ -32,7 +32,6 @@ function showCards(data) {
         </div>
         </div>
         </a>
-
         `;
   }
   document.getElementById('card-group').innerHTML = html;
@@ -64,7 +63,6 @@ function myFunction() {
         }
       }
     }, 200);
-
   }
 }
 
@@ -118,7 +116,7 @@ function getCurrentSeason() {
 getCurrentSeason();
 
 //Show Blogs From APİ
-let apiBlogs = 'http://localhost:3000/blogs';
+let apiBlogs = 'https://camperfinder.org/node2/node3';
 
 async function blogsApi(url) {
   const response = await fetch(url);
@@ -128,30 +126,23 @@ async function blogsApi(url) {
 }
 function showBlogs(data) {
   let html = ``;
-  let array = [];
-  for (let x of data) {
-    array.push(x.id);
-    if (array.length > 12) {
-      html.slice(0, 3) //SADECE 3 BLOG GÖSTER
-      html += `
-    <div class="cards blogs" onclick="goDetail(${x.id})">
+  let slicedArray = data.slice(0, 3);
+  slicedArray.map(x => {
+    html += `
+    <div class="cards blogs" onclick="goDetail(${x.num})">
     <img class="camper-image" src="${x.cardImage}" alt="">
     <h1 class="blog-header">${x.blogHeader}</h1>
     <p class="image-infos">
-        ${x.blogAnswer}
+    ${x.blogAnswer}
     </p>
-    <a class="read-all" onclick="goDetail(${x.id})">Devamını Oku</a>
+    <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>
     </div>`;
-    }
     document.getElementById('blog-cards').innerHTML = html;
-  }
-
+  })
 }
 
 blogsApi(apiBlogs);
-
 //Blog Detail Page
-
 function goDetail(id) {
   let params = new URLSearchParams(`id=${id}`);
   params.get('?id');

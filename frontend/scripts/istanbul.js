@@ -3,14 +3,13 @@ let apiPlaces = "https://camperfinder.org/node/node2/";
 async function placesApi(url) {
   const response = await fetch(url);
   data = await response.json();
-  showPlaces(data);
+  await showPlaces(data);
 }
 
 //Show Data HTML;
-function showPlaces(data) {
-  let html = ``; 
+async function showPlaces(data) {
+  let html = ``;
   for (let x of data) {
-    console.log(x.num)
     if (x.city == "İstanbul") {
       html += `
       <div class="card-flex" onclick="goDetail(${x.num})">
@@ -21,7 +20,7 @@ function showPlaces(data) {
       <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>
       </div>`;
 
-}
+    }
     document.getElementById('istanbul').innerHTML = html;
   }
 }
@@ -29,10 +28,10 @@ function showPlaces(data) {
 placesApi(apiPlaces);
 
 
-function goDetail(id) {
-  let params = new URLSearchParams(`id=${id}`);
-  params.get('?id'); 
-  params.get(id); 
+function goDetail(num) {
+  let params = new URLSearchParams(`id=${num}`);
+  params.get('?id');
+  params.get(num);
   window.location.href = ('detailplace.html' + "?" + params)
   //1-Detay sayfasına yönlendirilecek 
   //2-Detay sayfasında query`de idyi verecek. 

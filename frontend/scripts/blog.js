@@ -1,9 +1,5 @@
-
-
-
-
 //Show Blogs From APİ
-let apiBlogs = 'http://localhost:3000/blogs';
+let apiBlogs = 'https://camperfinder.org/node2/node3';
 
 async function blogsApi(url) {
   const response = await fetch(url);
@@ -13,22 +9,16 @@ async function blogsApi(url) {
 }
 function showBlogs(data) {
   let html = ``;
-  let paginationArray = [];
   for (let x of data) {
-    console.log(paginationArray.length)
-
-    if (paginationArray) {
-      
       html += `
-      <div class="cards-blog" onclick="goDetail(${x.id})">
+      <div class="cards-blog" onclick="goDetail(${x.num})">
       <img class="camper-image" src="${x.cardImage}" alt="">
       <h1 class="blogcard-header">${x.blogHeader}</h1>
       <p class="blog-infos">
         ${x.blogAnswer}
       </p>
-      <a class="read-all" onclick="goDetail(${x.id})">Devamını Oku</a>
+      <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>
       </div>`;
-    }
     document.getElementById('blogs').innerHTML = html;
   }
 
@@ -37,10 +27,10 @@ function showBlogs(data) {
 blogsApi(apiBlogs);
 
 
-function goDetail(id) {
-  let params = new URLSearchParams(`id=${id}`);
+function goDetail(num) {
+  let params = new URLSearchParams(`id=${num}`);
   params.get('?id');
-  params.get(id);
+  params.get(num);
   window.location.href = ('blogdetail.html' + "?" + params)
   //1-Detay sayfasına yönlendirilecek 
   //2-Detay sayfasında query`de idyi verecek. 

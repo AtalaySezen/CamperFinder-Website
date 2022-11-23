@@ -23,7 +23,7 @@ function showPlaces(data) {
     let html = ``;
     let html2 = ``;
     for (let x of data) {
-        if (window.location.href[51] == x.id) {
+        if (window.location.href[51] == x.num) {
             html += `
              <div class="swiper-slide">
              <img src="${x.image}" alt="">
@@ -44,8 +44,6 @@ function showPlaces(data) {
         document.getElementById('details-info').innerHTML = html2;
     }
 }
-  
-
 
 }
 //Start APİ

@@ -11,7 +11,7 @@ function showPlaces(data) {
   let html = ``; 
   for (let x of data) {
     console.log(x.num)
-    if (x.city == "İstanbul") {
+    if (x.city == "Edirne") {
       html += `
       <div class="card-flex" onclick="goDetail(${x.num})">
       <div class="places-card" style="background-image:url('${x.image}');"></div>

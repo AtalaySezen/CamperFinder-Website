@@ -1,7 +1,7 @@
 {
     "places": [
         {
-            "id": 1,
+            "num": 1,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Belgrad Ormanı, Kemer, 34450 Sarıyer/İstanbul,",
@@ -11,7 +11,7 @@
             "coordinate": " 41.1906261131468, 28.97894688790428"
         },
         {
-            "id": 2,
+            "num": 2,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Hacıllı, 34980 Şile/İstanbul",
@@ -21,7 +21,7 @@
             "coordinate": "41.0392638895643, 29.771052215341783"
         },
         {
-            "id": 3,
+            "num": 3,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Kurtdoğmuş, 34916 Pendik/İstanbul",
@@ -31,7 +31,7 @@
             "coordinate": "41.01730596015567, 29.345399756607144"
         },
         {
-            "id": 4,
+            "num": 4,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Esenceli, 34983 Şile/İstanbul",
@@ -41,7 +41,7 @@
             "coordinate": "41.06054605898897, 29.385479950518913"
         },
         {
-            "id": 5,
+            "num": 5,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Polonez, 34986 Beykoz/İstanbul",
@@ -51,7 +51,7 @@
             "coordinate": "41.110637481144536, 29.20444786218659"
         },
         {
-            "id": 6,
+            "num": 6,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Yalıköy, Çilingoz Cd., 34540 Çatalca/İstanbul",
@@ -61,7 +61,7 @@
             "coordinate": "41.572823419956904, 28.175459376796844"
         },
         {
-            "id": 7,
+            "num": 7,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Fatih, 34540 Çatalca/İstanbul",
@@ -71,7 +71,7 @@
             "coordinate": "41.556903354983746, 28.18540921545845"
         },
         {
-            "id": 8,
+            "num": 8,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district":  "Çatalca/İstanbul",
@@ -81,7 +81,7 @@
             "coordinate": "41.394714859810065, 28.369178420726197"
         },
         {
-            "id": 9,
+            "num": 9,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Şile/İstanbul",
@@ -91,7 +91,7 @@
             "coordinate": "41.09725231859679, 29.58023809093695"
         },
         {
-            "id": 10,
+            "num": 10,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Sofular, 34980 Şile/İstanbul",
@@ -101,7 +101,7 @@
             "coordinate": "41.18769383240464, 29.492124445941993"
         },
         {
-            "id": 11,
+            "num": 11,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Bıçkıdere, Şile/Istanbul",
@@ -111,7 +111,7 @@
             "coordinate": "41.06733302217208, 29.46669751534177"
         },
         {
-            "id": 12,
+            "num": 12,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Akçakese/Şile/İstanbul",
@@ -121,7 +121,7 @@
             "coordinate": "41.152184918589555, 29.72932616562256"
         },
         {
-            "id": 13,
+            "num": 13,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Şile/İstanbul",
@@ -131,7 +131,7 @@
             "coordinate": "41.115383825448056, 29.592484700000004"
         },
         {
-            "id": 14,
+            "num": 14,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Emirli, Pendik/İstanbul",
@@ -141,7 +141,7 @@
             "coordinate": "40.98822058607097, 29.345467799999998"
         },
         {
-            "id": 15,
+            "num": 15,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Kurtdoğmuş, Pendik/İstanbul",
@@ -151,7 +151,7 @@
             "coordinate": "41.012142585621554, 29.360335311702535"
         },
         {
-            "id": 16,
+            "num": 16,
             "city": "İstanbul",
             "alt": "İstanbula Yakın Kamp Alanları KampYeriBul",
             "district": "Anadolufeneri, Beykoz Cd., Beykoz/İstanbul",
@@ -163,7 +163,7 @@
     ],
     "detailpage": [
         {
-            "id": 1,
+            "num": 1,
             "header": "Çilingöz Tabiat Parkı",
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
             "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600",
@@ -171,49 +171,49 @@
             "image3": "https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         },
         {
-            "id": 2,
+            "num": 2,
             "header": "Çilingöz Tabiat Parkı2",
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
             "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600"
         },
         {
-            "id": 3,
+            "num": 3,
             "header": "Çilingöz Tabiat Parkı3",
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
             "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600"
         },
         {
-            "id": 4,
+            "num": 4,
             "header": "Test Kamp Alanı 4",
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
             "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600"
         },
         {
-            "id": 5,
+            "num": 5,
             "header": "Test Kamp Alanı 5",
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
             "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600"
         },
         {
-            "id": 6,
+            "num": 6,
             "header": "Test Kamp Alanı 6",
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
             "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600"
         },
         {
-            "id": 7,
+            "num": 7,
             "header": "Test Kamp Alanı 7",
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
             "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600"
         },
         {
-            "id": 8,
+            "num": 8,
             "header": "Test Kamp Alanı 8",
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
             "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600"
         },
         {
-            "id": 9,
+            "num": 9,
             "header": "Test Kamp Alanı 9",
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, illo? Obcaecati rerum quo quas suscipit.",
             "image": "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&w=1600"
@@ -221,96 +221,114 @@
     ],
     "cards": [
         {
-            "id": 1,
+            "num": 1,
             "city": "İstanbul",
             "cardInfo": "Şehirden kaçıp, huzurlu bir haftasonu için İstanbul kamp alanlarını",
             "href": "istanbul",
             "cardImage": "https://images.pexels.com/photos/2042109/pexels-photo-2042109.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        },
+        }
         {
-            "id": 2,
+            "num": 2,
             "city": "İzmir",
+            "alt":"İzmir Kamp Alanlarını Bul",
             "cardInfo": "Şehirden kaçıp, huzurlu bir haftasonu için İzmir kamp alanlarını",
             "href": "izmir",
             "cardImage": "https://images.pexels.com/photos/13578455/pexels-photo-13578455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        },
+        }
         {
-            "id": 3,
+            "num": 3,
             "city": "Bursa",
+            "alt":"Bursa Kamp Alanlarını Bul",
             "cardInfo": "Şehirden kaçıp, huzurlu bir haftasonu için Bursa kamp alanlarını",
             "href": "bursa",
+            "cardImage": "https://images.pexels.com/photos/1061640/pexels-photo-1061640.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        }
+        {
+            "num": 4,
+            "city": "Edirne",
+            "alt":"Edirne Kamp Alanlarını Bul",
+            "cardInfo": "Şehirden kaçıp, huzurlu bir haftasonu için Edirne kamp alanlarını",
+            "href": "edirne",
+            "cardImage": "https://images.pexels.com/photos/1061640/pexels-photo-1061640.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        }
+        {
+            "num": 5,
+            "city": "Tekirdağ",
+            "alt":"Tekirdağ Kamp Alanlarını Bul",
+            "cardInfo": "Şehirden kaçıp, huzurlu bir haftasonu için Edirne kamp alanlarını",
+            "href": "tekirdag",
             "cardImage": "https://images.pexels.com/photos/1061640/pexels-photo-1061640.jpeg?auto=compress&cs=tinysrgb&w=1600"
         }
     ],
     "blogs": [
         {
-            "id": 1,
+            "num": 1,
             "cardImage":"https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 1 ",
             "blogAnswer":"11Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         },
         {
-            "id": 2,
+            "num": 2,
             "cardImage":"https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 2",
             "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         },
         {
-            "id": 3,
+            "num": 3,
             "cardImage":"https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
             "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         },
         {
-            "id": 4,
+            "num": 4,
             "cardImage":"https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
             "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         },
         {
-            "id": 5,
+            "num": 5,
             "cardImage":"https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
             "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         }
         ,   {
-            "id": 6,
+            "num": 6,
             "cardImage":"https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
             "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         },
         {
-            "id": 7,
+            "num": 7,
             "cardImage":"https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 1 ",
             "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         },
         {
-            "id": 8,
+            "num": 8,
             "cardImage":"https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 2",
             "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         },
         {
-            "id": 9,
+            "num": 9,
             "cardImage":"https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
             "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         },
         {
-            "id": 10,
+            "num": 10,
             "cardImage":"https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
             "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         },
         {
-            "id": 11,
+            "num": 11,
             "cardImage":"https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
             "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."
         }
         ,   {
-            "id": 12,
+            "num": 12,
             "cardImage":"https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             "blogHeader":"Kampa Giderken Yanıma Neler Almalıyım? 3",
             "blogAnswer":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore est facilis quos dolore placeat. Nesciunt temporibus cumque pariatur placeat perspiciatis sapiente omnis provident explicabo culpa quam beatae tempora illo, voluptatum sequi? Fuga harum veniam nulla commodi, saepe repellat iusto molestias assumenda aperiam sapiente, hic vel error vero eaque placeat repudiandae, aliquid cupiditate? Minus, architecto dolorum."

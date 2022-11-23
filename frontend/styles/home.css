@@ -156,7 +156,16 @@
 }
 
 .Bursa {
-    background-color: #009900;
+    background-color: #63a1ff;
+}
+.Edirne{
+    background-color: #A91101;
+}
+.Tekirdağ{
+    background-color: #2e8b57;
+}
+.Kırklareli{
+    background-color: #ffce8f;
 }
 
 .card:hover {

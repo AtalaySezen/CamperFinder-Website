@@ -10,6 +10,7 @@ async function placesApi(url) {
 async function showPlaces(data) {
   let html = ``;
   for (let x of data) {
+    console.log(x.city)
     if (x.city == "Kırklareli") {
       html += `
       <div class="card-flex" onclick="goDetail(${x.num})">

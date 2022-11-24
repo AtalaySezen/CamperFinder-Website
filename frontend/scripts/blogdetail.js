@@ -11,6 +11,8 @@ async function showPlaces(data) {
     let html = ``;
     for (let x of data) {
         if (window.location.href[50] == x.num) {
+            // console.log(window.location.href[44]) Web sitesi için
+
             html += `
             <div class="cards" onclick="goDetail(${x.num})">
             <img class="camper-image" src="${x.cardImage}" alt="">

@@ -276,6 +276,13 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+.homepage-infos {
+    color: rgb(40, 64, 12);
+    font-size: 1rem;
+    min-height: 91px;
+    width: 80%;
+    padding-top: 1rem;
+}
 
 .camper-seasons {
     width: 100%;
@@ -405,6 +412,9 @@
         height: 100% !important;
         padding: 3rem;
         margin-bottom: 0;
+    }
+    .homepage-infos{
+        min-height: none;
     }
 
 }

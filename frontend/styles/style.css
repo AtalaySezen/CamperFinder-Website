@@ -397,7 +397,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 7rem;
+  padding: 7rem 0;
   margin-bottom: -3.5rem;
 }
 
@@ -510,7 +510,13 @@ footer {
   color: rgb(224, 80, 40);
   transition: 0.5s;
 }
-
+.footer-contact a{
+  color: rgb(40, 64, 12);
+}
+.footer-contact a:hover{
+  color: rgb(224, 80, 40);
+  transition: 0.5s;
+}
 @media(max-width:900px) {
   footer {
     height: 100%;

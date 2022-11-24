@@ -386,38 +386,74 @@ a {
 /*FOOTER*/
 footer {
   width: 100%;
+  overflow: hidden;
+  min-height: 45vh;
   background-color: white;
   border-radius: 25px;
-  padding: 7rem;
-}
-
-.info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  bottom: -6rem;
-  left: 2.5rem;
-  top: auto;
-}
-
-.info img {
-  width: 25px;
-  height: 25px;
-  position: relative;
-  bottom: 2px;
-  right: 3px;
-}
-
-.year-info {
-  font-weight: 500;
-  font-size: 1rem;
 }
 
 .footer-camper {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding: 7rem;
+  margin-bottom: -3.5rem;
+}
+
+.sub-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.footer-cities {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 0.8rem;
+}
+
+.cities-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 84px;
+  position: relative;
+  left: -0.4rem;
+}
+
+.footer-a {
+  margin: 5px;
+  color: rgb(40, 64, 12);
+  text-decoration: underline;
+  font-size: 13px;
+  text-align: left;
+}
+
+.footer-a:hover {
+  color: rgb(224, 80, 40);
+  transition: 0.5s;
+}
+
+.year-brand {
+  color: rgb(224, 80, 40);
+  font-weight: 500;
+}
+
+.year {
+  color: rgb(40, 64, 12);
+}
+
+.info-year {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: -1.5rem;
+  text-align: center;
+  left: 1.5rem;
 }
 
 .margin-footer {
@@ -425,6 +461,7 @@ footer {
 }
 
 .footer-about {
+  font-size: 1rem;
   color: rgb(224, 80, 40);
 }
 
@@ -446,9 +483,8 @@ footer {
 
 .fa-brands {
   fill: rgb(40, 64, 12);
-
-  width: 24px;
-  margin: 2px 4px;
+  width: 23px;
+  margin: 1px 2px;
 }
 
 .fa-brands:hover {
@@ -478,7 +514,6 @@ footer {
 @media(max-width:900px) {
   footer {
     height: 100%;
-    padding: 4rem;
   }
 
   .info {
@@ -489,12 +524,42 @@ footer {
   .footer-camper {
     flex-direction: column;
     margin-top: 0;
+    padding: 3rem;
   }
-
+  .footer-info,.footer-contact{
+    text-align: center;
+  }
+  .sub-footer{
+    margin: 1rem 0;
+    left: 0;
+    justify-content: center;
+  }
+  .footer-cities{
+    align-items: center;
+  }
+  .cities-column{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 52%;
+    height: 85px;
+    position: relative;
+    left: -0.4rem;
+    justify-content: center;
+  }
+  .footer-contact{
+    margin: 1rem 0;
+  }
   .contact-us,
   .about-us {
     text-align: center;
     margin: 1.4rem 0;
+  }
+  .read-all{
+    font-size: 0.9rem;
+  }
+  .join-us{
+    font-size: 1rem;
   }
 
 }

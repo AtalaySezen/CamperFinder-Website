@@ -179,6 +179,7 @@ header a:hover {
     clear: none;
     float: right;
     max-height: none;
+    padding: 0 1rem;
   }
 
   .header .menu-icon {

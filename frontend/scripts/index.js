@@ -3,40 +3,40 @@ let searchButton = document.getElementById('searchButton');
 
 
 //Show Cards Data: 
-let apiCards = 'http://camperfinder.org/node3/node4';
+// let apiCards = 'http://camperfinder.org/node3/node4';
 
-async function cardsApi(url) {
-  const response = await fetch(url);
+// async function cardsApi(url) {
+//   const response = await fetch(url);
 
-  data = await response.json();
-  showCards(data);
-}
-function showCards(data) {
-  let html = ``;
+//   data = await response.json();
+//   showCards(data);
+// }
+// function showCards(data) {
+//   let html = ``;
 
-  for (let x of data) {
-    html += `
-        <a  href="${x.href}.html">
-        <div class="card ${x.city}" id="card-city">
-        <div id="card-head" class="card-head">
-        <h1 class="header-card">${x.city}</h1>
-        </div>
-        <div id="card-image" class="image">
-        <img class="card-image" src="${x.cardImage}" alt="Kamp Yerleri Bul">                
-        </div>
-        <div class="card-subheader">
-        <p class="info-p">
-        ${x.cardInfo}
-        </p>
-        <button class="btn-discover" href="javascript:void">Keşfet</button>
-        </div>
-        </div>
-        </a>
-        `;
-  }
-  document.getElementById('card-group').innerHTML = html;
-}
-cardsApi(apiCards);
+//   for (let x of data) {
+//     html += `
+//         <a  href="${x.href}.html">
+//         <div class="card ${x.city}" id="card-city">
+//         <div id="card-head" class="card-head">
+//         <h1 class="header-card">${x.city}</h1>
+//         </div>
+//         <div id="card-image" class="image">
+//         <img class="card-image" src="${x.cardImage}" alt="Kamp Yerleri Bul">                
+//         </div>
+//         <div class="card-subheader">
+//         <p class="info-p">
+//         ${x.cardInfo}
+//         </p>
+//         <button class="btn-discover" href="javascript:void">Keşfet</button>
+//         </div>
+//         </div>
+//         </a>
+//         `;
+//   }
+//   document.getElementById('card-group').innerHTML = html;
+// }
+// cardsApi(apiCards);
 
 //SEARCH
 document.getElementById('noneSearch').style.display = "none";
@@ -151,4 +151,12 @@ function goDetail(id) {
   //1-Detay sayfasına yönlendirilecek 
   //2-Detay sayfasında query`de idyi verecek. 
   //3-Detay sayfası yüklenirken, idye bakılacak. O id ile get atılacak. (Detay Sayfası Yükleme Fonksiyonudur
+}
+
+
+//Card Href Link
+
+function goLink(event){
+  window.location.href = `${event}.html`
+
 }

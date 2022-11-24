@@ -1,4 +1,4 @@
-let apiPlaces = "http://localhost:3000/places";
+let apiPlaces = "https://camperfinder.org/node/node2/";
 
 async function placesApi(url) {
   const response = await fetch(url);

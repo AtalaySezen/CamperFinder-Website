@@ -14,7 +14,6 @@ async function showPlaces(data) {
       html += `
       <div class="card-flex" onclick="goDetail(${x.num})">
       <div class="places-card" style="background-image:url('${x.image}');"></div>
-      <small class="click-detail">Detay İçin Tıkla</small>
       <h1 class="header-place">${x.campPlaceName}</h1>
       <p class="info-place">${x.info}</p>
       <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>

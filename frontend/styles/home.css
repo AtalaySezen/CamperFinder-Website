@@ -106,6 +106,9 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 7rem 0;
+    background-color: white;
+    margin: 3rem 0;
+    border-radius: 35px;
 }
 
 .header-places {
@@ -135,7 +138,8 @@
     border-radius: 24px 24px 24px 24px;
     margin: 2rem 2rem;
 }
-.card-2:hover{
+
+.card-2:hover {
     cursor: pointer;
     transition: 0.5s;
     transform: scale(1.02);
@@ -146,28 +150,34 @@
     max-height: 342px;
     border-radius: 24px 24px 0px 0px;
 }
-.green-card{
+
+.green-card {
     background-color: rgb(154, 157, 104) !important;
 }
-.green-color{
+
+.green-color {
     color: rgb(154, 157, 104) !important;
 }
-.btn{
+
+.btn {
     font-size: 20px;
     font-weight: 450;
     letter-spacing: 0px;
     line-height: 21px;
 }
-.red-btn{
+
+.red-btn {
     color: rgb(224, 80, 40);
 }
 
-.card-green{
+.card-green {
     background-color: rgb(129, 154, 105) !important;
 }
-.green-color2{
-    color:  rgb(129, 154, 105);
+
+.green-color2 {
+    color: rgb(129, 154, 105);
 }
+
 .sub-card {
     display: flex;
     flex-direction: column;
@@ -358,7 +368,8 @@
 .blogs {
     cursor: pointer;
 }
-.btn-alls{
+
+.btn-alls {
     background-color: rgb(224, 80, 40);
     border-radius: 15px;
     display: inline-block;
@@ -376,7 +387,8 @@
     height: 65px;
     margin-top: 2rem;
 }
-.btn-alls:hover{
+
+.btn-alls:hover {
     cursor: pointer;
     transition: 0.5s;
     background-color: white;
@@ -411,7 +423,8 @@
     .search {
         width: 90%;
     }
-    .btn-alls{
+
+    .btn-alls {
         font-size: 18px;
         font-weight: 550;
         width: 285px;
@@ -484,27 +497,31 @@
     .homepage-infos {
         min-height: none;
     }
-    .buttonContainer{
+
+    .buttonContainer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .sub-header{
+
+    .sub-header {
         font-size: 1.1rem;
     }
 
-    .btn-show{
+    .btn-show {
         max-width: 150px;
         max-height: 70px;
         margin-top: 1rem;
         height: 38px;
     }
-    .sub-info{
+
+    .sub-info {
         width: 100%;
         font-size: 14px;
         line-height: 24px;
     }
-    .btn{
+
+    .btn {
         font-size: 17px;
     }
 }

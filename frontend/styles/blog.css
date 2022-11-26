@@ -49,9 +49,16 @@
 }
 
 .cards-blog {
-    width: 300px;
-    height: 450px;
-    margin: 0 2rem;
+    width: 75%;
+    max-width: 570px;
+    height: 75%;
+    border-radius: 24px 24px 24px 24px;
+    margin: 2rem 2rem;
+}
+.cards-blog:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1.02);
 }
 .cards-blog:hover{
     cursor: pointer;

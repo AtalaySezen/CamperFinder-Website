@@ -99,6 +99,9 @@
 .click-detail:hover{
     text-decoration: underline;
 }
+.map-text{
+    font-weight: 550;
+}
 
 /*MOBİLE */
 @media(max-width:900px) {

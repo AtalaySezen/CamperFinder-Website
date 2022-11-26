@@ -1,0 +1,28 @@
+.details-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border-radius: 35px;
+    margin: 3rem 0;
+    padding: 3rem;
+}
+.main-blog{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+.blog-text{
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+}
+.blog-subcontainer{
+    margin-top: 1rem;
+}
+.text-subcontainer{
+    color: rgb(224, 80, 40);
+    font-size: 1.3rem;
+    font-weight: 550;
+}

@@ -9,18 +9,25 @@ async function blogDetailApi(url) {
 //API
 async function showPlaces(data) {
     let html = ``;
+
     for (let x of data) {
         if (window.location.href[50] == x.num) {
             // console.log(window.location.href[44]) Web sitesi için
+            if (x.blogAnswer2 == null && x.blogList == null) {
+                x.blogAnswer2 = "CamperFinder"
+                x.blogList = "Camper Finder"
+            }
 
             html += `
-            <div class="cards" onclick="goDetail(${x.num})">
+            <div class="header-blog">
             <img class="camper-image" src="${x.cardImage}" alt="">
-            <h1 class="blog-header">${x.blogHeader}</h1>
-            <p class="image-infos">
-                ${x.blogAnswer}
-            </p>
-            </div>`;
+            <h1 class="detail-header"> ${x.blogHeader}</h1>
+            </div>
+            <div class="main-blog">
+            <p class="blog-text">${x.blogAnswer}</p>
+            <p id="blogAnswer2" class="blog-text">${x.blogAnswer2}</p>
+            </div>
+`;
             document.getElementById('details-info').innerHTML = html;
         }
     }

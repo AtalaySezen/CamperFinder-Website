@@ -25,7 +25,7 @@ async function getData() {
   const response = await fetch(apiCoordinates);
   const data = await response.json();
   for (item of data) {
-   const marker = L.marker([item.coordinate1,item.coordinate2]).addTo(map);
+   const marker = await L.marker([item.coordinate1,item.coordinate2]).addTo(map);
    const infoText = `
    <p class="map-text">
    ${item.campPlaceName}

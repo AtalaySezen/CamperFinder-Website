@@ -11,7 +11,7 @@ async function showPlaces(data) {
   let html = ``;
   for (let x of data) {
     if (x.city == "İstanbul") {
-      html += `
+     html += `
       <div class="card-flex" onclick="goDetail(${x.num})">
       <div class="places-card" style="background-image:url('${x.image}');"></div>
       <h1 class="header-place">${x.campPlaceName}</h1>

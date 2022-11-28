@@ -62,24 +62,19 @@
                 <p class="subheader-main">CamperFinder</p>
             </div>
             <div class="search">
-                <input style="text-transform:capitalize;" class="search-input" onkeyup="myFunction()" id="searchInput"
-                    placeholder="Şehir Ara" type="text">
-                <button class="search-button" id="buttonSearch">
+                <input onkeyup="search()" style="text-transform:capitalize;" class="search-input" id="searchInput" placeholder="Şehir Ara"
+                    type="text">
+                <button onclick="search()" class="search-button" id="buttonSearch">
                     <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path
                             d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z" />
                     </svg>
                 </button>
             </div>
-            <div id="noneSearch">
-                <ul id="myUL">
-                    <li><a href="istanbul.html">İstanbul</a></li>
-                    <li><a href="istanbul.html">Istanbul</a></li>
-                    <li><a href="izmir.html">Izmir</a></li>
-                    <li><a href="izmir.html">İzmir</a></li>
-                    <li><a href="bursa.html">Bursa</a></li>
-                </ul>
+            <div id="search-result">
+
             </div>
+        
         </div>
     </section>
     <div class="wrapper">
@@ -163,8 +158,7 @@
                 <p class="camper-info">Aradığın kamp yerini kısa sürede bulmanda sana yardımcı olur.</p>
                 <div class="camper-cards">
                     <div class="cards">
-                        <img class="camper-image"
-                            src="https://lh3.googleusercontent.com/liy7EhiQjvF3NsxFXjZz2bOewTKpCHxbox3b8Thd_PPGuWdC8XIuuyEo4LC0oXaXvRvi6iEESlKheGwlWeP-MNN1w2x63G4mDNc4hCiOi4zC6IW6aFB4tJqn1-uEIFEI1IvV0qJtfFTsbX91hiuOLgvIcw3MyWc09wSod9yusASH06IsN8o8bixxo2Iq4SKAs8kphDZWFzZaIeiqELzuXqfJJo_scO3OsxR3XE-_m4InPrjeHoo4CuZwXEzrDeBkPlYrSi0RVO86u0qYzjwhyuyMCbhhdC7VSyTYLkCG2f5QvPEnJA1dZiokLRpyRGUNnwq0sZgjUqQzu2oDV-RjZHuqeTcTdRisOTHAjCSfDOoC0l0Rt4jtopGuxp6RS080K_3bO62mOjQiKKi0G3_w5s-IGbDDsR_DFmPNtZhWNjrDBNHnGAiI-2aYgnHr-1Fg3Zrh_VGfSWMyT7-EZkwMmzlVfRM3Snigj21NGin5nz3WRVD6IA1-0CVDXNb43Y_PK1WCRl_InDhybH8dD0ofEbwjzVoKLSj90GuB68v92Bff2TaquDnDY0bvk8AeVO8yrwHWxA5vAenB4aP_oNfiXEJEZTOGeuoPIL1-CG71MQBCzjDnfXO_TlTaNSJVA5qUWCUUzsejKeYkioC3ZLWA--y_CaPupfMBZo5r6Qey8vCEOFX-02zVpwNdDJDFEhX4_bc077tFbv2TkUzk4M1ow5PiTsvxzp67La0pDoAq6jzz3i3mG_n6KAfLgf7dghxitKZ6MmhkuKufHX19Yb6RHnP0e5pJwNbQqODxpnjwdkErlK2GTz_80Dj1-MbJAo0oEMWwC8hRMSkKa7JMZTew7LcMPe0P91G_13XtJF_j4cPLmHPD_1MdkkDbHRvFyMFZWInpA6Hvyzp0OMDxRjQM27Y0XVGBG1ESZXMvuBfWIiqZvBL2RN4MtsKHvx-2jS8UZ9fdku4m4pGUsjcoc56Bae7BMCbZxLzyzHiiG4vDFLxfu285XYJog8Qy6sI8KieAOgEhIfu4nieHV8sGkWr00CeI6iI=w1120-h750-no?authuser=3"
+                        <img class="camper-image" src="https://i.ibb.co/xSRXKHw/pexels-photo-1118785.jpg"
                             alt="Kamp alanlarını bul">
                         <p class="homepage-infos">
                             CamperFinder ile doğa kamp yerlerini kolayca bul. Kamp yerlerine ulaşmanın en kolay yolu,
@@ -172,24 +166,21 @@
                         </p>
                     </div>
                     <div class="cards">
-                        <img class="camper-image"
-                            src="https://lh3.googleusercontent.com/xxDAVee0et69Vk-I62cdPXa-2gIYi0J7RGdvjTllyGq-kA80CN74r3FOxQIVn65NO1QCps4UqMMGztgrmbf27bmRzg7QSIpIoVhgeKI9abY9bY4Q5hGaNjG-a4FxjUwIRruAvyY85DYd4A2xne-0ckdZxq4wg6OXs-QlohHe4MIRoM1MP9YMKiCoc8PImVI3r_TnD0D9WYvvcaSwv0jKZLbY1haI90i2xvHd1ZzNoX-CRudVyk8FYCh-0Zkza2nO69-qdUXiJ_BV7f5oLLepY_aLha7Zoj4DpKXZARIui_NhVVLen6iWVeoXQE-fgEmi21s2rQIPeHGMmLUwz9L2JXOhXL6ZYG_ywfgBZERRU7w_eN2a_IWWQl0uanaLyy9ZU-ic1XJRGyu0SWfxO5nrCXq5q3NkHNJCLfqqsab20PGHAfQut8K06eSo6ynFqEv0IvZAt3LFfUCh57eru00vSqXjCQ8jdo3cbS98xwp2uHEEKUnQW-dwABnIJcIEp7hQoYVQ9fCQt_o1-uKojZ_5BhVOBW1HpYfbtpHMtfzwJbQkVWLy16AW3rk-zco4_WK_ys4A2Zm6n0Q-306ssgZ2phRqpaYfCDCG1d-WrJfQKcAYvOq-yv_vHkhV9mHG1buGQaqlfGDRlfzmxznU05Q_pXQM0JPvqJbLo6WlctOr00omMA4c3LvQlRgF30iOgCzreShxhAF37RiChbP5iL5pFbSqzEjjn6JzAn1IMMVMZ4Ko7h3EuNkNdPGLjcY4Q8zBg-hRlcdXaJv5jHRLpNonUGNzGGYnZ3POHVEgHtoqGQyuM8GMMyve4_Q5yEwNz1u0rqxZD-ra3jBw3-DTIKbEc8gWKgUCull2a67WSVE4_cbwltccjYzzgQCmFS8-mw-Pm632AwYcM5ZQOAvTzKLOnZ4U42kN0Ny9Sx47cTN8k0thkvUbxz5ws27dr3X8ECuZUBKQC8IgSgf97LWbH2SgR8g9E1CRUCicqjonKTUae1EiWYDxTA5CBLvn0z44eVp40M4agPKxTJ8ir9XGdn-9GVBas5w=w760-h451-no?authuser=3"
+                        <img class="camper-image" src="https://i.ibb.co/JH9gjqW/pexels-photo-260593.jpg"
                             alt="Kamp Nerde Yapılır?">
                         <p class="homepage-infos">
                             CamperFinder gelişen ve devamlı büyüyen bir topluluk olmayı hedeflemektedir. Devamlılık ve
-                            gelişmemiz için her zaman katkılarınızı bekliyoruz.
+                            gelişmemiz için her zaman katkılarınızı b kliyoruz.
                         </p>
                     </div>
                     <div class="cards">
-                        <img class="camper-image"
-                            src="https://lh3.googleusercontent.com/kBF2AaxvjNwoV7VXJp1R7_ISqMPVRCSU7cDRiFIKwpYkODf8Y0AREXtMa-sfVzR2N8-LvbFbPMgyhDC7aC1StNTXYng-aeJVo6U6ekpID_OOVLZ71Di-Tn--wpRthIM48mh6S_V_BV4pQNQgbd2e1UM5RKpNv2ocGmBjsQqYqxSLqavCo5p0RatPiL_DJCe5TVeLsIjC-yCeCYh9o4Oi1rBWgzDbFbIAcQ7LuejagjVA_-CJz-r865pYhUYgcUSTBSdI1PU5V4ZlE0sfb8ap82PYEp2UTmY-EoeYZOYFxwc8n-jPeZ11MLcGKgGj8nnU9_HvRupQdAasESKfTOEzgqFqL_i-5EsPwZRVkKrq2o81yorTvIuiv66ttEvsWiVhKUY5xlDVr4egVoewoOW-OvkRFOZrsq5ALCIw1z0YhWlydly1OFMwRt1hyka4j6mxNAPISsBOjoOj3Q4Q-bDMx_I-ZUyFzj8A_MXsgBd7NAkKwLYUxOGo6btl4KhCKWQihDcy6vt0pPrXMjbsh5x5eMgJDtanV3qHRKoKphpJVtdcZmUIpMX5qnUh8rK3d6TQMb-K17QIYYop4Pf9sbiljTSY8AR2peCl_MzqnC7e1ckmiKiSVKzPt22atFYL9nFZp8OOzBpHaX15mKS0R2Y8CRHUsQi0kDBpIyt2y0Y8qMB3FE5HHtCJP7InwmJ9Ear0HgA3W1Sd4sUGzceGDy5U6fplQgJJm0a6wXFM-1jlI033r665V8peuBV9t1i3ipYKzp8A8n-MxEmQQyUK8W-VoucxJU5pisVzCIIjuPBIOl-3c49zLsJX65IYb7pnVKAp46n5tnyh4BvdDpAo9vsss0uegr07nprLbw1bSIXppu0g_Ur7Pel5nI1YEeLB4UuwKPKAE33p5f8nD4N8oGns25Ehb-qcrBdl17h3bPjG2bc5-el-GwmJJGwKtb0C44yiSztUT4tCIEOWlbCoRIzzmK27uZNxIjxa42wZAOMfkIMA6Y--7rQ3pXVGFPBh8mQVk7h4_aoWOAJgG-ekEYx0v8pTqLg=w1124-h750-no?authuser=3"
+                        <img class="camper-image" src="https://i.ibb.co/mSTtP92/pexels-photo-3232542.jpg"
                             alt="İstanbul Kamp Alanları">
                         <p class="homepage-infos">
                             CamperFinder insanların kamp alanlarını keşfetmesini tüm platformlara uyumlu akıcı arayüzü
                             ile sağlar.
                         </p>
                     </div>
-
                 </div>
                 <a class="join-us" href="./contributeus.html" style="padding-top:3rem;">Bize Katkıda Bulunun.</a>
             </div>
@@ -283,11 +274,7 @@
             </div>
         </footer>
 
-
-
     </div>
-
-
     <script src="./scripts/main.js"></script>
     <script src="./scripts/index.js"></script>
     <!-- Google tag (gtag.js) -->

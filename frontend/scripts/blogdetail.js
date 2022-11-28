@@ -9,7 +9,7 @@ async function blogDetailApi(url) {
 //API
 async function showPlaces(data) {
     let html = ``;
-
+    
     for (let x of data) {
         if (window.location.href[50] == x.num) {
             // console.log(window.location.href[44]) Web sitesi için

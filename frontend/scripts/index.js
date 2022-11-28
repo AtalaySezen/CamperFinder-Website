@@ -3,32 +3,7 @@ let searchButton = document.getElementById('searchButton');
 
 
 //SEARCH
-document.getElementById('noneSearch').style.display = "none";
 
-function myFunction() {
-
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('searchInput');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName('li');
-  if (input.value == "") {
-    document.getElementById('noneSearch').style.display = "none";
-  } else {
-    setTimeout(() => {
-      for (i = 0; i < li.length; i++) {
-        document.getElementById('noneSearch').style.display = "flex";
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-        } else {
-          li[i].style.display = "none";
-        }
-      }
-    }, 200);
-  }
-}
 
 //Text According To Seasons
 let seasonsText = document.getElementById('seasons');
@@ -122,5 +97,61 @@ getCurrentSeason();
 
 function goLink(event) {
   window.location.href = `${event}.html`
+}
+
+
+let apiPlaces = "https://camperfinder.org/node/node2/";
+
+async function placesApi(url) {
+  const response = await fetch(url);
+  data = await response.json();
+  await showPlaces(data);
+}
+
+//Show Data HTML;
+async function showPlaces(data) {
+  let searchCity = [];
+  data.map(x => {
+    searchCity.push(x.city);
+    uniqueArray = searchCity.filter(function (item, pos) {
+      return searchCity.indexOf(item) == pos;
+    })
+
+    uniqueArray.map(y => {
+      if (y.city == searchInput.value) {
+       console.log(searchInput.value)
+
+      }
+    })
+
+
+  })
+}
+
+placesApi(apiPlaces);
+
+
+function search() {
+  fetch(apiPlaces)
+  .then(response=>response.json())
+  let searchCity = [];
+  data.map(x=>{
+    searchCity.push(x.city.toLowerCase());
+
+    uniqueArray = [...new Set(searchCity)];
+    uniqueArray.map(a=>{
+      console.log(a)
+      let value = searchInput.value;
+      console.log(value)
+      if(a === value){
+        document.getElementById('search-result').innerHTML = `
+          <a style="color:white;" href="${a}.html">${a}</a>
+        `
+      }
+    })
+
+
+  })
+
 
 }

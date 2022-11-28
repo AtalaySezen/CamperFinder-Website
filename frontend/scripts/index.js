@@ -80,42 +80,42 @@ function getCurrentSeason() {
 getCurrentSeason();
 
 //Show Blogs From APİ
-let apiBlogs = 'https://camperfinder.org/node2/node3';
+// let apiBlogs = 'https://camperfinder.org/node2/node3';
 
-async function blogsApi(url) {
-  const response = await fetch(url);
+// async function blogsApi(url) {
+//   const response = await fetch(url);
 
-  data = await response.json();
-  showBlogs(data);
-}
-function showBlogs(data) {
-  let html = ``;
-  let slicedArray = data.slice(0, 3);
-  slicedArray.map(x => {
-    html += `
-    <div class="cards blogs" onclick="goDetail(${x.num})">
-    <img class="camper-image" src="${x.cardImage}" alt="">
-    <h1 class="blog-header">${x.blogHeader}</h1>
-    <p class="image-infos">
-    ${x.blogAnswer}
-    </p>
-    <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>
-    </div>`;
-    document.getElementById('blog-cards').innerHTML = html;
-  })
-}
+//   data = await response.json();
+//   showBlogs(data);
+// }
+// function showBlogs(data) {
+//   let html = ``;
+//   let slicedArray = data.slice(0, 3);
+//   slicedArray.map(x => {
+//     html += `
+//     <div class="cards blogs" onclick="goDetail(${x.num})">
+//     <img class="camper-image" src="${x.cardImage}" alt="">
+//     <h1 class="blog-header">${x.blogHeader}</h1>
+//     <p class="image-infos">
+//     ${x.blogAnswer}
+//     </p>
+//     <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>
+//     </div>`;
+//     document.getElementById('blog-cards').innerHTML = html;
+//   })
+// }
 
-blogsApi(apiBlogs);
-//Blog Detail Page
-function goDetail(id) {
-  let params = new URLSearchParams(`id=${id}`);
-  params.get('?id');
-  params.get(id);
-  window.location.href = ('blogdetail.html' + "?" + params)
-  //1-Detay sayfasına yönlendirilecek 
-  //2-Detay sayfasında query`de idyi verecek. 
-  //3-Detay sayfası yüklenirken, idye bakılacak. O id ile get atılacak. (Detay Sayfası Yükleme Fonksiyonudur
-}
+// blogsApi(apiBlogs);
+// //Blog Detail Page
+// function goDetail(id) {
+//   let params = new URLSearchParams(`id=${id}`);
+//   params.get('?id');
+//   params.get(id);
+//   window.location.href = ('blogdetail.html' + "?" + params)
+//   //1-Detay sayfasına yönlendirilecek 
+//   //2-Detay sayfasında query`de idyi verecek. 
+//   //3-Detay sayfası yüklenirken, idye bakılacak. O id ile get atılacak. (Detay Sayfası Yükleme Fonksiyonudur
+// }
 
 
 //Card Href Link

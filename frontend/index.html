@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/ms-icon-70x70.png">
     <meta name="description" content="İstanbul kamp alanları, doğa kamp alanları. Nerede kamp yapılır? Kamp alanları">
     <meta name="description" content="CamperFinder ile kamp alanları, doğa alanlarını kısa sürede bul. Doğa kamp alanlarının hepsine 
@@ -56,6 +57,10 @@
     </header>
     <section>
         <div class="search-container">
+            <div class="mainpage-header">
+                <h1 class="header-main">Kamp Yerlerini Kolayca Bul</h1>
+                <p class="subheader-main">CamperFinder</p>
+            </div>
             <div class="search">
                 <input style="text-transform:capitalize;" class="search-input" onkeyup="myFunction()" id="searchInput"
                     placeholder="Şehir Ara" type="text">
@@ -148,13 +153,14 @@
                 </div>
             </div>
             <div class="all-places">
+                <p class="camper-info">Aradığın Şehiri Bulamadın mı?</p>
                 <button onclick="goLink(id)" class="btn-alls" id="kampalanlari">Diğer Şehirleri Görüntüle</button>
             </div>
         </section>
         <section class="camper-infos">
             <div class="camping-container">
-                <h1 class="camper-header">CamperFinder kendinizi dışarıda bulmanın en basit yoludur!</h1>
-                <p class="camper-info">Senin için aradığın kamp yerini en kısa sürede bulur.</p>
+                <h1 class="camper-header">CamperFinder kamp yerlerini bulmanın en kolay yolu!</h1>
+                <p class="camper-info">Aradığın kamp yerini kısa sürede bulmanda sana yardımcı olur.</p>
                 <div class="camper-cards">
                     <div class="cards">
                         <img class="camper-image"

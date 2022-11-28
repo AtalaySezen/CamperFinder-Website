@@ -12,7 +12,7 @@ function showPlaces(data) {
   for (let x of data) {
     if (x.city == "İzmir") {
       html += `
-      <div class="card-flex" onclick="goDetail(${x.id})">
+      <div class="card-flex" onclick="goDetail(${x.num})">
       <div class="places-card" style="background-image:url('${x.image}');"></div>
       <small class="click-detail">Detay İçin Tıkla</small>
       <h1 class="header-place">${x.campPlaceName}</h1>
@@ -27,10 +27,10 @@ function showPlaces(data) {
 placesApi(apiPlaces);
 
 
-function goDetail(id) {
-  let params = new URLSearchParams(`id=${id}`);
+function goDetail(num) {
+  let params = new URLSearchParams(`id=${num}`);
   params.get('?id'); 
-  params.get(id); 
+  params.get(num); 
   window.location.href = ('detailplace.html' + "?" + params)
   //1-Detay sayfasına yönlendirilecek 
   //2-Detay sayfasında query`de idyi verecek. 

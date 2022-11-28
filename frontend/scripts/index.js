@@ -2,42 +2,6 @@ let searchInput = document.getElementById('searchInput');
 let searchButton = document.getElementById('searchButton');
 
 
-//Show Cards Data: 
-// let apiCards = 'http://camperfinder.org/node3/node4';
-
-// async function cardsApi(url) {
-//   const response = await fetch(url);
-
-//   data = await response.json();
-//   showCards(data);
-// }
-// function showCards(data) {
-//   let html = ``;
-
-//   for (let x of data) {
-//     html += `
-//         <a  href="${x.href}.html">
-//         <div class="card ${x.city}" id="card-city">
-//         <div id="card-head" class="card-head">
-//         <h1 class="header-card">${x.city}</h1>
-//         </div>
-//         <div id="card-image" class="image">
-//         <img class="card-image" src="${x.cardImage}" alt="Kamp Yerleri Bul">                
-//         </div>
-//         <div class="card-subheader">
-//         <p class="info-p">
-//         ${x.cardInfo}
-//         </p>
-//         <button class="btn-discover" href="javascript:void">Keşfet</button>
-//         </div>
-//         </div>
-//         </a>
-//         `;
-//   }
-//   document.getElementById('card-group').innerHTML = html;
-// }
-// cardsApi(apiCards);
-
 //SEARCH
 document.getElementById('noneSearch').style.display = "none";
 
@@ -156,7 +120,7 @@ function goDetail(id) {
 
 //Card Href Link
 
-function goLink(event){
+function goLink(event) {
   window.location.href = `${event}.html`
 
 }

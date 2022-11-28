@@ -27,10 +27,10 @@ function showPlaces(data) {
 placesApi(apiPlaces);
 
 
-function goDetail(id) {
-  let params = new URLSearchParams(`id=${id}`);
+function goDetail(num) {
+  let params = new URLSearchParams(`id=${num}`);
   params.get('?id'); 
-  params.get(id); 
+  params.get(num); 
   window.location.href = ('detailplace.html' + "?" + params)
   //1-Detay sayfasına yönlendirilecek 
   //2-Detay sayfasında query`de idyi verecek. 

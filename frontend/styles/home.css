@@ -1,6 +1,6 @@
 .search-container {
     width: 100%;
-    background-image: url('https://lh3.googleusercontent.com/hCLDqx2W0WSZGoY8opfFv132QHxCr7IOFx3B0HYh3AsoE5rPrlGO0huCycW8dU9zYowld1wLzxDh4Hl9TMsGQYDQhOYK0gkPRwhfmLd-g297p-bxpyVCG7OVP6hvDYvAE3IMFTzdliQdyudYEPtBVvGJiDSBQVjgsqTAT8HUNDAQAqSXHmj_md24uPfBDjbZvMBbyQ2WFxe-2OyHW2gRrpyl2D1bIRbq_kAgPVesSqmsHPkxUlZwhl3gO-DREc4kETIFBGJgXVoMOp3zkzUdOW7HpdqRoiwJjQxlhVae0_6CvS6w4MttFHehwPIqYMwW6gax5iMZ7uLm52W1z5IDqJI58WaFOwqJGO4uotDMqaPIEdlBiYKBXz-DrKSNevsjRFRkagJ2QVTFcbFrOc17jZrXs8SpzM17HZqLRpjsbOkw9P2qjZKXq0_HBU54yrJE_XjuQujCiMFxVROJG1bddu0CjUbKy6G27hXmqg0yR3LrayTy7a-VKfb-CHZfHsZJCsyYEZ_DfgIXy3zknPs58tT-i6DcFjuxyYSZCOFCwO8ltGP37fNsje5qoSYx0YYE0gWzyTRiDvL4V82jngTb1MfKfyXE2ycO0cwWDF3YfNha7pYT97NnsVw0CnC2gMjs5IBX4ZZNR5fZXbjCnEHG6R6BEO6NX4b6S1f6Z1wVrAA05liaGY5FO65YnHCzDVcgVhexTR2ck9JZNqHYLoHMqEDYlmZ1m8rWTibIGcODCHSrCyP91YPUCuojPdLCWukUm8p8t6c_7Li0XvLSGrEPa_cjqmi4qXpXFyQ1TB4_bUYSK-qRiQNQyQA_diMOwXOhtfE6BTRK4X6PgS4BxNHOXlm_bZFoO021OhNuy9iOjGLzqCVrYwxCxsHcQZPOTprIHz9_fFdfoEtp9Etn1K8qr8FuQnp_jxb0dkd9AO7fPj0dtPAh2c5Aw4h_xdOsOantqdLw1Pvn6dQmMno_ekpxUCJs17Kh7OuMlNy2mq-v8HTEnjW_9Kg04UiAGemdezwCSz23r8FhhRVjipIVWSqH9iSEi-I=w1499-h929-no?authuser=3');
+    background-image: url('https://i.ibb.co/5F5Sj6L/camperfinder.jpg');
     height: 68vh;
     background-position: 100%;
     background-repeat: no-repeat;
@@ -297,11 +297,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0 1rem;
 }
 
 .camper-image {
     width: 85%;
-    border-radius: 25px;
+    max-width: 450px;
+    min-height: 320px;
+    min-width: 450px;
+    max-height: 350px;
+    border-radius: 30px;
 }
 
 .image-infos {
@@ -319,14 +324,15 @@
 .homepage-infos {
     color: rgb(40, 64, 12);
     font-size: 1rem;
-    min-height: 91px;
-    width: 80%;
+    min-height: 100px;
+    width: 98%;
     padding-top: 1rem;
+    text-align: center;
 }
 
 .camper-seasons {
     width: 100%;
-    background-image: url('https://lh3.googleusercontent.com/PfLhe2hwCN-PD1YCVli-tj2cWwGfbp1If8TlpQgi4xDpXKWzyVEc-TcfQ-C_QVMSLwU3TZYf31rsKwEQVaP9tLKr4R4zUXVkiMgO8wqcOGL9divBya5ZKPotiDxSgYXfdo5-VkV6X_Uk4Qprnbz31uNcz_2jS_YDKU01I1_Xltg59GtoQ3lCI4GUhWLP_qtiPva9pTpJMYbW2W-w2Hwid9MrrlwIWQi0BsrtuMubTpNPWjKQbMbQ791uC64gF8laEY4DcrvgzpLzYmDGVky3Rs6KUY5y_ljO9rq28qwkKnb6RN94PlKbPhqURRa_t1lqzg9oObdMJvxhk9F5h4JGrEEfTuHUrMfUjDmbhEFi52z7H6UexPwcbYKo6_5q7MbQbINLQOOR-cs74Xkv8fvaitgXjNN8iuim-4HRKbvS2GYtoquggWfrrY-g5--4k-9LbXNBzEPNwGkZHzfXmB1fgQ0dYSidoQGE_SsOmHkUYcq83tgAxq9sOy6oCfT0PbBhmhGr5quK8BSFwyTfTuBXqNWvT-Mov13OVN3DDHmNZUHtvirVkwMJ8ng-ILmePYurwXacKAjXOTKt_LIaPZQnylbudnio9D53Mk0ljzCS9AZNLWFMbwD9zes_zdq-zKkbq_eG2S2WRZb6cKmm2YrQSL_YFaMacDio2H8cytyMZwUcqPGUyDxekJ-lokmm_7ThfjkissH-csmpsE0ucSLR4PtsE3bWmOk4yF95oA9GhW-q0apQtbeYoB32zqeMjLCfW8YWA5qj8VZnqO5-MSNScuBzpef3ERcvYA-U6sO-Vpk7OBIxuSUUNi4-DXelvjFLTxks_4-rV9Q16jEEIEl8NsVHdW3n2mjpExZ-o6MN4BhAG7iUA6ocP0lt9DfeBPI4dJ_yGds5MoE4zefm71yvRYbzWpXtnN19LNszzHEcSvvdeCQLP3pe6S4_8YK7jYbHQjf0yQ7caJEXdLtnuzBzFH_0IONgiTaqhfIOcB0AnBuFC79CYzNevlVFBAgn487HmoIHrKfVdkkdNV8HexTRc6IWhrY=w1394-h929-no?authuser=3');
+    background-image: url('https://i.ibb.co/hc55nr8/camperfinderanasayfa.jpg');
     background-size: cover;
     background-size: 100%;
     background-repeat: no-repeat;

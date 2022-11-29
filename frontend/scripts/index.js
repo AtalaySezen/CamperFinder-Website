@@ -119,7 +119,6 @@ async function showPlaces(data) {
     uniqueArray = searchCity.filter(function (item, pos) {
       return searchCity.indexOf(item) == pos;
     })
-
     uniqueArray.map(y => {
       if (y.city == searchInput.value) {
         console.log(searchInput.value)
@@ -139,11 +138,12 @@ function search() {
     .then(response => response.json())
   let searchCity = [];
   data.map(x => {
-    searchCity.push(x.city.toLowerCase());
+    searchCity.push(x.city.toLocaleLowerCase());
     arr = [...new Set(searchCity)];
-    let value = searchInput.value.toLowerCase();
+    let value = searchInput.value.toLocaleLowerCase();
+    let inputValue = value.replace(/^\s+|\s+$/gm,'').trim();
     for (i = 0; i < arr.length; i++) {
-      if (arr[i] === value) {
+      if (arr[i] === inputValue) {
         document.getElementById('search-result').innerHTML = `
           <p class="result-p" style=color:white;>Bulunan Şehirler:</p>
           <a class="result-href" href="${arr[i]}.html" style="color:white;">

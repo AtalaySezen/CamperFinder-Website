@@ -53,7 +53,10 @@
 .swiper {
     width: 70%;
     height: 70%;
+    user-select: none;
 }
+
+
 :root{
     --swiper-theme-color: rgb(224, 80, 40) !important;
 }

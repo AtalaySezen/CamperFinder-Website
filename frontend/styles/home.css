@@ -434,7 +434,10 @@
 
 @media(max-width:900px) {
     .header-main {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+    }
+    .subheader-main{
+        font-size: 1.3rem;
     }
 
     .container-places {
@@ -443,12 +446,13 @@
 
     .camper-infos {
         margin-bottom: 0;
+
     }
 
     .camper-info {
         padding-top: 0.4rem;
         font-size: 0.9rem;
-        width: 80%;
+        width: 100%;
         text-align: center;
     }
 
@@ -463,6 +467,10 @@
 
     .search {
         width: 90%;
+    }
+    .sub-card{
+        align-items: center;
+        text-align: center;
     }
 
     .btn-alls {
@@ -549,6 +557,7 @@
 
     .homepage-infos {
         min-height: none;
+        width: 90%;
     }
 
     .buttonContainer {
@@ -569,7 +578,7 @@
     }
 
     .sub-info {
-        width: 100%;
+        width: 105%;
         font-size: 14px;
         line-height: 24px;
     }

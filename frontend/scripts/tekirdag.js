@@ -8,7 +8,7 @@ async function placesApi(url) {
 
 //Show Data HTML;
 function showPlaces(data) {
-  let html = ``; 
+  let html = ``;
   for (let x of data) {
     if (x.city == "Tekirdağ") {
       html += `
@@ -18,8 +18,7 @@ function showPlaces(data) {
       <h1 class="header-place">${x.campPlaceName}</h1>
       <p class="info-place">${x.info}</p>
       </div>`;
-
-}
+    }
     document.getElementById('istanbul').innerHTML = html;
   }
 }
@@ -29,8 +28,8 @@ placesApi(apiPlaces);
 
 function goDetail(num) {
   let params = new URLSearchParams(`id=${num}`);
-  params.get('?id'); 
-  params.get(num); 
+  params.get('?id');
+  params.get(num);
   window.location.href = ('detailplace.html' + "?" + params)
   //1-Detay sayfasına yönlendirilecek 
   //2-Detay sayfasında query`de idyi verecek. 

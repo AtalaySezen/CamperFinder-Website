@@ -84,7 +84,8 @@
     .info-us {
         text-align: center;
         font-size: 0.9rem;
-        padding-top: 1rem;
         width: 60%;
+        margin-top: 0.5rem;
+        
     }
 }

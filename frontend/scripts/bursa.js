@@ -10,12 +10,7 @@ async function placesApi(url) {
       numberCity.push(x.num);
       console.log(numberCity.length)
     }
-
   })
-
-
-
-
   showPlaces(data);
 }
 

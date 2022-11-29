@@ -38,6 +38,7 @@
     color: rgb(216, 70, 39);
     text-align: center;
     font-size: 1.2rem;
+    font-weight: 500;
     padding: 0.7rem 0;
     width: 60%;
 }
@@ -90,6 +91,6 @@
     }
 
     .subheader-blog {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }

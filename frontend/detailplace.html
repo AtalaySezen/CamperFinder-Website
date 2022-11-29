@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/ms-icon-70x70.png">
     <title>CamperFinder | Detay</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/detailpage.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -32,18 +32,7 @@
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
             <ul class="menu">
                 <li><a href="./index.html">Anasayfa</a></li>
-                <div class="dropdown">
-                    <button class="dropbtn">Kamp Alanları
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" lang="tr">
-                        <a href="./istanbul.html">İstanbul</a>
-                        <a href="./ankara.html">Ankara</a>
-                        <a href="./izmir.html">İzmir</a>
-                        <a href="./Bursa.html">Bursa</a>
-                        <a href="./kampalanlari.html">Tüm Şehirler</a>
-                    </div>
-                </div>
+                <li><a href="./kampalanlari.html">Kamp Alanları</a></li>
                 <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./contributeus.html">Hakkımızda</a></li>
                 <li><a href="./map.html">Harita</a></li>
@@ -53,9 +42,8 @@
     </header>
     <div class="wrapper">
         <div class="detail-flex">
-            <div class="detail-page" id="detail-page">
-                <div class="detailHead" id="details-info">
-                </div>
+            <div id="detail-header">
+                <!--Header-->
             </div>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper" id="swiper">
@@ -67,15 +55,62 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
+            <div class="detail-page" id="detail-page">
+                <div class="detailHead" id="details-info">
+                    <!--Place Info-->
+                </div>
+                <!---Check What Have-->
+                <div class="container-row">
+
+                    <div class="container-detail">
+                        <h1 class="check-header">
+                            Neler Var?
+                        </h1>
+                        <div class="check-items">
+                            <div class="circle-check" id="icon-toilet">
+
+                            </div>
+                            <p class="check-info">Tuvalet</p>
+                        </div>
+
+                        <div class="check-items">
+                            <div class="circle-check" id="icon-shower">
+                              
+                            </div>
+                            <p class="check-info">Duş</p>
+                        </div>
+
+                        <div class="check-items">
+                            <div class="circle-check" id="icon-market">
+                              
+                            </div>
+                            <p class="check-info">Market</p>
+                        </div>
+
+                        <div class="check-items">
+                            <div class="circle-check" id="icon-internet">
+
+                            </div>
+                            <p class="check-info">İnternet</p>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+            <a class="join-us" onclick="history.back()">Kamp Alanlarına Geri Dön</a>
+
         </div>
-        <div class="adress-info" id="adress-info">
-            <h1 class="header-detail">Adres</h1>
-            <p class="detail-subheader">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad beatae error sunt mollitia cumque iure?
-            </p>
-        </div>
-    </div>
-  <footer>
+        <footer>
             <div class="footer-camper">
                 <div class="footer-info">
                     <h2 class="footer-about">
@@ -118,10 +153,10 @@
                 </div>
             </div>
             <div class="sub-footer">
-               <div class="footer-cities">
+                <div class="footer-cities">
                     <h3 class="footer-about">Kamp Alanları</h3>
                     <div class="href-cities">
-                      <a class="footer-a" href="./istanbul.html">İstanbul</a>
+                        <a class="footer-a" href="./istanbul.html">İstanbul</a>
                         <a class="footer-a" href="./ankara.html">Ankara</a>
                         <a class="footer-a" href="./antalya.html">Antalya</a>
                         <a class="footer-a" href="./izmir.html">İzmir</a>
@@ -143,9 +178,9 @@
             </div>
         </footer>
 
-    <script src="./scripts/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="./scripts/detailplace.js"></script>
+        <script src="./scripts/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="./scripts/detailplace.js"></script>
 
 </body>
 

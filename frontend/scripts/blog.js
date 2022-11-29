@@ -22,7 +22,6 @@ function showBlogs(data) {
       </div>`;
     document.getElementById('blogs').innerHTML = html;
   }
-
 }
 
 blogsApi(apiBlogs);

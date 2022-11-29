@@ -101,7 +101,7 @@ header a:hover {
   cursor: pointer;
   display: inline-block;
   float: right;
-  padding: 28px 20px;
+  padding: 31px 20px;
   position: relative;
   user-select: none;
 }
@@ -141,7 +141,7 @@ header a:hover {
 }
 
 .header .menu-btn:checked~.menu {
-  max-height: 320px;
+  max-height: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -584,7 +584,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 5px;
-    width: 70%;
+    width: 65%;
   }
   .footer-a{
     font-weight: 500;

@@ -1,9 +1,11 @@
 .detail-page {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .card {
@@ -19,12 +21,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2rem;
+    padding: 2rem 0;
     margin-top: 2rem;
     width: 100%;
     background-color: white;
     border-radius: 35px;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .detailHead {
@@ -36,29 +38,24 @@
 .header-detail {
     color: rgb(40, 64, 12);
     font-size: 1.9rem;
+    margin-bottom: 1rem;
 }
 
 .detail-subheader {
-    color: rgb(224, 80, 40);
+    color: rgb(40, 64, 12);
     font-weight: 530;
 }
 
-.adress-info {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-top: 2rem;
-    width: 100%;
-    border-radius: 35px;
-    background-color: white;
 
-}
+
 
 /*SLİDER */
 .swiper {
     width: 70%;
     height: 70%;
+}
+:root{
+    --swiper-theme-color: rgb(224, 80, 40) !important;
 }
 
 .swiper-slide {
@@ -99,4 +96,71 @@
     object-fit: cover;
 }
 
-/*SLİDER */
+/*Check Items CSS */
+.container-row{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    padding:1rem 0;
+}
+.checks-row{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.container-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.check-items {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.icon-check {
+    fill: green;
+    width: 25px;
+}
+.icon-cross {
+    fill: red;
+    width: 20px;
+}
+.check-header{
+    color: rgb(40, 64, 12);
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+}
+
+
+.circle-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: aliceblue;
+    border-radius: 35px;
+}
+.check-info{
+    margin: 0 5px;
+}
+
+@media(max-width:900px) {
+    .header-detail {
+        font-size: 1.2rem;
+    }
+
+    .detail-subheader {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .swiper {
+        width: 95%;
+        height: 95%;
+    }
+}

@@ -14,7 +14,6 @@ async function showPlaces(data) {
         let params = (new URL(document.location)).searchParams;
         let name = params.get("id");
         if (name == x.num) {
-            // console.log(window.location.href[44]) Web sitesi için
             html += `
             <div class="header-blog">
             <h1 class="detail-header"> ${x.blogHeader}</h1>

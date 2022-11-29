@@ -11,21 +11,17 @@ async function showPlaces(data) {
     let html = ``;
     
     for (let x of data) {
-        if (window.location.href[50] == x.num) {
+        let params = (new URL(document.location)).searchParams;
+        let name = params.get("id");
+        if (name == x.num) {
             // console.log(window.location.href[44]) Web sitesi için
-            if (x.blogAnswer2 == null && x.blogList == null) {
-                x.blogAnswer2 = "CamperFinder"
-                x.blogList = "Camper Finder"
-            }
-
             html += `
             <div class="header-blog">
-            <img class="camper-image" src="${x.cardImage}" alt="">
             <h1 class="detail-header"> ${x.blogHeader}</h1>
+            <img class="camper-image" src="${x.image}" alt="">
             </div>
             <div class="main-blog">
-            <p class="blog-text">${x.blogAnswer}</p>
-            <p id="blogAnswer2" class="blog-text">${x.blogAnswer2}</p>
+            ${x.html}
             </div>
 `;
             document.getElementById('details-info').innerHTML = html;

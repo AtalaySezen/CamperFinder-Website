@@ -33,9 +33,9 @@ button:hover {
 /*NAVBAR*/
 .navbar-logo {
   position: relative;
-  width: 30px;
-  top: 1.1rem;
-  fill: rgb(0, 197, 133);
+  width: 28px;
+  top: 1.2rem;
+  fill: rgb(129, 154, 105) !important;
 }
 
 header a {
@@ -414,7 +414,17 @@ footer {
   flex-direction: column;
   position: relative;
   left: 0.8rem;
+  align-items: center;
+  justify-content: center;
 }
+.href-cities{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 95%;
+  margin-top: 5px;
+}
+
 
 .cities-column {
   display: flex;
@@ -429,7 +439,8 @@ footer {
   margin: 5px;
   color: rgb(40, 64, 12);
   text-decoration: underline;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 500;
   text-align: left;
 }
 
@@ -567,6 +578,16 @@ footer {
   }
   .join-us{
     font-size: 1rem;
+  }
+  .href-cities{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    width: 70%;
+  }
+  .footer-a{
+    font-weight: 500;
   }
 
 }

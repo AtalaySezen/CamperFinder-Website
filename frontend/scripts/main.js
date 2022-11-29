@@ -14,3 +14,5 @@ function randomEmoji() {
   return emoji[random];
 }
 console.log('%c Camperfinder%s!','background: rgb(40, 64, 12); color: white; ', randomEmoji());
+
+

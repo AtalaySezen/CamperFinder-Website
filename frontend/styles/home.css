@@ -11,20 +11,24 @@
     align-items: center;
     justify-content: center;
 }
-.mainpage-header{
+
+.mainpage-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 1.5rem;
 }
-.header-main{
+
+.header-main {
     color: white;
     font-size: 2.5rem;
 }
-.subheader-main{
+
+.subheader-main {
     color: white;
     font-size: 1.4rem;
 }
+
 .search {
     display: flex;
     align-items: center;
@@ -45,8 +49,8 @@
     margin: 0 8px;
     padding: padding;
     padding: 22px 15px;
-    margin: 0.7rem ;
-    text-transform:lowercase;
+    margin: 0.7rem;
+    text-transform: lowercase;
 }
 
 
@@ -78,7 +82,8 @@
     fill: white;
     width: 50%;
 }
-.all-places{
+
+.all-places {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -282,6 +287,11 @@
     margin: 0 1rem;
 }
 
+.blog-image {
+    width: 100%;
+    border-radius: 25px;
+}
+
 .cards:hover {
     cursor: pointer;
     transition: 0.5s;
@@ -356,8 +366,15 @@
 }
 
 .blog-header {
-    color: rgb(40, 64, 12);
+    color: rgb(224, 80, 40);
     text-align: center;
+}
+
+.blog-html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .blogs {
@@ -390,26 +407,28 @@
     color: rgb(224, 80, 40);
 }
 
-#search-result{
+#search-result {
     display: flex;
     align-items: center;
     margin: 1rem 0;
     height: 30px;
 }
-.result-p{
+
+.result-p {
     color: white;
     margin: 0 8px;
     font-size: 16px;
 }
-.href-span{
+
+.href-span {
     text-transform: capitalize;
 }
 
 @media(max-width:900px) {
-    .header-main{
+    .header-main {
         font-size: 1.6rem;
     }
-   
+
     .container-places {
         padding: 4rem 0;
     }
@@ -445,7 +464,8 @@
         height: 50px;
         margin-top: 1rem;
     }
-    .all-places{
+
+    .all-places {
         margin-top: 1rem;
     }
 
@@ -548,5 +568,13 @@
 
     .btn {
         font-size: 17px;
+    }
+
+    .blog-html {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
     }
 }

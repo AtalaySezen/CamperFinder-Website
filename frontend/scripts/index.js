@@ -55,7 +55,7 @@ function getCurrentSeason() {
 getCurrentSeason();
 
 //Show Blogs From APİ
-let apiBlogs = 'https://camperfinder.org/node2/node3';
+let apiBlogs = 'http://camperfinder.org/node2/node3';
 
 async function blogsApi(url) {
   const response = await fetch(url);
@@ -67,18 +67,21 @@ function showBlogs(data) {
   let html = ``;
   let slicedArray = data.slice(0, 3);
   slicedArray.map(x => {
+    if (x.image == null) {
+      x.image = "https://i.ibb.co/xSRXKHw/pexels-photo-1118785.jpg"
+    }
     html += `
-    <div class="cards blogs" onclick="goDetail(${x.num})">
-    <img class="camper-image" src="${x.cardImage}" alt="">
+    <div class="cards blogs" onclick="goDetail(${x.num})"> 
+    <img class="blog-image" src="${x.image}">
     <h1 class="blog-header">${x.blogHeader}</h1>
-    <p class="image-infos">
-    ${x.blogAnswer}
-    </p>
-    <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>
+    <div class="blog-html">
+    ${x.html}
+    </div>
     </div>`;
     document.getElementById('blog-cards').innerHTML = html;
   })
 }
+
 
 blogsApi(apiBlogs);
 //Blog Detail Page

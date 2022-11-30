@@ -166,4 +166,14 @@
         width: 95%;
         height: 95%;
     }
+    .swiper-slide img{
+        max-width: 100%;
+        min-height: 100%;
+    }
+    .detail-page{
+        margin-top: 0;
+    }
+    .icon-check,.icon-cross{
+        width: 15px;
+    }
 }

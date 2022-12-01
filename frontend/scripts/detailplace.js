@@ -135,12 +135,7 @@ function detailInfo() {
                                         
                                     `}
                     }
-
-
-
                 }
-
-
 
             })
 
@@ -149,3 +144,4 @@ function detailInfo() {
 }
 
 detailInfo();
+

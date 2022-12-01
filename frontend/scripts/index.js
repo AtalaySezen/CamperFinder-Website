@@ -2,9 +2,6 @@ let searchInput = document.getElementById('searchInput');
 let searchButton = document.getElementById('searchButton');
 
 
-//SEARCH
-
-
 //Text According To Seasons
 let seasonsText = document.getElementById('seasons');
 function getCurrentSeason() {
@@ -14,9 +11,7 @@ function getCurrentSeason() {
   if (month > 3 && month < 6) {
     seasonsText.innerHTML = "İlkbahar'ın tadını en güzel kamp alanlarında çıkarın.";
     return 'spring';
-
   }
-
   if (month > 6 && month < 9) {
     seasonsText.innerHTML = "Yaz'ın tadını en güzel kamp alanlarında çıkarın.";
     return 'summer';
@@ -51,6 +46,7 @@ function getCurrentSeason() {
 
   console.error('Unable to calculate current season');
 }
+
 //Start seasons function
 getCurrentSeason();
 
@@ -82,7 +78,6 @@ function showBlogs(data) {
   })
 }
 
-
 blogsApi(apiBlogs);
 //Blog Detail Page
 function goDetail(id) {
@@ -93,13 +88,6 @@ function goDetail(id) {
   //1-Detay sayfasına yönlendirilecek 
   //2-Detay sayfasında query`de idyi verecek. 
   //3-Detay sayfası yüklenirken, idye bakılacak. O id ile get atılacak. (Detay Sayfası Yükleme Fonksiyonudur
-}
-
-
-//Card Href Link
-
-function goLink(event) {
-  window.location.href = `${event}.html`
 }
 
 
@@ -125,13 +113,10 @@ async function showPlaces(data) {
 
       }
     })
-
-
   })
 }
 
 placesApi(apiPlaces);
-
 
 function search() {
   fetch(apiPlaces)
@@ -141,7 +126,7 @@ function search() {
     searchCity.push(x.city.toLocaleLowerCase());
     arr = [...new Set(searchCity)];
     let value = searchInput.value.toLocaleLowerCase();
-    let inputValue = value.replace(/^\s+|\s+$/gm,'').trim();
+    let inputValue = value.replace(/^\s+|\s+$/gm, '').trim();
     for (i = 0; i < arr.length; i++) {
       if (arr[i] === inputValue) {
         document.getElementById('search-result').innerHTML = `

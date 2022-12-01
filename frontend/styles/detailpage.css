@@ -57,7 +57,7 @@
 }
 
 
-:root{
+:root {
     --swiper-theme-color: rgb(224, 80, 40) !important;
 }
 
@@ -100,24 +100,27 @@
 }
 
 /*Check Items CSS */
-.container-row{
+.container-row {
     display: flex;
     flex-direction: row;
     width: 85%;
-    padding:1rem 0;
+    padding: 1rem 0;
 }
-.checks-row{
+
+.checks-row {
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
 }
-.container-detail{
+
+.container-detail {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
 }
+
 .check-items {
     display: flex;
     align-items: center;
@@ -128,11 +131,13 @@
     fill: green;
     width: 25px;
 }
+
 .icon-cross {
     fill: red;
     width: 20px;
 }
-.check-header{
+
+.check-header {
     color: rgb(40, 64, 12);
     font-size: 1.9rem;
     margin-bottom: 1rem;
@@ -148,9 +153,19 @@
     background: aliceblue;
     border-radius: 35px;
 }
-.check-info{
+
+.check-info {
     margin: 0 5px;
 }
+
+.detail-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
 
 @media(max-width:900px) {
     .header-detail {
@@ -166,14 +181,18 @@
         width: 95%;
         height: 95%;
     }
-    .swiper-slide img{
+
+    .swiper-slide img {
         max-width: 100%;
         min-height: 100%;
     }
-    .detail-page{
+
+    .detail-page {
         margin-top: 0;
     }
-    .icon-check,.icon-cross{
+
+    .icon-check,
+    .icon-cross {
         width: 15px;
     }
 }

@@ -381,7 +381,7 @@ a {
 }
 
 .none {
-  display: none;
+  display: none !important;
 }
 
 /*LOADER */
@@ -531,6 +531,29 @@ footer {
   color: rgb(224, 80, 40);
   transition: 0.5s;
 }
+
+
+/* .scroll-container{
+  display: flex;
+  position: relative;
+  align-items: center;
+  right: 123rem;
+  bottom: 186rem;
+}
+.scroll-container:hover{
+  cursor: pointer;
+}
+.go-top{
+  width: 50px;
+  position: absolute;
+  fill: white;
+  background-color: rgb(216, 70, 39);
+  border-radius: 35px;
+  left: 207rem;
+  padding: 10px;
+  top: 174rem;
+} */
+
 @media(max-width:900px) {
   footer {
     height: 100%;

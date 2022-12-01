@@ -9,7 +9,7 @@ async function blogDetailApi(url) {
 //API
 async function showPlaces(data) {
     let html = ``;
-    
+
     for (let x of data) {
         let params = (new URL(document.location)).searchParams;
         let name = params.get("id");

@@ -34,7 +34,10 @@ function goDetail(num) {
   //2-Detay sayfasında query`de idyi verecek. 
   //3-Detay sayfası yüklenirken, idye bakılacak. O id ile get atılacak. (Detay Sayfası Yükleme Fonksiyonudur
 }
-
+function goTopPage(){
+  console.log("çalış")
+  window.scrollTo(0,0);
+}
 
 
 

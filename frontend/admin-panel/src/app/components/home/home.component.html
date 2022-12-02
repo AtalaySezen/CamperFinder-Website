@@ -1,1 +1,21 @@
-    <p>home works!</p>
+<div class="flex-cards">
+    <ng-container *ngFor="let item of placesData">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{item.city}}</mat-card-title>
+                <mat-card-subtitle>{{item.campPlaceName}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{item.image}}" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>
+                    {{item.info}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary">Düzenle</button>
+                <button mat-raised-button color="warn" [value]="item.id" (click)="deletePlace(item._id)">Sil</button>
+            </mat-card-actions>
+        </mat-card>
+    </ng-container>
+</div>

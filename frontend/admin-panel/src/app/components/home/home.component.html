@@ -1,5 +1,16 @@
+
+<select class="select-city" name="Cities" (change)="changeCity($event)">
+    <option value="">Select</option>
+    <option value="selectall">Hepsini Göster</option>
+    <option [value]="item.city" *ngFor="let item of placesData">
+        {{item.city}}
+    </option>
+</select>
+<mat-progress-bar  [color]="color"
+*ngIf="loadingTable" mode="indeterminate"></mat-progress-bar>
 <div class="flex-cards">
-    <ng-container *ngFor="let item of placesData">
+    <ng-container *ngFor="let item of selectedData">
+        
         <mat-card class="example-card">
             <mat-card-header>
                 <div mat-card-avatar class="example-header-image"></div>
@@ -13,7 +24,7 @@
                 </p>
             </mat-card-content>
             <mat-card-actions>
-                <button mat-raised-button color="primary">Düzenle</button>
+                <!-- <button mat-raised-button color="primary" (click)="openDialog(item._id, item.info,item.city)">Düzenle</button> -->
                 <button mat-raised-button color="warn" [value]="item.id" (click)="deletePlace(item._id)">Sil</button>
             </mat-card-actions>
         </mat-card>

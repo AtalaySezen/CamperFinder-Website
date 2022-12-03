@@ -22,7 +22,7 @@ export class PlacesapiService {
   DeletePlace(id:number):Observable<any>{
     return this.http.delete<any>(environment.placesUrl+{id});
   }
-
+ 
 
     
 

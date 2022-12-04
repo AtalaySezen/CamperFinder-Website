@@ -8,21 +8,21 @@ function getCurrentSeason() {
   const now = new Date();
   const month = now.getMonth() + 1;
 
-  if (month > 3 && month < 6) {
+  if (month > 3 && month <= 6) {
     seasonsText.innerHTML = "İlkbahar'ın tadını en güzel kamp alanlarında çıkarın.";
     return 'spring';
   }
-  if (month > 6 && month < 9) {
+  if (month > 6 && month <= 9) {
     seasonsText.innerHTML = "Yaz'ın tadını en güzel kamp alanlarında çıkarın.";
     return 'summer';
   }
 
-  if (month > 9 && month < 12) {
+  if (month > 9 && month <= 12) {
     seasonsText.innerHTML = "Sonbahar'ın tadını en güzel kamp alanlarında çıkarın.";
     return 'fall';
   }
 
-  if (month >= 1 && month < 3) {
+  if (month >= 1 && month <= 3) {
     seasonsText.innerHTML = "Kış'ın tadını en güzel kamp alanlarında çıkarın.";
     return 'winter';
   }

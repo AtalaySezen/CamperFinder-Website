@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { PlacesapiService } from 'src/app/services/placesapi.service';
 import { HttpClient } from '@angular/common/http';
 import { MatTableDataSource } from '@angular/material';
-import { MatDialog } from '@angular/material/dialog';
-import { DialogHomeComponent } from '../dialog-home/dialog-home.component';
-
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { DialoghomeComponent } from './dialoghome/dialoghome.component';
+export interface DialogData {
+  animal: 'panda' | 'unicorn' | 'lion';
+}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -16,7 +18,7 @@ export class HomeComponent implements OnInit {
   selectedData: Array<any> = [];
   color: string = "primary";
   loadingTable: boolean = false;
-  constructor(private http: HttpClient, private placesapi: PlacesapiService, private dialog: MatDialog) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public dialogRef: MatDialogRef<DialoghomeComponent>, private http: HttpClient, private placesapi: PlacesapiService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.places();
@@ -55,13 +57,26 @@ export class HomeComponent implements OnInit {
         alert("Şehir Silinemedi Bir Hata Var.")
       }
     )
+  }
 
+
+
+  //??
+  openDialog() {
+    this.dialog.open(DialoghomeComponent);
   }
 
 
 
 
-
-
-
 }
+
+
+
+
+
+
+
+
+
+

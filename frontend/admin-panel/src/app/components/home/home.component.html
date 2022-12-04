@@ -1,3 +1,4 @@
+<button mat-raised-button (click)="openDialog()">Open dialog without animation</button>
 
 <select class="select-city" name="Cities" (change)="changeCity($event)">
     <option value="">Select</option>
@@ -24,7 +25,7 @@
                 </p>
             </mat-card-content>
             <mat-card-actions>
-                 <button mat-raised-button color="primary">Düzenle</button> 
+                 <button mat-raised-button color="primary">Düzenle</button>
                  <button mat-raised-button color="warn" [value]="item.id" (click)="deletePlace(item._id)">Sil</button>
             </mat-card-actions>
         </mat-card>

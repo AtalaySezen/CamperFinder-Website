@@ -10,34 +10,34 @@ import {MatTableModule} from '@angular/material/table';
 import { MatTableDataSource } from '@angular/material';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatButtonModule} from '@angular/material/button';
-import {MatDialogModule} from '@angular/material/dialog';
-import { DialogHomeComponent } from './components/dialog-home/dialog-home.component';
+import {MatDialogModule, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlacedetailComponent } from './components/placedetail/placedetail.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import { EditblogComponent } from './components/editblog/editblog.component';
 import { LoginComponent } from './components/login/login.component';
+import { DialoghomeComponent } from './components/home/dialoghome/dialoghome.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DialogHomeComponent,
     PlacedetailComponent,
     EditblogComponent,
-    LoginComponent
+    LoginComponent,
+    DialoghomeComponent
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     MatToolbarModule,
     MatIconModule,
-    MatSidenavModule,
+    MatMenuModule,
     FormsModule,
     MatTableModule,
     HttpClientModule,
@@ -51,7 +51,9 @@ import { LoginComponent } from './components/login/login.component';
     MatButtonModule,
     AppRoutingModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {provide: MatDialogRef, useValue: {}},
+    {provide: MAT_DIALOG_DATA, useValue: []},
+],  bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,13 @@
 <p>
   <mat-toolbar color="primary">
-    <span>My Application</span>
+    <span>CamperFinder</span>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button routerLink="home" mat-menu-item>Kamp Alanları</button>
+      <button routerLink="placedetail" mat-menu-item>Kamp Detay</button>
+    </mat-menu>
   </mat-toolbar>
 </p>
 
-  <router-outlet></router-outlet>
+
+<router-outlet></router-outlet>

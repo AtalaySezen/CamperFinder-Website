@@ -17,17 +17,27 @@ import { FormsModule } from '@angular/forms';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PlacedetailComponent } from './components/placedetail/placedetail.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import { EditblogComponent } from './components/editblog/editblog.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DialogHomeComponent
+    DialogHomeComponent,
+    PlacedetailComponent,
+    EditblogComponent,
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
     FormsModule,
     MatTableModule,
     HttpClientModule,

@@ -1,8 +1,20 @@
-<h1 mat-dialog-title>Delete file</h1>
-<div mat-dialog-content>
-  Would you like to delete cat.jpeg?
-</div>
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close>No</button>
-  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
-</div>
+<h1 class="mat-dialog-title">{{data.campPlaceName}}</h1>
+<form [formGroup]="Form" class="flex flex-col">
+    <ng-container class="mt-3">
+        <mat-label class="header-dialog">Kamp Alanı Açıklaması</mat-label>
+        <p>
+            {{data.info}}
+        </p>
+    </ng-container>
+    <mat-dialog-content style="margin-top:1rem;">
+        <mat-form-field appearance="outline" class="w-full">
+            <mat-label translate>Note</mat-label>
+            <textarea matInput type="text" formControlName="info" placeholder="info">
+            </textarea>
+        </mat-form-field>
+    </mat-dialog-content>
+    <div mat-dialog-actions class="flex justify-end">
+        <button mat-raised-button color="warn" translate (click)="closeDialog()">Cancel</button>
+        <button mat-raised-button color="primary" (click)="saveDialog()"  translate>Save</button>
+    </div>
+</form>

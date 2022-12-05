@@ -7,7 +7,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
-import { MatTableDataSource } from '@angular/material';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
@@ -22,6 +21,9 @@ import { EditblogComponent } from './components/editblog/editblog.component';
 import { LoginComponent } from './components/login/login.component';
 import { DialoghomeComponent } from './components/home/dialoghome/dialoghome.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,10 @@ import {MatMenuModule} from '@angular/material/menu';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    ReactiveFormsModule,
     MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatIconModule,
     MatMenuModule,
     FormsModule,

@@ -329,6 +329,24 @@ a {
 }
 
 /*LOADER */
+.loader-spin{
+  font-size: 25px;
+  color: rgb(40, 64, 12);
+}
+.loader-spin::after {
+  animation: ellipsis 2s steps(3) infinite;
+  content: "...";
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+@keyframes ellipsis {
+  0% { width: 0; }
+  75% { width: 3ch; }
+  100% { width: 3ch; }
+}
+
 .preloader {
   align-items: center;
   background: #FFF;
@@ -566,6 +584,12 @@ footer {
 } */
 
 @media(max-width:900px) {
+  .loader-spin{
+    font-size: 20px;
+    color: rgb(40, 64, 12);
+    text-align: center;
+    width: 80%;
+  }
   footer {
     height: 100%;
   }

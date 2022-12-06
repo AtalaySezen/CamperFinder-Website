@@ -25,23 +25,9 @@ async function showPlaces(data) {
     let params = (new URL(document.location)).searchParams;
     let name = params.get("id")
     for (let x of data) {
-        if (x.image2 == null && x.image3 == null) {
-            x.image2 = "https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
-            x.image3 = "https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
-        }
+
         ;
         if (name == x.num) {
-            html += `
-            <div class="swiper-slide">
-             <img src="${x.image}" alt="${x.alt}">
-             </div>
-             <div class="swiper-slide">
-             <img src="${x.image2}" alt="${x.alt}">
-             </div>
-            <div class="swiper-slide">
-            <img src="${x.image3}" alt="${x.alt}">
-            </div>`;
-            document.getElementById('swiper').innerHTML = html;
             //Show Header And Info Texts:
             html2 += `
             <h1 class="header-detail">${x.campPlaceName} Hakkında</h1>
@@ -63,6 +49,8 @@ placesApi(detailPlaces);
 let detailInfoApı = 'http://camperfinder.org/node3/node4'
 
 function detailInfo() {
+
+    let html = ``;
     //Get Params ID
     let params = (new URL(document.location)).searchParams;
     let name = params.get("id")
@@ -72,7 +60,19 @@ function detailInfo() {
         .then(data =>
             data.map(a => {
                 for (let y of data) {
+                    console.log(y);
                     if (name == y.num) {
+                        html += `
+                        <div class="swiper-slide">
+                         <img src="${y.image1}" alt="${y.alt}">
+                         </div>
+                         <div class="swiper-slide">
+                         <img src="${y.image2}" alt="${y.alt}">
+                         </div>
+                        <div class="swiper-slide">
+                        <img src="${y.image3}" alt="${y.alt}">
+                        </div>`;
+                        document.getElementById('swiper').innerHTML = html;
                         console.log(y)
                         if (y.toilet == true) {
                             document.getElementById('icon-toilet').innerHTML = `

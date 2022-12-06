@@ -16,7 +16,7 @@ export class PlacedetailComponent implements OnInit {
   selectedData: Array<any> = [];
   color: string = "primary";
   loadingTable: boolean = false;
-  displayedColumns: string[] = ['num','Adress', 'Alt Tag', 'Image 2', 'Image 3', 'internet', 'market', 'shower', 'toilet', 'actions'];
+  displayedColumns: string[] = ['num', 'Adress', 'Alt Tag', 'Image 1', 'Image 2', 'Image 3', 'internet', 'market', 'shower', 'toilet', 'actions'];
   dataSource: MatTableDataSource<any>;
 
   constructor(@Inject(MAT_DIALOG_DATA) public dialogRef: MatDialogRef<EditdetailComponent>, private http: HttpClient, private placesapi: PlacesapiService, public dialog: MatDialog) { }
@@ -38,19 +38,6 @@ export class PlacedetailComponent implements OnInit {
     )
   }
 
-  changeAdress(event: any) {
-    this.loadingTable = true;
-    this.placesData.map(x => {
-      this.loadingTable = false;
-      if (x.adress == event.target.value) {
-        this.selectedData.push(x);
-        console.log(this.selectedData)
-      }
-      else if (event.target.value == "selectall") {
-        this.selectedData.push(x);
-      }
-    })
-  }
 
   places() {
     this.loadingTable = true;
@@ -62,7 +49,7 @@ export class PlacedetailComponent implements OnInit {
     })
   }
 
-  openDialog(adress:any,alt:any,image2:any,image3:any,internet:any,market:any,num:any,shower:any,toilet:any) {
+  openDialog(adress: any, alt: any, image1: any, image2: any, image3: any, internet: any, market: any, num: any, shower: any, toilet: any) {
     const dialogRef = this.dialog.open(DialognewdetailComponent, {
       width: '600px',
       height: 'auto',
@@ -70,13 +57,14 @@ export class PlacedetailComponent implements OnInit {
         title: 'New Place',
         adress: adress,
         alt: alt,
+        image1: image1,
         image2: image2,
         image3: image3,
-        internet:internet,
-        market:market,
-        num:num,
-        shower:shower,
-        toilet:toilet
+        internet: internet,
+        market: market,
+        num: num,
+        shower: shower,
+        toilet: toilet
       },
     });
   }

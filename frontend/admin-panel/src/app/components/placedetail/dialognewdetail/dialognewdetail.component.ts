@@ -18,14 +18,13 @@ export class DialognewdetailComponent implements OnInit {
         num: new FormControl(this.data.num, Validators.required),
         adress: new FormControl(this.data.adress, Validators.required),
         alt: new FormControl(this.data.alt, Validators.required),
-        image: new FormControl(this.data.image, Validators.required),
+        image1: new FormControl(this.data.image1, Validators.required),
         image2: new FormControl(this.data.image2, Validators.required),
         image3: new FormControl(this.data.image3, Validators.required),
         internet: new FormControl(this.data.internet, Validators.required),
         market: new FormControl(this.data.market, Validators.required),
         shower: new FormControl(this.data.shower, Validators.required),
         toilet: new FormControl(this.data.toilet, Validators.required)
-
       })
     }
   }
@@ -38,7 +37,7 @@ export class DialognewdetailComponent implements OnInit {
     let num = this.Form.get('num')?.value;
     let adress = this.Form.get('adress')?.value;
     let alt = this.Form.get('alt')?.value;
-    let image = this.Form.get('image')?.value;
+    let image1 = this.Form.get('image1')?.value;
     let image2 = this.Form.get('image2')?.value;
     let image3 = this.Form.get('image3')?.value;
     let internet = this.Form.get('internet')?.value;
@@ -47,17 +46,17 @@ export class DialognewdetailComponent implements OnInit {
     let toilet = this.Form.get('toilet')?.value;
 
 
-    this.http.post<any>(`http://camperfinder.org/node3/node4`, {
+    this.http.post<any>(`http://camperfinder.org/node3/node4/`, {
       num: num,
       adress: adress,
       alt: alt,
-      image: image,
+      image1: image1,
       image2: image2,
       image3: image3,
       internet: internet,
       market: market,
       shower: shower,
-      toilet:toilet
+      toilet: toilet
     }).subscribe(data => {
       if (data) {
         this.dialogRef.close({ event: 'success' });

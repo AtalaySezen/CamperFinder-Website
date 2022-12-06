@@ -41,7 +41,7 @@
     </ng-container>
 </div> -->
 <ng-container *ngFor="let element of placesData|slice:0:1">
-    <button (click)="openDialog(element.adress,element.alt,element.image2,element.image3,element.internet,element.market,element.num,element.shower,element.toilet)" mat-icon-button color="primary" matTooltip="Edit Note">
+    <button (click)="openDialog(element.adress,element.alt,element.image1,element.image2,element.image3,element.internet,element.market,element.num,element.shower,element.toilet)" mat-icon-button color="primary" matTooltip="Edit Note">
         <mat-icon>Yeni Alan Ekle</mat-icon>
     </button>
 </ng-container>
@@ -63,8 +63,10 @@
         <td mat-cell *matCellDef="let element"> {{element.alt}} </td>
     </ng-container>
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="Image 2">
+    <ng-container matColumnDef="Image 1">
+        <th mat-header-cell *matHeaderCellDef> Image 1 </th>
+        <td mat-cell *matCellDef="let element"> {{element.image1}} </td>
+    </ng-container>    <ng-container matColumnDef="Image 2">
         <th mat-header-cell *matHeaderCellDef> Image 2 </th>
         <td mat-cell *matCellDef="let element"> {{element.image2}} </td>
     </ng-container>

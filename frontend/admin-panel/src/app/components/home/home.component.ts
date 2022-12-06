@@ -73,10 +73,25 @@ export class HomeComponent implements OnInit {
         image: image
       },
     });
+}
 
-
-
-
+addNewPlace(num:any,city:any,alt:any,district:any,image:any,campPlaceName:any,info:any,coordinate1:any,coordinate2:any){
+  const dialogRef = this.dialog.open(DialoghomeComponent, {
+    width: '600px',
+    height: 'auto',
+    data: {
+      title: 'Edit Mail',
+      num:num,
+      city:city,
+      alt:alt,
+      district:district,
+      image: image,
+      campPlaceName:campPlaceName,
+      info: info,
+      coordinate1:coordinate1,
+      coordinate2:coordinate2
+    },
+  });
 }
 
 

@@ -1,18 +1,25 @@
-<h1 class="mat-dialog-title">{{data.campPlaceName}}</h1>
 <form [formGroup]="Form" class="flex flex-col">
-    <ng-container class="mt-3">
-        <mat-label class="header-dialog">Kamp Alanı Açıklaması</mat-label>
-        <p>
-            {{data.info}}
-        </p>
-    </ng-container>
+    <mat-dialog-content style="margin-top:1rem;">
+    <mat-label>Düzenleme</mat-label>
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Kamp Alanı İsmi</mat-label>
+        <textarea placeholder={{data.campPlaceName}} matInput type="text" formControlName="campPlaceName" rows="4" cols="50" placeholder="campPlaceName">
+        </textarea>
+    </mat-form-field>
+</mat-dialog-content>
     <mat-dialog-content style="margin-top:1rem;">
         <mat-form-field appearance="outline" class="w-full">
-            <mat-label translate>Note</mat-label>
-            <textarea matInput type="text" formControlName="info" placeholder="info">
+            <mat-label translate>Açıklama</mat-label>
+            <textarea matInput type="text" formControlName="info" rows="4" cols="50" placeholder="info">
             </textarea>
         </mat-form-field>
     </mat-dialog-content>
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label translate>Görsel Linki</mat-label>
+        <textarea placeholder=`{{data.image}}` matInput type="text" formControlName="image" rows="4" cols="50" placeholder="image">
+        </textarea>
+    </mat-form-field>
+   
     <div mat-dialog-actions class="flex justify-end">
         <button mat-raised-button color="warn" translate (click)="closeDialog()">Cancel</button>
         <button mat-raised-button color="primary" (click)="saveDialog()"  translate>Save</button>

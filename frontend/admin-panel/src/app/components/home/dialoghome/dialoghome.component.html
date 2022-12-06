@@ -1,27 +1,35 @@
-<form [formGroup]="Form" class="flex flex-col">
-    <mat-dialog-content style="margin-top:1rem;">
-    <mat-label>Düzenleme</mat-label>
-    <mat-form-field appearance="outline" class="w-full">
-        <mat-label>Kamp Alanı İsmi</mat-label>
-        <textarea placeholder={{data.campPlaceName}} matInput type="text" formControlName="campPlaceName" rows="4" cols="50" placeholder="campPlaceName">
-        </textarea>
-    </mat-form-field>
-</mat-dialog-content>
-    <mat-dialog-content style="margin-top:1rem;">
-        <mat-form-field appearance="outline" class="w-full">
-            <mat-label translate>Açıklama</mat-label>
-            <textarea matInput type="text" formControlName="info" rows="4" cols="50" placeholder="info">
-            </textarea>
+<form [formGroup]="Form" class="form-column">
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Kamp Alanı İsmi</mat-label>
+            <input matInput placeholder={{data.campPlaceName}} type="text" formControlName="campPlaceName"
+                placeholder="campPlaceName">
+            <mat-hint>Kamp Alanı İsmi</mat-hint>
         </mat-form-field>
-    </mat-dialog-content>
-    <mat-form-field appearance="outline" class="w-full">
-        <mat-label translate>Görsel Linki</mat-label>
-        <textarea placeholder=`{{data.image}}` matInput type="text" formControlName="image" rows="4" cols="50" placeholder="image">
-        </textarea>
-    </mat-form-field>
-   
-    <div mat-dialog-actions class="flex justify-end">
-        <button mat-raised-button color="warn" translate (click)="closeDialog()">Cancel</button>
-        <button mat-raised-button color="primary" (click)="saveDialog()"  translate>Save</button>
-    </div>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Açıklama</mat-label>
+            <input matInput placeholder={{data.info}} type="text" formControlName="info" placeholder="info">
+            <mat-hint>Kamp Alanı Açıklama</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Görsel Linki</mat-label>
+            <input matInput placeholder={{data.image}} type="text" formControlName="image" placeholder="image">
+            <mat-hint>Görsel Linki</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Görsel Alt Tagi</mat-label>
+            <input matInput placeholder={{data.alt}} type="text" formControlName="alt" placeholder="alt">
+            <mat-hint>Görsel Alt Tagi</mat-hint>
+        </mat-form-field>
+    </p>
 </form>
+<div mat-dialog-actions class="button-flex">
+    <button mat-raised-button color="warn" translate (click)="closeDialog()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="saveDialog()" translate>Save</button>
+</div>

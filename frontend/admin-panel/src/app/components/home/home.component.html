@@ -1,6 +1,3 @@
-<div style="margin:1rem 0;">
-    <button mat-raised-button color="primary" (click)="addNewPlace()">Yeni Yer Ekle</button>
-</div>
 <select class="select-city" name="Cities" (change)="changeCity($event)">
     <option value="">Select</option>
     <option value="selectall">Hepsini Göster</option>
@@ -8,26 +5,37 @@
         {{item.city}}
     </option>
 </select>
-<mat-progress-bar  [color]="color"
-*ngIf="loadingTable" mode="indeterminate"></mat-progress-bar>
+<mat-progress-bar [color]="color" *ngIf="loadingTable" mode="indeterminate"></mat-progress-bar>
+<div>
+    <mat-label>En Son Eklenen Kart Numarası</mat-label>
+    <div *ngFor="let item of placesData; let last=last">
+        <span *ngIf="last">{{item.num}}</span>
+    </div>
+</div>
+
+<div style="margin:1rem 0;" *ngFor="let item of placesData|slice:0:1">
+    <button mat-raised-button color="primary"
+        (click)="addNewPlace(item.id,item.city,item.alt,item.district,item.image,item.campPlaceName,item.info,item.coordinate1,item.coordinate2)">Yeni
+        Yer Ekle</button>
+</div>
 <div class="flex-cards">
     <ng-container *ngFor="let item of selectedData">
-        
         <mat-card class="example-card">
             <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{item.num}}</mat-card-title>
                 <mat-card-title>{{item.city}}</mat-card-title>
                 <mat-card-subtitle>{{item.campPlaceName}}</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image src="{{item.image}}" alt="Photo of a Shiba Inu">
+            <img mat-card-image src="{{item.image}}" alt="CamperFinder Eksik Fotoğraf">
             <mat-card-content>
                 <p>
                     {{item.info}}
                 </p>
             </mat-card-content>
             <mat-card-actions>
-                 <button mat-raised-button color="primary" (click)="openDialog(item._id,item.info,item.image)">Düzenle</button>
-                 <button mat-raised-button color="warn" [value]="item.id" (click)="deletePlace(item._id)">Sil</button>
+                <button mat-raised-button color="primary"
+                    (click)="openDialog(item._id,item.info,item.image,item.alt,item.campPlaceName)">Düzenle</button>
+                <button mat-raised-button color="warn" [value]="item.id" (click)="deletePlace(item._id)">Sil</button>
             </mat-card-actions>
         </mat-card>
     </ng-container>

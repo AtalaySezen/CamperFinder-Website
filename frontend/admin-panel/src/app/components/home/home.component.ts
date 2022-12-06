@@ -3,6 +3,7 @@ import { PlacesapiService } from 'src/app/services/placesapi.service';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DialoghomeComponent } from './dialoghome/dialoghome.component';
+import { AddnewplaceComponent } from './addnewplace/addnewplace.component';
 export interface DialogData {
   animal: 'panda' | 'unicorn' | 'lion';
 }
@@ -42,9 +43,10 @@ export class HomeComponent implements OnInit {
     this.placesapi.GetPlaces().subscribe(data => {
       this.loadingTable = false;
       this.placesData = data;
+      console.log(data);
     })
   }
- 
+
   deletePlace(id: any) {
     console.log(id);
     this.http.delete(`https://camperfinder.org/node/node2/${id}`).subscribe(() => {
@@ -61,38 +63,40 @@ export class HomeComponent implements OnInit {
 
 
   //??
-  openDialog(id: number, info: string, image: string) {
-    console.log(id,info,image)
+  openDialog(id: number, info: string, image: string, alt: string, campPlaceName: string) {
+    console.log(id, info, image)
     const dialogRef = this.dialog.open(DialoghomeComponent, {
       width: '600px',
       height: 'auto',
       data: {
-        title: 'Edit Mail',
+        title: 'Edit Place',
         id: id,
         info: info,
-        image: image
+        image: image,
+        alt: alt,
+        campPlaceName: campPlaceName
       },
     });
-}
+  }
 
-addNewPlace(num:any,city:any,alt:any,district:any,image:any,campPlaceName:any,info:any,coordinate1:any,coordinate2:any){
-  const dialogRef = this.dialog.open(DialoghomeComponent, {
-    width: '600px',
-    height: 'auto',
-    data: {
-      title: 'Edit Mail',
-      num:num,
-      city:city,
-      alt:alt,
-      district:district,
-      image: image,
-      campPlaceName:campPlaceName,
-      info: info,
-      coordinate1:coordinate1,
-      coordinate2:coordinate2
-    },
-  });
-}
+  addNewPlace(num: any, city: any, alt: any, district: any, image: any, campPlaceName: any, info: any, coordinate1: any, coordinate2: any) {
+    const dialogRef = this.dialog.open(AddnewplaceComponent, {
+      width: '600px',
+      height: 'auto',
+      data: {
+        title: 'Add New Place',
+        num: num,
+        city: city,
+        alt: alt,
+        district: district,
+        image: image,
+        campPlaceName: campPlaceName,
+        info: info,
+        coordinate1: coordinate1,
+        coordinate2: coordinate2
+      },
+    });
+  }
 
 
 

@@ -24,6 +24,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AddnewplaceComponent } from './components/home/addnewplace/addnewplace.component';
+import { DialognewdetailComponent } from './components/placedetail/dialognewdetail/dialognewdetail.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { MatInputModule } from '@angular/material/input';
     PlacedetailComponent,
     EditblogComponent,
     LoginComponent,
-    DialoghomeComponent
+    DialoghomeComponent,
+    AddnewplaceComponent,
+    DialognewdetailComponent
   ],
   imports: [
     BrowserAnimationsModule,

@@ -1,1 +1,38 @@
-<p>login works!</p>
+<form class="example-form">
+    <p> </p>
+    <button mat-raised-button style="margin-bottom:0.5rem;">Welcome {{userName|titlecase}}</button>
+    <div [class]="warnPass">
+      <button mat-raised-button matTooltip="Username is admin, not Admin."
+        aria-label="Button that displays a tooltip when focused or hovered over">
+
+        {{warnMessage}}
+      </button>
+    </div>
+    <ng-container>
+      <button [class]="warnTry" mat-raised-button matTooltip="Username is admin, not Admin."
+        aria-label="Button that displays a tooltip when focused or hovered over">
+        Birden fazla kez hatalı şifre girdiniz. Güvenlik için kullanıcı adı ve şifre değiştiriliyor...
+      </button>
+
+    </ng-container>
+    <ng-container *ngIf="userName!=null">Please Enter Your Password</ng-container>
+    <mat-form-field class="example-full-width">
+      <mat-label>Username</mat-label>
+      <input name="username" matInput placeholder="Username" [(ngModel)]="userName">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" name="password" type="password" [(ngModel)]="password">
+      <div style="    display: inline;
+      position: absolute;
+      right: 1rem;
+      top: -6px;">
+       <span class="material-icons" (click)="showPass()">
+        visibility
+        </span>
+      </div>
+    </mat-form-field>
+    <button mat-raised-button color="accent" [disabled]="userName===undefined||password===undefined||password.length<4"
+      (click)="loginHref()">Login</button>
+  </form>

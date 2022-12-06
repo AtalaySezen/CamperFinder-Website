@@ -1,0 +1,18 @@
+.example-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+}
+.none{
+    display: none;
+}
+.show{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.warnTry{
+    display: inline-block;
+}

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: false,
+  placesUrl:"https://camperfinder.org/node/node2"
 };

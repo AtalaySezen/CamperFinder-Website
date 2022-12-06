@@ -7,6 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'admin-panel';
-  showFiller = false;
+
+  ngOnInit(){
+  }
+  
+
+  // userLogged(){
+  //   console.log(this.isLogged,"islogged");
+  //   if(localStorage.getItem('isLogged') == 'true'){
+  //     this.isLogged == true;
+  //   }else{
+  //     this.isLogged == false;
+  //   }
+  // }
+
+
 
 }

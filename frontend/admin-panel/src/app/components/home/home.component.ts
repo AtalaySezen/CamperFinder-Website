@@ -4,9 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DialoghomeComponent } from './dialoghome/dialoghome.component';
 import { AddnewplaceComponent } from './addnewplace/addnewplace.component';
-export interface DialogData {
-  animal: 'panda' | 'unicorn' | 'lion';
-}
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -36,7 +34,6 @@ export class HomeComponent implements OnInit {
         this.selectedData.push(x);
       }
     })
-
   }
   places() {
     this.loadingTable = true;

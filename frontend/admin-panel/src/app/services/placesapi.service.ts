@@ -24,6 +24,19 @@ export class PlacesapiService {
   }
  
 
+   //Get datas
+   GetPlaceDetail(): Observable<any> {
+    return this.http.get<any>(environment.detailsUrl);
+  }
+
+  // PostPlace(): Observable<any> {
+  //   return this.http.get<any>(environment.placesUrl);
+  // }
+
+  DeletePlaceDetail(id:number):Observable<any>{
+    return this.http.delete<any>(environment.detailsUrl+{id});
+  }
+
     
 
 }

@@ -1,1 +1,53 @@
-<p>dialognewdetail works!</p>
+<form [formGroup]="Form" class="form-column">
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Şehir Numarası</mat-label>
+            <input matInput placeholder={{data.num}} type="text" formControlName="num" placeholder="num">
+            <mat-hint>Şehir Numarası</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Adres</mat-label>
+            <input matInput placeholder={{data.adress}} type="text" formControlName="adress" placeholder="adress">
+            <mat-hint>Adres yaz</mat-hint>
+        </mat-form-field>
+    </p>
+
+
+    <mat-form-field appearance="outline">
+        <mat-label>Image 2</mat-label>
+        <input placeholder={{data.image2}} matInput type="text" formControlName="image2" placeholder="image2">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Image 3</mat-label>
+        <input placeholder={{data.image3}} matInput type="text" formControlName="image3" placeholder="image3">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Görsel Alt Tagi</mat-label>
+        <input placeholder={{data.alt}} matInput type="text" formControlName="alt" placeholder="alt">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Internet</mat-label>
+        <input placeholder={{data.internet}} matInput type="text" formControlName="internet" placeholder="internet">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Market</mat-label>
+        <input placeholder={{data.market}} matInput type="text" formControlName="market" placeholder="market">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Toilet</mat-label>
+        <input placeholder={{data.toilet}} matInput type="text" formControlName="toilet" placeholder="toilet">
+    </mat-form-field>
+
+
+
+
+
+</form>
+<div mat-dialog-actions class="button-flex">
+    <button mat-raised-button color="warn" translate (click)="closeDialog()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="saveDialog()" translate>Save</button>
+</div>

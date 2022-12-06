@@ -1,1 +1,104 @@
-<p>placedetail works!</p>
+<!-- <select class="select-city" name="Cities" (change)="changeAdress($event)">
+    <option value="">Select</option>
+    <option value="selectall">Hepsini Göster</option>
+    <option [value]="item.adress" *ngFor="let item of placesData">
+        {{item.city}}
+    </option>
+</select>
+<mat-progress-bar [color]="color" *ngIf="loadingTable" mode="indeterminate"></mat-progress-bar>
+<div>
+    <mat-label>En Son Eklenen Kart Numarası</mat-label>
+    <div *ngFor="let item of placesData; let last=last">
+        <span *ngIf="last">{{item.num}}</span>
+    </div>
+</div>
+
+<div style="margin:1rem 0;" *ngFor="let item of placesData|slice:0:1">
+    <button mat-raised-button color="primary"
+        (click)="addNewPlace(item.id,item.city,item.alt,item.district,item.image,item.campPlaceName,item.info,item.coordinate1,item.coordinate2)">Yeni
+        Yer Ekle</button>
+</div> 
+<div class="flex-cards">
+    <ng-container *ngFor="let item of selectedData">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>{{item.num}}</mat-card-title>
+                <mat-card-title>{{item.adress}}</mat-card-title>
+                <mat-card-subtitle>{{item.campPlaceName}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{item.image2}}" alt="CamperFinder Eksik Fotoğraf">
+            <mat-card-content>
+                <p>
+                    {{item.info}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary"
+                    (click)="openDialog(item._id,item.info,item.image,item.alt,item.campPlaceName)">Düzenle</button>
+                <button mat-raised-button color="warn" [value]="item.id" (click)="deletePlace(item._id)">Sil</button>
+            </mat-card-actions> 
+        </mat-card>
+    </ng-container>
+</div> -->
+<ng-container *ngFor="let element of placesData|slice:0:1">
+    <button (click)="openDialog(element.adress,element.alt,element.image2,element.image3,element.internet,element.market,element.num,element.shower,element.toilet)" mat-icon-button color="primary" matTooltip="Edit Note">
+        <mat-icon>Yeni Alan Ekle</mat-icon>
+    </button>
+</ng-container>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="num">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.num}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Adress">
+        <th mat-header-cell *matHeaderCellDef> Adress </th>
+        <td mat-cell *matCellDef="let element"> {{element.adress}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Alt Tag">
+        <th mat-header-cell *matHeaderCellDef> Alt Tag </th>
+        <td mat-cell *matCellDef="let element"> {{element.alt}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Image 2">
+        <th mat-header-cell *matHeaderCellDef> Image 2 </th>
+        <td mat-cell *matCellDef="let element"> {{element.image2}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Image 3">
+        <th mat-header-cell *matHeaderCellDef> Image 3 </th>
+        <td mat-cell *matCellDef="let element"> {{element.image3}} </td>
+    </ng-container>
+    <ng-container matColumnDef="internet">
+        <th mat-header-cell *matHeaderCellDef> İnternet </th>
+        <td mat-cell *matCellDef="let element"> {{element.internet}} </td>
+    </ng-container>
+    <ng-container matColumnDef="market">
+        <th mat-header-cell *matHeaderCellDef> Market </th>
+        <td mat-cell *matCellDef="let element"> {{element.market}} </td>
+    </ng-container>
+    <ng-container matColumnDef="shower">
+        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+        <td mat-cell *matCellDef="let element"> {{element.shower}} </td>
+    </ng-container>
+    <ng-container matColumnDef="toilet">
+        <th mat-header-cell *matHeaderCellDef> Toilet </th>
+        <td mat-cell *matCellDef="let element"> {{element.toilet}} </td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions</th>
+        <td mat-cell *matCellDef="let element">
+            <button  [value]="element.id" (click)="deletePlace(element._id)" mat-icon-button color="primary" matTooltip="Edit Note">
+                <mat-icon>Sil</mat-icon>
+            </button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

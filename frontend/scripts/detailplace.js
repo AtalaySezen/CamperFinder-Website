@@ -33,13 +33,13 @@ async function showPlaces(data) {
         if (name == x.num) {
             html += `
             <div class="swiper-slide">
-             <img src="${x.image}" alt="">
+             <img src="${x.image}" alt="${x.alt}">
              </div>
              <div class="swiper-slide">
-             <img src="${x.image2}" alt="">
+             <img src="${x.image2}" alt="${x.alt}">
              </div>
             <div class="swiper-slide">
-            <img src="${x.image3}" alt="">
+            <img src="${x.image3}" alt="${x.alt}">
             </div>`;
             document.getElementById('swiper').innerHTML = html;
             //Show Header And Info Texts:

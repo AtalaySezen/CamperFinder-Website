@@ -17,7 +17,7 @@ async function showPlaces(data) {
             html += `
             <div class="header-blog">
             <h1 class="detail-header"> ${x.blogHeader}</h1>
-            <img class="camper-image" src="${x.image}" alt="">
+            <img class="camper-image" src="${x.image}" alt="${x.alt}">
             </div>
             <div class="main-blog">
             ${x.html}

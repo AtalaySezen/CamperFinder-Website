@@ -26,6 +26,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AddnewplaceComponent } from './components/home/addnewplace/addnewplace.component';
 import { DialognewdetailComponent } from './components/placedetail/dialognewdetail/dialognewdetail.component';
+import { NewblogdialogComponent } from './components/editblog/newblogdialog/newblogdialog.component';
+import { EditdetailComponent } from './components/placedetail/editdetail/editdetail.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { DialognewdetailComponent } from './components/placedetail/dialognewdeta
     LoginComponent,
     DialoghomeComponent,
     AddnewplaceComponent,
-    DialognewdetailComponent
+    DialognewdetailComponent,
+    NewblogdialogComponent,
+    EditdetailComponent
   ],
   imports: [
     BrowserAnimationsModule,

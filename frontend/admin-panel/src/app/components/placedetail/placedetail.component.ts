@@ -25,11 +25,13 @@ export class PlacedetailComponent implements OnInit {
     this.places();
 
   }
+  
   deletePlace(id: any) {
     console.log(id);
     this.http.delete(`http://camperfinder.org/node3/node4/${id}`).subscribe(() => {
       console.log("detay deleted");
       alert("Detay Sayfası Silindi")
+      this.places();
     },
       (error) => {
         console.log(error);
@@ -70,7 +72,9 @@ export class PlacedetailComponent implements OnInit {
     dialogRef.afterClosed().subscribe(data => {
       this.places();
     })
-  }
+  };
+
+
 
 
 

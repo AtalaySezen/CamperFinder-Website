@@ -9,6 +9,14 @@
     </p>
     <p>
         <mat-form-field appearance="outline">
+            <mat-label>Kamp Alanı Numarası</mat-label>
+            <input matInput placeholder={{data.num}} type="text" formControlName="num"
+                placeholder="num">
+            <mat-hint>Alan Numarası</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
             <mat-label>Açıklama</mat-label>
             <input matInput placeholder={{data.info}} type="text" formControlName="info" placeholder="info">
             <mat-hint>Kamp Alanı Açıklama</mat-hint>

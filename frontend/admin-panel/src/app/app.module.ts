@@ -28,6 +28,9 @@ import { AddnewplaceComponent } from './components/home/addnewplace/addnewplace.
 import { DialognewdetailComponent } from './components/placedetail/dialognewdetail/dialognewdetail.component';
 import { NewblogdialogComponent } from './components/editblog/newblogdialog/newblogdialog.component';
 import { EditdetailComponent } from './components/placedetail/editdetail/editdetail.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import {MatTooltip, MatTooltipModule} from '@angular/material/tooltip';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,9 @@ import { EditdetailComponent } from './components/placedetail/editdetail/editdet
     AddnewplaceComponent,
     DialognewdetailComponent,
     NewblogdialogComponent,
-    EditdetailComponent
+    EditdetailComponent,
+    NavbarComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -49,6 +54,7 @@ import { EditdetailComponent } from './components/placedetail/editdetail/editdet
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTooltipModule,
     MatIconModule,
     MatMenuModule,
     FormsModule,

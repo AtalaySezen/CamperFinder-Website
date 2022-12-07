@@ -16,6 +16,7 @@ export class DialoghomeComponent {
     {
       this.Form = new FormGroup({
         id: new FormControl(this.data.id, Validators.required),
+        num: new FormControl(this.data.num, Validators.required),
         info: new FormControl(this.data.info, Validators.required),
         campPlaceName: new FormControl(this.data.campPlaceName, Validators.required),
         image: new FormControl(this.data.image, Validators.required),
@@ -27,11 +28,13 @@ export class DialoghomeComponent {
 
   saveDialog() {
     let id = this.Form.get('id')?.value;
+    let num = this.Form.get('num')?.value;
     let info = this.Form.get('info')?.value;
     let image = this.Form.get('image')?.value;
     let alt = this.Form.get('alt')?.value;
     let campPlaceName = this.Form.get('campPlaceName')?.value;
     this.http.put<any>(`https://camperfinder.org/node/node2/${id}`, {
+      num:num,
       info: info,
       image: image,
       alt: alt,

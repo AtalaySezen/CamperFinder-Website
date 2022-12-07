@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
   }
 
   changeCity(event: any) {
+    console.log("çalıştı")
     this.loadingTable = true;
     this.placesData.map(x => {
       this.loadingTable = false;
@@ -62,7 +63,7 @@ export class HomeComponent implements OnInit {
 
 
   //??
-  openDialog(id: number, info: string, image: string, alt: string, campPlaceName: string) {
+  openDialog(id: number,num:number, info: string, image: string, alt: string, campPlaceName: string) {
     console.log(id, info, image)
     const dialogRef = this.dialog.open(DialoghomeComponent, {
       width: '600px',
@@ -70,6 +71,7 @@ export class HomeComponent implements OnInit {
       data: {
         title: 'Edit Place',
         id: id,
+        num:num,
         info: info,
         image: image,
         alt: alt,

@@ -44,8 +44,6 @@ export class DialognewdetailComponent implements OnInit {
     let market = this.Form.get('market')?.value;
     let shower = this.Form.get('shower')?.value;
     let toilet = this.Form.get('toilet')?.value;
-
-
     this.http.post<any>(`http://camperfinder.org/node3/node4/`, {
       num: num,
       adress: adress,

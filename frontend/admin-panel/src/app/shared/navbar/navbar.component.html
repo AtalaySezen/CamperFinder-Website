@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span>CamperFinder</span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/home">Kamp Alanları</button>
+    <button mat-menu-item routerLink="/placedetail">Kamp Detay</button>
+    <button mat-menu-item routerLink="/blog">Blog</button>
+    <button mat-menu-item routerLink="/" (click)="logOut()">Çıkış Yap</button>
+  </mat-menu>
+  <span class="example-spacer"></span>
+  <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button> -->
+</mat-toolbar>

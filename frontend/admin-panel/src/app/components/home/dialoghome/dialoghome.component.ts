@@ -45,6 +45,7 @@ export class DialoghomeComponent {
         alert("hata var");
       }
     })
+
   }
 
   closeDialog() {

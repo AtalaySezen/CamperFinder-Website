@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
     this.loadingTable = true;
     this.placesData.map(x => {
       this.loadingTable = false;
+      localStorage.setItem('selectedCity', event.target.value);
       if (x.city == event.target.value) {
         this.selectedData.push(x);
         console.log(this.selectedData)
@@ -35,6 +36,7 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
   places() {
     this.loadingTable = true;
     this.placesapi.GetPlaces().subscribe(data => {
@@ -74,6 +76,10 @@ export class HomeComponent implements OnInit {
         campPlaceName: campPlaceName
       },
     });
+    dialogRef.afterClosed().subscribe(data => {
+      this.places();
+      console.log("dialog kapandı")
+    })
   }
 
   addNewPlace(num: any, city: any, alt: any, district: any, image: any, campPlaceName: any, info: any, coordinate1: any, coordinate2: any) {
@@ -93,6 +99,9 @@ export class HomeComponent implements OnInit {
         coordinate2: coordinate2
       },
     });
+    dialogRef.afterClosed().subscribe(data => {
+      this.places();
+    })
   }
 
 

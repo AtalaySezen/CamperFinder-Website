@@ -67,6 +67,9 @@ export class PlacedetailComponent implements OnInit {
         toilet: toilet
       },
     });
+    dialogRef.afterClosed().subscribe(data => {
+      this.places();
+    })
   }
 
 

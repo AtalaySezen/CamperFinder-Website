@@ -171,6 +171,13 @@
     .header-detail {
         font-size: 1.2rem;
     }
+    .detail-row{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .check-items{
+        flex-direction: column;
+    }
 
     .detail-subheader {
         font-size: 1rem;

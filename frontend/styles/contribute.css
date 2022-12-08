@@ -58,7 +58,7 @@
 }
 
 .avatar-icon {
-    width: 25px;
+    width: 28px;
     margin: 0 5px;
 }
 
@@ -75,6 +75,11 @@
     width: 300px;
     margin: 0 1rem;
     border-radius: 25px;
+}
+.avatars img:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1.02);
 }
 
 .linkedin {

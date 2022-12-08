@@ -12,6 +12,7 @@
     justify-content: center;
 }
 
+
 .mainpage-header {
     display: flex;
     flex-direction: column;
@@ -321,6 +322,7 @@
 .homepage-infos {
     color: rgb(40, 64, 12);
     font-size: 1rem;
+    font-weight: 450;
     min-height: 100px;
     width: 98%;
     padding-top: 1rem;
@@ -471,6 +473,8 @@
     .subheader-main {
         font-size: 1.2rem;
         width: 70%;
+        text-align: center;
+        height: 40px;
     }
 
     .container-places {

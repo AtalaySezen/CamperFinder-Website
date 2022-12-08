@@ -17,11 +17,12 @@ async function getData() {
   const response = await fetch(apiCoordinates);
   const data = await response.json();
   for (item of data) {
+    console.log(item.num)
     const marker = await L.marker([item.coordinate1, item.coordinate2]).addTo(map);
     const infoText = `
-   <p class="map-text">
+   <a href="detailplace.html?id=${item.num}" class="map-text">
    ${item.campPlaceName}
-   </p>
+   </a>
    `;
     marker.bindPopup(infoText);
   }

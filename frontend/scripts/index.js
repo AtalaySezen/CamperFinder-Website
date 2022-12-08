@@ -1,4 +1,3 @@
-let searchInput = document.getElementById('searchInput');
 let searchButton = document.getElementById('searchButton');
 
 
@@ -109,8 +108,6 @@ async function showPlaces(data) {
     })
     uniqueArray.map(y => {
       if (y.city == searchInput.value) {
-        console.log(searchInput.value)
-
       }
     })
   })
@@ -118,24 +115,65 @@ async function showPlaces(data) {
 
 placesApi(apiPlaces);
 
-function search() {
-  fetch(apiPlaces)
-    .then(response => response.json())
-  let searchCity = [];
-  data.map(x => {
-    searchCity.push(x.city.toLocaleLowerCase());
-    arr = [...new Set(searchCity)];
-    let value = searchInput.value.toLocaleLowerCase();
-    let inputValue = value.replace(/^\s+|\s+$/gm, '').trim();
-    for (i = 0; i < arr.length; i++) {
-      if (arr[i] === inputValue) {
-        document.getElementById('search-result').innerHTML = `
-          <p class="result-p" style=color:white;>Bulunan Şehirler:</p>
-          <a class="result-href" href="${arr[i]}.html" style="color:white;">
-          <span class="href-span">${arr[i]}</span>
-          </a>
-          `
-      }
+
+
+let suggestions = [
+  "İzmir",
+  "Ankara",
+  "İstanbul",
+  "Antalya",
+  "Sakarya",
+  "Kırklareli",
+  "Edirne",
+  "Bursa",
+  "Eskişehir",
+  "Tekirdağ"
+];
+
+const searchInput = document.querySelector(".searchInput");
+const input = document.getElementById('input');
+const resultBox = searchInput.querySelector(".resultBox");
+const icon = searchInput.querySelector(".icon");
+let linkTag = searchInput.querySelector("a");
+let webLink;
+
+// if user press any key and release
+input.onkeyup = (e) => {
+  let userData = e.target.value; //
+  let emptyArray = [];
+  if (userData) {
+    emptyArray = suggestions.filter((data) => {
+      return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+    });
+    emptyArray = emptyArray.map((data) => {
+      return data = `<li id=${data}>` + data + `</li>`;
+    });
+    document.getElementById('text-search').innerHTML = "CamperFinder'a hoşgeldin aradığın şehri kolayca bul!"
+    searchInput.classList.remove("none"); //show 
+    showSuggestions(emptyArray);
+    let allList = resultBox.querySelectorAll("li");
+    for (let i = 0; i < allList.length; i++) {
+      allList[i].setAttribute("onclick", "select(id)");
     }
-  })
+  } else {
+    searchInput.classList.add("none"); //hide 
+    document.getElementById('text-search').innerHTML = "CamperFinder"
+
+  }
+}
+
+function showSuggestions(list) {
+  let listData;
+  if (!list.length) {
+    userValue = inputBox.value;
+    listData = '<li>' + userValue + '</li>';
+  } else {
+    listData = list.join('');
+  }
+  resultBox.innerHTML = listData;
+}
+
+function select(id) {
+  let lowerId = id.toLocaleLowerCase();
+  window.location.href = `${lowerId}.html`
 }

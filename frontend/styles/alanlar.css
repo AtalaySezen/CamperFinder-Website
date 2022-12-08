@@ -6,29 +6,33 @@
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
+
 .header-info {
     color: rgb(40, 64, 12);
     font-size: 1.9rem;
 }
-.subheader-info{
-        color: rgb(224, 80, 40);
-        font-size: 1.2rem;
-        text-align: center;
-        width: 100%;
-        font-weight: 550;
+
+.subheader-info {
+    color: rgb(224, 80, 40);
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    font-weight: 550;
 }
 
-@media(max-width:900px){
-    .header-info{
+@media(max-width:900px) {
+    .header-info {
         font-size: 1.2rem;
         text-align: center;
     }
-    .subheader-info{
+
+    .subheader-info {
         font-size: 1rem;
         text-align: center;
         width: 85%;
     }
-    .header-camps{
+
+    .header-camps {
         padding-bottom: 1rem;
     }
 }

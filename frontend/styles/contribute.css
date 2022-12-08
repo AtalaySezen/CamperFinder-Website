@@ -35,16 +35,19 @@
     font-weight: 500;
     /* color: rgb(224, 80, 40); */
 }
-.form-buttons{
+
+.form-buttons {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.form-buttons a{
+
+.form-buttons a {
     margin: 0 15px;
 }
-.avatars{
+
+.avatars {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -53,26 +56,32 @@
     padding: 2rem 0;
     text-align: center;
 }
-.avatar-icon{
+
+.avatar-icon {
     width: 25px;
     margin: 0 5px;
 }
-.avatar{
+
+.avatar {
     font-weight: 500;
 }
-.avatar-info{
+
+.avatar-info {
     font-weight: 600;
     color: rgb(224, 80, 40);
 }
-.avatars img{
+
+.avatars img {
     width: 300px;
     margin: 0 1rem;
     border-radius: 25px;
 }
-.linkedin{
+
+.linkedin {
     fill: #0072b1;
 }
-.github{
+
+.github {
     fill: #171515;
 }
 
@@ -86,6 +95,6 @@
         font-size: 0.9rem;
         width: 60%;
         margin-top: 0.5rem;
-        
+
     }
 }

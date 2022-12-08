@@ -87,7 +87,8 @@
     line-height: 24px;
     text-align: center;
 }
-.click-detail{
+
+.click-detail {
     display: none;
     color: rgb(216, 70, 39);
     position: relative;
@@ -97,20 +98,23 @@
     top: 3px;
     font-weight: 500;
 }
-.click-detail:hover{
+
+.click-detail:hover {
     text-decoration: underline;
 }
-.map-text{
+
+.map-text {
     font-weight: 550;
     color: rgb(40, 64, 12) !important;
 }
 
 /*MOBİLE */
 @media(max-width:900px) {
-    .istanbul-places{
+    .istanbul-places {
         margin-top: 2rem;
         margin-bottom: 3rem;
     }
+
     .header-ist {
         font-size: 1.4rem;
     }

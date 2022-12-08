@@ -56,15 +56,18 @@
     border-radius: 24px 24px 24px 24px;
     margin: 2rem 2rem;
 }
+
 .cards-blog:hover {
     cursor: pointer;
     transition: 0.5s;
     transform: scale(1.02);
 }
-.cards-blog:hover{
+
+.cards-blog:hover {
     cursor: pointer;
 }
-.blogcard-header{
+
+.blogcard-header {
     font-size: 1.2rem;
     font-weight: 500;
     color: rgb(40, 64, 12);

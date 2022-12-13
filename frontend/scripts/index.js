@@ -116,7 +116,6 @@ async function showPlaces(data) {
 placesApi(apiPlaces);
 
 
-
 let suggestions = [
   "İzmir",
   "Ankara",
@@ -177,3 +176,26 @@ function select(id) {
   let lowerId = id.toLocaleLowerCase();
   window.location.href = `${lowerId}.html`
 }
+
+
+
+//24 saatte bir arka plan değiştirme:
+var color = ["bg-0", "bg-1", "bg-2", "bg-3", "bg-4"];
+var i = 0;
+
+function changeBg() {
+  console.log("...")
+  let bgSection = document.getElementById('search-bg');
+  bgSection.classList.add('bg-0');
+  setInterval(function () {
+    bgSection.classList.add(color[i])
+    i++;
+    if (i > color.length - 1) {
+      i = 0;
+    }
+  }, 24 * 60 * 60 * 60);
+}
+
+changeBg();
+
+

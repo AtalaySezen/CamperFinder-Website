@@ -29,6 +29,7 @@ async function showPlaces(data) {
         ;
         if (name == x.num) {
             //Show Header And Info Texts:
+            document.title = 'CamperFinder | ' + x.campPlaceName;
             html2 += `
             <h1 class="header-detail">${x.campPlaceName} Hakkında</h1>
             <p class="detail-subheader">
@@ -47,7 +48,6 @@ placesApi(detailPlaces);
 
 
 let detailInfoApı = 'http://camperfinder.org/node3/node4'
-
 function detailInfo() {
 
     let html = ``;

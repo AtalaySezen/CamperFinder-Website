@@ -43,20 +43,19 @@
         </nav>
     </header>
     <section>
-        <div class="search-container">
+        <div class="search-container" id="search-bg">
             <div class="mainpage-header">
                 <h1 class="header-main">Kamp Yerlerini Kolayca Bul</h1>
                 <p class="subheader-main" id="text-search">CamperFinder</p>
             </div>
             <div class="search container">
-                    <input autocomplete="off" class="search-input" id="input" type="text" placeholder="Şehir ara   ">
-                </div>
-                <div class="searchInput">
-                    <ul class="resultBox">
-                      <!-- results-->
-                    </ul>
-                  </div>
-         
+                <input autocomplete="off" class="search-input" id="input" type="text" placeholder="Şehir ara   ">
+            </div>
+            <div class="searchInput">
+                <ul class="resultBox">
+                    <!-- results-->
+                </ul>
+            </div>
     </section>
     <div class="wrapper">
         <section class="container-places">
@@ -69,7 +68,7 @@
             <div class="card-places">
                 <div class="card-2" onclick="goLink(id)" id="istanbul">
                     <div class="image-full">
-                        <img src="https://i.ibb.co/CW3Y3PC/istanbul-kamp-alanlari.webp" alt="İstanbul Kamp Alanları">
+                        <img src="https://i.ibb.co/gwYxCYL/istanbul-kamp-alanlari.jpg" alt="İstanbul Kamp Alanları">
                     </div>
                     <div class="sub-card">
                         <h1 class="sub-header">İstanbul</h1>
@@ -83,7 +82,7 @@
                 </div>
                 <div class="card-2" onclick="goLink(id)" id="ankara">
                     <div class="image-full">
-                        <img src="https://i.ibb.co/25sGJqH/ankarakampalanlari.webp" alt="Ankara Kamp Alanları">
+                        <img src="https://i.ibb.co/vDtZSzM/pexels-photo-13320762.jpg" alt="Ankara Kamp Alanları">
                     </div>
                     <div class="sub-card">
                         <h1 class="sub-header">Ankara</h1>
@@ -97,7 +96,7 @@
                 </div>
                 <div class="card-2 card-green" onclick="goLink(id)" id="izmir">
                     <div class="image-full">
-                        <img src="https://i.ibb.co/Bw7MFJJ/izmir-kamp-alanlari.webp" alt="İzmir Kamp Yerleri">
+                        <img src="https://i.ibb.co/0rYqhMW/izmir-kamp-alanlari.jpg" alt="İzmir Kamp Yerleri">
                     </div>
                     <div class="sub-card">
                         <h1 class="sub-header">İzmir</h1>
@@ -111,7 +110,7 @@
                 </div>
                 <div class="card-2 green-card" onclick="goLink(id)" id="Bursa">
                     <div class="image-full">
-                        <img src="https://i.ibb.co/BCWwzbh/bursa-kamp-alanlari-optimized-1.webp"
+                        <img src="https://i.ibb.co/NNdTW94/bursa-kamp-alanlari.jpg"
                             alt="Bursa Kamp Yerleri">
                     </div>
                     <div class="sub-card">
@@ -136,7 +135,7 @@
                 <p class="camper-info">Aradığın kamp yerini kısa sürede bulmanda sana yardımcı olur.</p>
                 <div class="camper-cards">
                     <div class="cards">
-                        <img class="camper-image" src="https://i.ibb.co/D5vcbKQ/kampalanlar-bul.webp"
+                        <img class="camper-image" src="https://i.ibb.co/Z1LPvhn/kampyerleri.jpg"
                             alt="Kamp alanlarını bul">
                         <p class="homepage-infos">
                             Kamp alanlarını kolayca bul. Aradığın tüm kamp alanlarına ulaşmanın en kolay yolu
@@ -144,15 +143,15 @@
                         </p>
                     </div>
                     <div class="cards">
-                        <img class="camper-image" src="https://i.ibb.co/znvLNsh/kampalanlar.webp"
-                            alt="Kamp Nerde Yapılır?">
+                        <img class="camper-image" src="https://i.ibb.co/QmKYWtP/kampyerleri-1.jpg"
+                            alt="Kamp Nerede Yapılır?">
                         <p class="homepage-infos">
                             CamperFinder sizler ile birlikte gelişen ve büyüyen bir topluluk olmayı hedeflemektedir.
                             Devamlılık ve gelişmemiz için her zaman katkılarınıza açığız.
                         </p>
                     </div>
                     <div class="cards">
-                        <img class="camper-image" src="https://i.ibb.co/sPX0nfc/kampneredeyapilir.webp"
+                        <img class="camper-image" src="https://i.ibb.co/4tsgkpk/dogakampalanlari.jpg"
                             alt="İstanbul Kamp Alanları">
                         <p class="homepage-infos">
                             CamperFinder Türkiye'de insanlarımızın kamp alanlarını keşfetmesini ve Türkiye' de kamp
@@ -188,7 +187,7 @@
         </section>
         <footer>
             <div class="footer-camper">
-                   <div class="footer-info">
+                <div class="footer-info">
                     <h2 class="footer-about">
                         CamperFinder
                     </h2>
@@ -248,8 +247,7 @@
 
             </div>
             <div class="info-year">
-                <span class="year-brand">CamperFinder <small class="year">
-                        2022
+                <span class="year-brand">CamperFinder <small id="year" class="year">
                     </small></span>
             </div>
         </footer>
@@ -257,7 +255,6 @@
     </div>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/index.js"></script>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCTNQWPGSH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];

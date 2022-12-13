@@ -1,6 +1,5 @@
 .search-container {
     width: 100%;
-    background-image: url('https://i.ibb.co/5F5Sj6L/camperfinder.jpg');
     height: 72vh;
     background-position: 100%;
     background-repeat: no-repeat;
@@ -10,6 +9,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.bg-0{
+    background-image: url('https://i.ibb.co/5F5Sj6L/camperfinder.jpg') !important;
+}
+.bg-1{
+    background-image: url('https://i.ibb.co/0jj4yQp/kampalanlar-bul-1.jpg') !important;
+}
+.bg-2{
+    background-image: url('https://i.ibb.co/P5J3Yt8/kampalanlar-bul-2.jpg') !important;
+}
+.bg-3{
+    background-image: url('https://i.ibb.co/sVHJfP4/kampalanlar-bul-3.jpg') !important;
+}
+.bg-4{
+    background-image: url('https://i.ibb.co/zxWYBfs/kampalanlar-bul-4.jpg') !important;
 }
 
 
@@ -578,9 +592,6 @@
         font-size: 0.9rem;
     }
 
-    .navbar-logo {
-        display: none;
-    }
 
     .camper-header {
         font-size: 1.2rem;

@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { PlacesapiService } from 'src/app/services/placesapi.service';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
@@ -6,7 +6,11 @@ import { EditdetailComponent } from './editdetail/editdetail.component';
 import { MatTableDataSource } from '@angular/material/table';
 import { DialognewdetailComponent } from './dialognewdetail/dialognewdetail.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSortModule } from '@angular/material/sort';
 import { CustomsnackComponent } from '../customsnack/customsnack.component';
+import { DataSource } from '@angular/cdk/collections';
+import { MatPaginator } from '@angular/material/paginator';
+
 @Component({
   selector: 'app-placedetail',
   templateUrl: './placedetail.component.html',
@@ -18,8 +22,10 @@ export class PlacedetailComponent implements OnInit {
   selectedData: Array<any> = [];
   color: string = "primary";
   loadingTable: boolean = false;
-  displayedColumns: string[] = ['num', 'Adress', 'Alt Tag', 'Image 1', 'Image 2', 'Image 3', 'internet', 'market', 'shower', 'toilet', 'actions'];
+  displayedColumns: string[] = ['num', 'Adress', 'Image 1', 'Image 2', 'Image 3', 'internet', 'market', 'shower', 'toilet', 'actions'];
   dataSource: MatTableDataSource<any>;
+
+
 
   constructor(@Inject(MAT_DIALOG_DATA) public dialogRef: MatDialogRef<EditdetailComponent>,
     private http: HttpClient,
@@ -64,6 +70,7 @@ export class PlacedetailComponent implements OnInit {
       console.log(data);
     })
   }
+
 
   openDialog(adress: any, alt: any, image1: any, image2: any, image3: any, internet: any, market: any, num: any, shower: any, toilet: any) {
     const dialogRef = this.dialog.open(DialognewdetailComponent, {

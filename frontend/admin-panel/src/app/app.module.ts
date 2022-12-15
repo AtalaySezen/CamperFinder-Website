@@ -31,6 +31,9 @@ import { EditdetailComponent } from './components/placedetail/editdetail/editdet
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import {MatTooltip, MatTooltipModule} from '@angular/material/tooltip';
 import { LoaderComponent } from './shared/loader/loader.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { CustomsnackComponent } from './components/customsnack/customsnack.component';
+
 
 @NgModule({
   declarations: [
@@ -45,13 +48,15 @@ import { LoaderComponent } from './shared/loader/loader.component';
     NewblogdialogComponent,
     EditdetailComponent,
     NavbarComponent,
-    LoaderComponent
+    LoaderComponent,
+    CustomsnackComponent
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     ReactiveFormsModule,
     MatToolbarModule,
+    MatSnackBarModule,
     MatFormFieldModule,
     MatInputModule,
     MatTooltipModule,

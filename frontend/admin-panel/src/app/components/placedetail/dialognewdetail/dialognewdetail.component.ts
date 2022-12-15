@@ -2,6 +2,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { CustomsnackComponent } from '../../customsnack/customsnack.component';
 
 @Component({
   selector: 'app-dialognewdetail',
@@ -10,9 +12,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DialognewdetailComponent implements OnInit {
   Form: FormGroup;
+  durationInSeconds = 5;
 
-  constructor(public dialogRef: MatDialogRef<DialognewdetailComponent>, private http: HttpClient, @Inject(MAT_DIALOG_DATA)
-  public data: any) {
+  constructor(
+    public dialogRef: MatDialogRef<DialognewdetailComponent>,
+    private http: HttpClient,
+    @Inject(MAT_DIALOG_DATA)
+    public data: any,
+    private snack: MatSnackBar,
+  ) {
     {
       this.Form = new FormGroup({
         num: new FormControl(this.data.num, Validators.required),
@@ -32,6 +40,13 @@ export class DialognewdetailComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  openSnackBar() {
+    this.snack.openFromComponent(CustomsnackComponent, {
+      duration: this.durationInSeconds * 1000,
+    });
+  }
+
 
   saveDialog() {
     let num = this.Form.get('num')?.value;
@@ -58,10 +73,11 @@ export class DialognewdetailComponent implements OnInit {
     }).subscribe(data => {
       if (data) {
         this.dialogRef.close({ event: 'success' });
-        alert("Yeni Kamp Detay Alanı Eklendi.");
+        this.snack.open('Başarıyla Eklendi', 'Ok', {
+        });
       } else {
-        console.log("hata")
-        alert("eklenemedi hata var.");
+        this.snack.open('Eklenemedi Hata Var', 'Ok', {
+        });
       }
     })
   }

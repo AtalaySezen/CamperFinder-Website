@@ -4,6 +4,9 @@ import { HttpClient } from '@angular/common/http';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DialoghomeComponent } from './dialoghome/dialoghome.component';
 import { AddnewplaceComponent } from './addnewplace/addnewplace.component';
+import { UniqueSelectionDispatcher } from '@angular/cdk/collections';
+import { CustomsnackComponent } from '../customsnack/customsnack.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-home',
@@ -14,23 +17,33 @@ export class HomeComponent implements OnInit {
 
   placesData: Array<any> = [];
   selectedData: Array<any> = [];
+  uniqueArray: Array<any> = [];
+  durationInSeconds = 5;
+  cityArray: Array<any> = [];
   color: string = "primary";
   loadingTable: boolean = false;
-  constructor(@Inject(MAT_DIALOG_DATA) public dialogRef: MatDialogRef<DialoghomeComponent>, private http: HttpClient, private placesapi: PlacesapiService, public dialog: MatDialog) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public dialogRef: MatDialogRef<DialoghomeComponent>,
+    private snack: MatSnackBar,
+    private http: HttpClient,
+    private placesapi: PlacesapiService,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     this.places();
   }
 
   changeCity(event: any) {
-    console.log("çalıştı")
+    console.log(event.target.value)
     this.loadingTable = true;
     this.placesData.map(x => {
       this.loadingTable = false;
-      localStorage.setItem('selectedCity', event.target.value);
       if (x.city == event.target.value) {
+        localStorage.setItem("selectedItem", event.target.value);
         this.selectedData.push(x);
-        console.log(this.selectedData)
+      }
+      else if (event.target.value == "reset") {
+        this.selectedData = [];
       }
       else if (event.target.value == "selectall") {
         this.selectedData.push(x);
@@ -43,19 +56,28 @@ export class HomeComponent implements OnInit {
     this.placesapi.GetPlaces().subscribe(data => {
       this.loadingTable = false;
       this.placesData = data;
-      console.log(data);
+      this.placesData.map(x => {
+        this.cityArray.push(x.city)
+        this.uniqueArray = [...new Set(this.cityArray)]; //remove duplicate cities from data.
+      })
+
     })
   }
-
+  openSnackBar() {
+    this.snack.openFromComponent(CustomsnackComponent, {
+      duration: this.durationInSeconds * 1000,
+    });
+  }
   deletePlace(id: any) {
-    console.log(id);
     this.http.delete(`https://camperfinder.org/node/node2/${id}`).subscribe(() => {
-      console.log("city deleted");
-      alert("Şehir Silindi")
+      this.snack.open('Başarıyla Silindi', 'Ok', {
+      });
+      this.places();
     },
       (error) => {
         console.log(error);
-        alert("Şehir Silinemedi Bir Hata Var.")
+        this.snack.open('Silinemedi Hata Var', 'Ok', {
+        });
       }
     )
   }
@@ -63,7 +85,7 @@ export class HomeComponent implements OnInit {
 
 
   //??
-  openDialog(id: number,num:number, info: string, image: string, alt: string, campPlaceName: string) {
+  openDialog(id: number, num: number, info: string, image: string, alt: string, campPlaceName: string) {
     console.log(id, info, image)
     const dialogRef = this.dialog.open(DialoghomeComponent, {
       width: '600px',
@@ -71,7 +93,7 @@ export class HomeComponent implements OnInit {
       data: {
         title: 'Edit Place',
         id: id,
-        num:num,
+        num: num,
         info: info,
         image: image,
         alt: alt,
@@ -80,7 +102,6 @@ export class HomeComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(data => {
       this.places();
-      console.log("dialog kapandı")
     })
   }
 

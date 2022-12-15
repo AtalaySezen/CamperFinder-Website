@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-dialoghome',
@@ -11,8 +12,10 @@ import { HttpClient } from '@angular/common/http';
 export class DialoghomeComponent {
   Form: FormGroup;
 
-  constructor(public dialogRef: MatDialogRef<DialoghomeComponent>, private http: HttpClient, @Inject(MAT_DIALOG_DATA)
-  public data: any) {
+  constructor(public dialogRef: MatDialogRef<DialoghomeComponent>,
+    private http: HttpClient,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private snack: MatSnackBar) {
     {
       this.Form = new FormGroup({
         id: new FormControl(this.data.id, Validators.required),
@@ -34,7 +37,7 @@ export class DialoghomeComponent {
     let alt = this.Form.get('alt')?.value;
     let campPlaceName = this.Form.get('campPlaceName')?.value;
     this.http.put<any>(`https://camperfinder.org/node/node2/${id}`, {
-      num:num,
+      num: num,
       info: info,
       image: image,
       alt: alt,
@@ -42,10 +45,12 @@ export class DialoghomeComponent {
     }).subscribe(data => {
       if (data) {
         this.dialogRef.close({ event: 'success' });
-        alert(`${campPlaceName},güncellendi`);
+        this.snack.open('Başarıyla Kaydedildi', 'Ok', {
+        });
       } else {
         console.log("hata")
-        alert("hata var");
+        this.snack.open('Başarıyla Silindi', 'Ok', {
+        });
       }
     })
 

@@ -18,23 +18,15 @@
         Yer Ekle</button>
 </div>
 </div>
-
-<!-- <mat-form-field appearance="fill" style="width: 100% !important;">
-<mat-select class="select-city" name="Cities" (onchange)="changeCity($event)">
-    <mat-option value="">Select</mat-option>
-    <mat-option value="selectall">Hepsini Göster</mat-option>
-    <mat-option [value]="item.city" *ngFor="let item of placesData">
-        {{item.city}}
-    </mat-option>
-</mat-select>
-</mat-form-field> -->
-<select class="select-city" name="Cities" (change)="changeCity($event)">
-    <option value="">Select</option>
-    <option value="selectall">Hepsini Göster</option>
-    <option [value]="item.city" *ngFor="let item of placesData">
-        {{item.city}}
-    </option>
-</select>
+<div class="select-container">
+    <select class="select-city" name="Cities" (change)="changeCity($event)">
+        <option value="reset">Sıfırla</option>
+        <option value="selectall">Hepsini Göster</option>
+        <option [value]="item" *ngFor="let item of uniqueArray">
+            {{item}}
+        </option>
+    </select>
+</div>
 <div class="flex-cards">
     <ng-container *ngFor="let item of selectedData">
         <mat-card class="example-card">

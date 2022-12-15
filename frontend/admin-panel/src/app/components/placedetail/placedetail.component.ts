@@ -5,13 +5,15 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { EditdetailComponent } from './editdetail/editdetail.component';
 import { MatTableDataSource } from '@angular/material/table';
 import { DialognewdetailComponent } from './dialognewdetail/dialognewdetail.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { CustomsnackComponent } from '../customsnack/customsnack.component';
 @Component({
   selector: 'app-placedetail',
   templateUrl: './placedetail.component.html',
   styleUrls: ['./placedetail.component.scss']
 })
 export class PlacedetailComponent implements OnInit {
-
+  durationInSeconds = 5;
   placesData: Array<any> = [];
   selectedData: Array<any> = [];
   color: string = "primary";
@@ -19,23 +21,35 @@ export class PlacedetailComponent implements OnInit {
   displayedColumns: string[] = ['num', 'Adress', 'Alt Tag', 'Image 1', 'Image 2', 'Image 3', 'internet', 'market', 'shower', 'toilet', 'actions'];
   dataSource: MatTableDataSource<any>;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public dialogRef: MatDialogRef<EditdetailComponent>, private http: HttpClient, private placesapi: PlacesapiService, public dialog: MatDialog) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public dialogRef: MatDialogRef<EditdetailComponent>,
+    private http: HttpClient,
+    private placesapi: PlacesapiService,
+    public dialog: MatDialog,
+    private snack: MatSnackBar,
+  ) { }
 
   ngOnInit(): void {
     this.places();
 
   }
-  
+  openSnackBar() {
+    this.snack.openFromComponent(CustomsnackComponent, {
+      duration: this.durationInSeconds * 1000,
+    });
+  }
+
+
   deletePlace(id: any) {
     console.log(id);
     this.http.delete(`http://camperfinder.org/node3/node4/${id}`).subscribe(() => {
-      console.log("detay deleted");
-      alert("Detay Sayfası Silindi")
+      this.snack.open('Başarıyla Silindi', 'Ok', {
+      });
       this.places();
     },
       (error) => {
         console.log(error);
-        alert("Şehir Silinemedi Bir Hata Var.")
+        this.snack.open('Şehir Silinemedi', 'Ok', {
+        });
       }
     )
   }

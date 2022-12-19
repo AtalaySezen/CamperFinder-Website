@@ -4,7 +4,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-
 var polygon = L.polygon([
   [51.509, -0.08],
   [51.503, -0.06],
@@ -20,13 +19,12 @@ async function getData() {
     console.log(item.num)
     const marker = await L.marker([item.coordinate1, item.coordinate2]).addTo(map);
     const infoText = `
-   <a href="detailplace.html?id=${item.num}" class="map-text">
-   ${item.campPlaceName}
-   </a>
-   `;
+    <a href="detailplace.html?id=${item.num}" class="map-text">
+    ${item.campPlaceName}
+    </a>`;
     marker.bindPopup(infoText);
   }
-}
+};
 
 getData();
 

@@ -171,11 +171,13 @@
     .header-detail {
         font-size: 1.2rem;
     }
-    .detail-row{
+
+    .detail-row {
         flex-direction: column;
         justify-content: center;
     }
-    .check-items{
+
+    .check-items {
         flex-direction: column;
     }
 

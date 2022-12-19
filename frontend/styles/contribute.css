@@ -76,7 +76,8 @@
     margin: 0 1rem;
     border-radius: 25px;
 }
-.avatars img:hover{
+
+.avatars img:hover {
     cursor: pointer;
     transition: 0.5s;
     transform: scale(1.02);

@@ -5,11 +5,11 @@ async function blogDetailApi(url) {
     const response = await fetch(url);
     data = await response.json();
     await showPlaces(data);
-}
+};
+
 //API
 async function showPlaces(data) {
     let html = ``;
-
     for (let x of data) {
         let params = (new URL(document.location)).searchParams;
         let name = params.get("id");
@@ -21,11 +21,11 @@ async function showPlaces(data) {
             </div>
             <div class="main-blog">
             ${x.html}
-            </div>
-`;
+            </div>`
             document.getElementById('details-info').innerHTML = html;
         }
     }
-}
+};
+
 //Start APİ
 blogDetailApi(apiBlogs);

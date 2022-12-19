@@ -84,7 +84,7 @@ header a:hover {
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: #f4f4f4; 
+  background-color: #f4f4f4;
 }
 
 .header .logo {
@@ -521,10 +521,12 @@ footer {
     top: 1.5rem;
     left: 0;
   }
-  .info-year{
+
+  .info-year {
     left: 0;
   }
-  .footer-about{
+
+  .footer-about {
     text-align: center;
   }
 

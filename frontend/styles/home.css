@@ -10,19 +10,24 @@
     align-items: center;
     justify-content: center;
 }
-.bg-0{
+
+.bg-0 {
     background-image: url('https://i.ibb.co/5F5Sj6L/camperfinder.jpg') !important;
 }
-.bg-1{
+
+.bg-1 {
     background-image: url('https://i.ibb.co/0jj4yQp/kampalanlar-bul-1.jpg') !important;
 }
-.bg-2{
+
+.bg-2 {
     background-image: url('https://i.ibb.co/P5J3Yt8/kampalanlar-bul-2.jpg') !important;
 }
-.bg-3{
+
+.bg-3 {
     background-image: url('https://i.ibb.co/sVHJfP4/kampalanlar-bul-3.jpg') !important;
 }
-.bg-4{
+
+.bg-4 {
     background-image: url('https://i.ibb.co/zxWYBfs/kampalanlar-bul-4.jpg') !important;
 }
 
@@ -519,10 +524,12 @@
     .card-2 {
         width: 100%;
     }
-    .resultBox{
+
+    .resultBox {
         top: -0.1rem;
     }
-    .searchInput{
+
+    .searchInput {
         width: 45%;
     }
 

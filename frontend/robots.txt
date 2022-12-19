@@ -35,7 +35,6 @@ Disallow: /*/tried/*
 Disallow: /*/video_pins/*
 Disallow: /?show_error=true
 Disallow: /_/_/*
-Disallow: /_/_/pixel/*
 Disallow: /_ngjs/resource/
 Disallow: /about/*
 Disallow: /addboard/

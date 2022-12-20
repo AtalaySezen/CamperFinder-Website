@@ -1,3 +1,8 @@
+:root {
+    --green: rgb(40, 64, 12);
+    --red: rgb(224, 80, 40);
+}
+
 .blog-container {
     width: 100%;
     height: 100%;
@@ -29,13 +34,13 @@
 }
 
 .header-blog {
-    color: rgb(40, 64, 12);
+    color: var(--green);
     text-align: center;
     font-size: 1.9rem;
 }
 
 .subheader-blog {
-    color: rgb(216, 70, 39);
+    color: var(--red);
     text-align: center;
     font-size: 1.2rem;
     font-weight: 500;
@@ -46,7 +51,7 @@
 .header-place {
     font-size: 19px;
     margin-top: 4px;
-    color: rgb(60, 60, 60);
+    color: var(--green);
 }
 
 .cards-blog {
@@ -70,7 +75,6 @@
 .blogcard-header {
     font-size: 1.2rem;
     font-weight: 500;
-    color: rgb(40, 64, 12);
 }
 
 .blog-infos {

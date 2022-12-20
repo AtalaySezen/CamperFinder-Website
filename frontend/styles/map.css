@@ -37,13 +37,13 @@
 }
 
 .header-ist {
-    color: rgb(40, 64, 12);
+    color: var(--green);
     text-align: center;
     font-size: 1.9rem;
 }
 
 .subheader-ist {
-    color: rgb(216, 70, 39);
+    color: var(--red);
     text-align: center;
     font-size: 1.2rem;
     padding: 0.7rem 0;
@@ -90,7 +90,7 @@
 
 .click-detail {
     display: none;
-    color: rgb(216, 70, 39);
+    color: var(--red);
     position: relative;
     right: auto;
     left: auto;
@@ -105,7 +105,7 @@
 
 .map-text {
     font-weight: 550;
-    color: rgb(40, 64, 12) !important;
+    color: var(--green) !important;
 }
 
 /*MOBİLE */

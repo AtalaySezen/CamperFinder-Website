@@ -33,6 +33,8 @@ import {MatTooltip, MatTooltipModule} from '@angular/material/tooltip';
 import { LoaderComponent } from './shared/loader/loader.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CustomsnackComponent } from './components/customsnack/customsnack.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { EditblogdialogComponent } from './components/editblog/editblogdialog/editblogdialog.component';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { CustomsnackComponent } from './components/customsnack/customsnack.compo
     EditdetailComponent,
     NavbarComponent,
     LoaderComponent,
-    CustomsnackComponent
+    CustomsnackComponent,
+    FooterComponent,
+    EditblogdialogComponent
   ],
   imports: [
     BrowserAnimationsModule,

@@ -35,7 +35,7 @@
 }
 
 .subheader-ist {
-    color: rgb(216, 70, 39);
+    color: var(--red);
     text-align: center;
     font-size: 1.2rem;
     padding: 0.7rem 0;
@@ -73,7 +73,7 @@
     font-size: 18px;
     margin-top: 5px;
     text-align: center;
-    color: rgb(40, 64, 12);
+    color: var(--green);
     line-height: 25px;
     font-weight: 550;
 }
@@ -93,7 +93,7 @@
 
 .click-detail {
     display: none;
-    color: rgb(216, 70, 39);
+    color: var(--red);
     position: relative;
     right: auto;
     left: auto;
@@ -104,31 +104,6 @@
 
 .click-detail:hover {
     text-decoration: underline;
-}
-
-.arrow-left,
-.arrow-right {
-    width: 25px;
-    margin: 0 10px;
-    fill: rgb(224, 80, 40);
-}
-
-.leftside,
-.rightside {
-    display: flex;
-    align-items: center;
-}
-
-.arrows {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.go-city {
-    font-weight: 500;
-    font-size: 18px;
-    color: rgb(40, 64, 12);
 }
 
 /*MOBİLE */

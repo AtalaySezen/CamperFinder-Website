@@ -13,7 +13,7 @@
 }
 
 .contact-info {
-    color: rgb(224, 80, 40);
+    color: var(--red);
     font-weight: 500;
     font-size: 1.2rem;
 }
@@ -50,7 +50,7 @@
 }
 
 .contact-backpack {
-    color: rgb(224, 80, 40);
+    color: var(--red);
     font-weight: 500;
     font-size: 1.6rem;
     width: 50%;
@@ -68,7 +68,7 @@
 }
 
 .contact-link {
-    color: rgb(224, 80, 40);
+    color: var(--red);
     font-weight: 500;
     font-size: 1.2rem;
     width: 50%;
@@ -82,7 +82,7 @@
 }
 
 .mail-info:hover {
-    color: rgb(224, 80, 40);
+    color: var(--red);
     transition: 0.5s;
 }
 

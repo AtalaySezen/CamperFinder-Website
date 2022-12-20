@@ -64,7 +64,7 @@ export class NewblogdialogComponent implements OnInit {
 
   closeDialog() {
     this.dialogRef.close({ event: 'close' });
-  }
+  };
 
 
 

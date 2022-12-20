@@ -36,7 +36,7 @@ export class EditdetailComponent implements OnInit {
     }
   };
 
-  ngOnInit(): void {};
+  ngOnInit(): void { };
 
   openSnackBar() {
     this.snack.openFromComponent(CustomsnackComponent, {

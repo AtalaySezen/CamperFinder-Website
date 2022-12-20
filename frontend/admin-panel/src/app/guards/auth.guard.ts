@@ -6,29 +6,31 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
+  isAuth: boolean = false;
+
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return true;
   }
 
-  isAuth :boolean = false;
-  isAuthenticated(){
+
+  isAuthenticated() {
     let local = localStorage.getItem('isLogged');
 
-    if(local == 'true'){
+    if (local == 'true') {
       return true;
-    }else{
+    } else {
       return false;
     }
-  }
-  
-  login(){
-    this.isAuth = true;
-  }
-  logOut(){
-    this.isAuth = false;
+  };
 
-  }
-  
+  login() {
+    this.isAuth = true;
+  };
+
+  logOut() {
+    this.isAuth = false;
+  };
+
 }

@@ -57,7 +57,7 @@ export class EditblogComponent implements OnInit {
     )
   };
 
-  editBlog(id: number, num: number, blogHeader: string, image: string, html: string,alt:string) {
+  editBlog(id: number, num: number, blogHeader: string, image: string, html: string, alt: string) {
     console.log(id, blogHeader, image, html);
     const dialogRef = this.dialog.open(EditblogdialogComponent, {
       width: '600px',
@@ -69,26 +69,26 @@ export class EditblogComponent implements OnInit {
         blogHeader: blogHeader,
         image: image,
         html: html,
-        alt:alt
+        alt: alt
       },
     });
     dialogRef.afterClosed().subscribe(data => {
       this.getBlogs();
     })
   };
-  
-  addNewBlog(id: number, num: number, blogHeader: string, image: string, html: string,alt:string) {
+
+  addNewBlog(id: number, num: number, blogHeader: string, image: string, html: string, alt: string) {
     const dialogRef = this.dialog.open(NewblogdialogComponent, {
       width: '600px',
       height: 'auto',
       data: {
-        id:id,
+        id: id,
         title: 'Add New Blog',
         num: num,
         blogHeader: blogHeader,
         image: image,
         html: html,
-        alt:alt
+        alt: alt
       },
     });
     dialogRef.afterClosed().subscribe(data => {
@@ -99,8 +99,8 @@ export class EditblogComponent implements OnInit {
 
 
 
-  
-  }
+
+}
 
 
 

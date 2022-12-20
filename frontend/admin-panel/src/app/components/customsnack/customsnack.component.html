@@ -1,12 +1,3 @@
-<!-- <span class="example-pizza-party" matSnackBarLabel>
-    Başarıyla Tamamlandı.
-  </span>
-  <span matSnackBarActions>
-    <button mat-button matSnackBarAction (click)="snackBarRef.dismissWithAction()">
-        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="check"></mat-icon>
-    </button>
-  </span> -->
-  
   <mat-form-field appearance="fill">
     <mat-label>Horizontal position</mat-label>
     <mat-select [(value)]="horizontalPosition">
@@ -24,7 +15,6 @@
       <mat-option value="bottom">Bottom</mat-option>
     </mat-select>
   </mat-form-field>
-  
   <button mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="check"></mat-icon>
   </button>

@@ -35,6 +35,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CustomsnackComponent } from './components/customsnack/customsnack.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { EditblogdialogComponent } from './components/editblog/editblogdialog/editblogdialog.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { EditblogdialogComponent } from './components/editblog/editblogdialog/ed
     LoaderComponent,
     CustomsnackComponent,
     FooterComponent,
-    EditblogdialogComponent
+    EditblogdialogComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserAnimationsModule,

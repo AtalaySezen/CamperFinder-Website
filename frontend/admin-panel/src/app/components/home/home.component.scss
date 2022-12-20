@@ -1,8 +1,9 @@
  .add-flex {
      display: flex;
-     justify-content: space-between;
+     justify-content: space-evenly;
+     width: 100%;
      align-items: center;
-     margin: 5px 7rem;
+     margin: 2rem 0;
  }
 
  .flex-cards {
@@ -13,28 +14,29 @@
      justify-content: center;
  }
 
- .last-item {
-     color: rgb(40, 64, 12);
-     text-decoration: underline;
-     font-weight: 550;
- }
-
  .select-container {
-     width: 100%;
      display: flex;
+     flex-direction: column;
      align-items: center;
      justify-content: center;
+     background-color: white;
+     margin-top: 2rem;
+     border-radius: 25px;
  }
-
+ .header{
+    padding-top: 2rem;
+    color: rgb(40, 64, 12);
+}
  .select-city {
-     width: 90%;
+    width: 55%;
      text-align: center;
      height: 45px;
-     border-radius: 20px;
      font-size: 1.1rem;
      color: rgb(40, 64, 12);
-     font-weight: 550;
-     border: 2px solid rgb(40, 64, 12);
+     font-weight: 500;
+ }
+ option{
+    overflow: hidden;
  }
 
  .example-card {

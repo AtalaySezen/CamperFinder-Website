@@ -57,7 +57,7 @@ export class EditblogdialogComponent implements OnInit {
     })
   };
 
-  
+
   closeDialog() {
     this.dialogRef.close({ event: 'close' });
   };

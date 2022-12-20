@@ -3,7 +3,7 @@
 <ng-container *ngFor="let element of placesData|slice:0:1">
     <div class="add-new">
         <button
-            (click)="openDialog(element.adress,element.alt,element.image1,element.image2,element.image3,element.internet,element.market,element.num,element.shower,element.toilet)"
+            (click)="newDetail(element.adress,element.alt,element.image1,element.image2,element.image3,element.internet,element.market,element.num,element.shower,element.toilet)"
             mat-raised-button color="primary" matTooltip="Yeni Detay Alanı">
             Yeni Alan Ekle
         </button>
@@ -18,7 +18,6 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Adress </th>
         <td mat-cell *matCellDef="let element"> {{element.adress}} </td>
     </ng-container>
-
     <ng-container matColumnDef="Image 1">
         <th mat-header-cell *matHeaderCellDef> Image 1 </th>
         <td mat-cell *matCellDef="let element" matTooltip="Linki Kopyala Ve Görseli Aç"> {{element.image1}} </td>
@@ -55,13 +54,13 @@
                 matTooltip="Sil">
                 <mat-icon>delete</mat-icon>
             </button>
-            <button [value]="element.id" (click)="deletePlace(element._id)" mat-icon-button color="primary"
-                matTooltip="Düzenle">
+            <button [value]="element.id"
+                (click)="editPlace(element._id,element.adress,element.num,element.alt,element.image1,element.image2,element.image3,element.internet,element.market,element.shower,element.toilet)"
+                mat-icon-button color="primary" matTooltip="Düzenle">
                 <mat-icon>edit</mat-icon>
             </button>
         </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
 </table>

@@ -19,8 +19,7 @@ export class DialognewdetailComponent implements OnInit {
     private http: HttpClient,
     @Inject(MAT_DIALOG_DATA)
     public data: any,
-    private snack: MatSnackBar,
-  ) {
+    private snack: MatSnackBar,) {
     {
       this.Form = new FormGroup({
         num: new FormControl(this.data.num, Validators.required),
@@ -35,17 +34,16 @@ export class DialognewdetailComponent implements OnInit {
         toilet: new FormControl(this.data.toilet, Validators.required)
       })
     }
-  }
+  };
 
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { };
 
   openSnackBar() {
     this.snack.openFromComponent(CustomsnackComponent, {
       duration: this.durationInSeconds * 1000,
     });
-  }
+  };
 
 
   saveDialog() {
@@ -80,11 +78,14 @@ export class DialognewdetailComponent implements OnInit {
         });
       }
     })
-  }
+  };
 
   closeDialog() {
     this.dialogRef.close({ event: 'close' });
-  }
+  };
 
+
+
+  
 
 }

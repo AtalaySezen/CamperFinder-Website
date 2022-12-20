@@ -8,18 +8,21 @@ import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarRef, MatSnackBar
 })
 export class CustomsnackComponent implements OnInit {
   horizontalPosition: MatSnackBarHorizontalPosition = 'start';
-  verticalPosition: MatSnackBarVerticalPosition = 'bottom'; 
-  
-  constructor(private _snackBar: MatSnackBar) { }
+  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
-  ngOnInit(): void {
-  }
+  constructor(private _snackBar: MatSnackBar) { }
   snackBarRef = inject(MatSnackBarRef);
+
+  ngOnInit(): void { };
 
   openSnackBar() {
     this._snackBar.open('Cannonball!!', 'Splash', {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
     });
-  }
+  };
+
+
+
+
 }

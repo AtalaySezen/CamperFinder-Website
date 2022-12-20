@@ -12,14 +12,6 @@ export class AppComponent {
   }
   
 
-  // userLogged(){
-  //   console.log(this.isLogged,"islogged");
-  //   if(localStorage.getItem('isLogged') == 'true'){
-  //     this.isLogged == true;
-  //   }else{
-  //     this.isLogged == false;
-  //   }
-  // }
 
 
 

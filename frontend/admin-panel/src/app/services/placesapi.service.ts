@@ -8,35 +8,31 @@ import { environment } from 'src/environments/environment';
 })
 export class PlacesapiService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   //Get datas
   GetPlaces(): Observable<any> {
     return this.http.get<any>(environment.placesUrl);
-  }
+  };
 
-  // PostPlace(): Observable<any> {
-  //   return this.http.get<any>(environment.placesUrl);
-  // }
+  DeletePlace(id: number): Observable<any> {
+    return this.http.delete<any>(environment.placesUrl + { id });
+  };
 
-  DeletePlace(id:number):Observable<any>{
-    return this.http.delete<any>(environment.placesUrl+{id});
-  }
- 
 
-   //Get datas
-   GetPlaceDetail(): Observable<any> {
+  //Get datas
+  GetPlaceDetail(): Observable<any> {
     return this.http.get<any>(environment.detailsUrl);
-  }
+  };
 
-  // PostPlace(): Observable<any> {
-  //   return this.http.get<any>(environment.placesUrl);
-  // }
+  DeletePlaceDetail(id: number): Observable<any> {
+    return this.http.delete<any>(environment.detailsUrl + { id });
+  };
 
-  DeletePlaceDetail(id:number):Observable<any>{
-    return this.http.delete<any>(environment.detailsUrl+{id});
-  }
 
-    
+  GetBlogs(): Observable<any> {
+    return this.http.get<any>(environment.blogsUrl);
+  };
+
 
 }

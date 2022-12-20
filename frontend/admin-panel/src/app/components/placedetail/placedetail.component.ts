@@ -26,7 +26,6 @@ export class PlacedetailComponent implements OnInit {
   dataSource: MatTableDataSource<any>;
 
 
-
   constructor(@Inject(MAT_DIALOG_DATA) public dialogRef: MatDialogRef<EditdetailComponent>,
     private http: HttpClient,
     private placesapi: PlacesapiService,
@@ -36,13 +35,13 @@ export class PlacedetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.places();
+  };
 
-  }
   openSnackBar() {
     this.snack.openFromComponent(CustomsnackComponent, {
       duration: this.durationInSeconds * 1000,
     });
-  }
+  };
 
 
   deletePlace(id: any) {
@@ -58,7 +57,7 @@ export class PlacedetailComponent implements OnInit {
         });
       }
     )
-  }
+  };
 
 
   places() {
@@ -69,10 +68,10 @@ export class PlacedetailComponent implements OnInit {
       this.dataSource = new MatTableDataSource(data);
       console.log(data);
     })
-  }
+  };
 
 
-  openDialog(adress: any, alt: any, image1: any, image2: any, image3: any, internet: any, market: any, num: any, shower: any, toilet: any) {
+  newDetail(adress: any, alt: any, image1: any, image2: any, image3: any, internet: any, market: any, num: any, shower: any, toilet: any) {
     const dialogRef = this.dialog.open(DialognewdetailComponent, {
       width: '600px',
       height: 'auto',
@@ -95,6 +94,31 @@ export class PlacedetailComponent implements OnInit {
     })
   };
 
+
+  editPlace(_id: any, adress: any, num: any, alt: any, image1: any, image2: any, image3: any, internet: any, market: any, shower: any, toilet: any) {
+    const dialogRef = this.dialog.open(EditdetailComponent, {
+      width: '600px',
+      height: 'auto',
+      data: {
+        title: 'New Place',
+        id: _id,
+        adress: adress,
+        alt: alt,
+        image1: image1,
+        image2: image2,
+        image3: image3,
+        internet: internet,
+        market: market,
+        num: num,
+        shower: shower,
+        toilet: toilet
+      },
+    });
+
+    dialogRef.afterClosed().subscribe(data => {
+      this.places();
+    })
+  };
 
 
 

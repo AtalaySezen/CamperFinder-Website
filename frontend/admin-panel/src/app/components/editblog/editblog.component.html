@@ -1,2 +1,21 @@
-<app-navbar></app-navbar>
-<p>editblog works!</p>
+<div class="flex-cards">
+    <ng-container  *ngFor="let item of blogsHtml">
+        <mat-card class="example-card">
+            <mat-card-header >
+                <mat-card-title>{{item.num}}</mat-card-title>
+                <mat-card-title>{{item.blogHeader}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{item.image}}" alt="CamperFinder Eksik Fotoğraf">
+            <mat-card-content>
+                <p>
+                    {{item.html}}
+                </p>
+            </mat-card-content>
+            <!-- <mat-card-actions>
+                <button mat-raised-button color="primary"
+                    (click)="openDialog(item._id,item.num,item.info,item.image,item.alt,item.campPlaceName)">Düzenle</button>
+                <button mat-raised-button color="warn" [value]="item.id" (click)="deletePlace(item._id)">Sil</button>
+            </mat-card-actions> -->
+        </mat-card>
+    </ng-container>
+</div>

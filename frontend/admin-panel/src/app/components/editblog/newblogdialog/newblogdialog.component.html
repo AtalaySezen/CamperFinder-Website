@@ -1,1 +1,48 @@
-<p>newblogdialog works!</p>
+<form [formGroup]="Form" class="form-column">
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Blog İsmi</mat-label>
+            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                cdkAutosizeMaxRows="5" placeholder={{data.blogHeader}} type="text" formControlName="blogHeader"
+                placeholder="blogHeader"></textarea>
+            <mat-hint>Blog İsmi</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Blog Numarası</mat-label>
+            <input matInput placeholder={{data.num}} type="text" formControlName="num" placeholder="num">
+            <mat-hint>Blog Numarası</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Blog Metini</mat-label>
+            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                cdkAutosizeMaxRows="5" placeholder={{data.html}} type="text" formControlName="html"
+                placeholder="html"></textarea>
+            <mat-hint>Blog Metini</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Blog Alt Tag</mat-label>
+            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                cdkAutosizeMaxRows="5" placeholder={{data.alt}} type="text" formControlName="alt"
+                placeholder="alt"></textarea>
+            <mat-hint>Blog Alt Tag</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Görsel Linki</mat-label>
+            <input matInput placeholder={{data.image}} type="text" formControlName="image" placeholder="image">
+            <mat-hint>Görsel Linki</mat-hint>
+        </mat-form-field>
+    </p>
+
+</form>
+<div mat-dialog-actions class="button-flex">
+    <button mat-raised-button color="warn" translate (click)="closeDialog()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="saveDialog()" translate>Save</button>
+</div>

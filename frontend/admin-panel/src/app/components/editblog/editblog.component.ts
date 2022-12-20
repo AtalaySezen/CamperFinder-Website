@@ -5,6 +5,8 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { UniqueSelectionDispatcher } from '@angular/cdk/collections';
 import { CustomsnackComponent } from '../customsnack/customsnack.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { EditblogdialogComponent } from './editblogdialog/editblogdialog.component';
+import { NewblogdialogComponent } from './newblogdialog/newblogdialog.component';
 @Component({
   selector: 'app-editblog',
   templateUrl: './editblog.component.html',
@@ -15,7 +17,7 @@ export class EditblogComponent implements OnInit {
   blogsHtml: Array<any> = [];
   loadingTable: boolean = false;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public dialogRef: MatDialogRef<EditblogComponent>,
+  constructor(@Inject(MAT_DIALOG_DATA) public dialogRef: MatDialogRef<EditblogdialogComponent>,
     private snack: MatSnackBar,
     private http: HttpClient,
     private placesapi: PlacesapiService,
@@ -31,6 +33,7 @@ export class EditblogComponent implements OnInit {
   getBlogs() {
     this.loadingTable = true;
     this.placesapi.GetBlogs().subscribe(data => {
+      this.blogsHtml = [];
       this.blogData = data;
       this.blogData.map(x => {
         console.log(x, "x")
@@ -40,14 +43,65 @@ export class EditblogComponent implements OnInit {
     })
   };
 
-  editBlog() {
-
+  deleteBlog(id: any) {
+    this.http.delete(`https://camperfinder.org/node2/node3/${id}`).subscribe(() => {
+      this.snack.open('Başarıyla Silindi', 'Ok', {
+      });
+      this.getBlogs();
+    },
+      (error) => {
+        console.log(error);
+        this.snack.open('Silinemedi Hata Var', 'Ok', {
+        });
+      }
+    )
   };
 
-  deleteBlog(id: number) {
-
+  editBlog(id: number, num: number, blogHeader: string, image: string, html: string,alt:string) {
+    console.log(id, blogHeader, image, html);
+    const dialogRef = this.dialog.open(EditblogdialogComponent, {
+      width: '600px',
+      height: 'auto',
+      data: {
+        title: 'Edit Blog',
+        id: id,
+        num: num,
+        blogHeader: blogHeader,
+        image: image,
+        html: html,
+        alt:alt
+      },
+    });
+    dialogRef.afterClosed().subscribe(data => {
+      this.getBlogs();
+    })
+  };
+  
+  addNewBlog(id: number, num: number, blogHeader: string, image: string, html: string,alt:string) {
+    const dialogRef = this.dialog.open(NewblogdialogComponent, {
+      width: '600px',
+      height: 'auto',
+      data: {
+        id:id,
+        title: 'Add New Blog',
+        num: num,
+        blogHeader: blogHeader,
+        image: image,
+        html: html,
+        alt:alt
+      },
+    });
+    dialogRef.afterClosed().subscribe(data => {
+      this.getBlogs();
+    })
   };
 
 
 
-}
+
+  
+  }
+
+
+
+

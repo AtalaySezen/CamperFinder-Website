@@ -2,24 +2,26 @@
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Kamp Alanı İsmi</mat-label>
-            <input matInput placeholder={{data.campPlaceName}} type="text" formControlName="campPlaceName"
-                placeholder="campPlaceName">
+                <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                cdkAutosizeMaxRows="5" placeholder={{data.campPlaceName}} type="text" formControlName="campPlaceName"
+                placeholder="campPlaceName"></textarea>
             <mat-hint>Kamp Alanı İsmi</mat-hint>
         </mat-form-field>
     </p>
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Kamp Alanı Numarası</mat-label>
-            <input matInput placeholder={{data.num}} type="text" formControlName="num"
-                placeholder="num">
-            <mat-hint>Alan Numarası</mat-hint>
+            <input matInput placeholder={{data.num}} type="text" formControlName="num" placeholder="num">
+            <mat-hint>Kamp Alanı Numarası</mat-hint>
         </mat-form-field>
     </p>
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Açıklama</mat-label>
-            <input matInput placeholder={{data.info}} type="text" formControlName="info" placeholder="info">
-            <mat-hint>Kamp Alanı Açıklama</mat-hint>
+            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                cdkAutosizeMaxRows="5" placeholder={{data.info}} type="text" formControlName="info"
+                placeholder="info"></textarea>
+            <mat-hint>Kamp Alanı Açıklaması</mat-hint>
         </mat-form-field>
     </p>
     <p>

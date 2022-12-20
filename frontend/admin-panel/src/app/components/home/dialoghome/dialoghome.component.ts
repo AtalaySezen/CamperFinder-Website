@@ -24,10 +24,9 @@ export class DialoghomeComponent {
         campPlaceName: new FormControl(this.data.campPlaceName, Validators.required),
         image: new FormControl(this.data.image, Validators.required),
         alt: new FormControl(this.data.alt, Validators.required)
-
-      })
+      });
     }
-  }
+  };
 
   saveDialog() {
     let id = this.Form.get('id')?.value;
@@ -53,12 +52,11 @@ export class DialoghomeComponent {
         });
       }
     })
-
-  }
+  };
 
   closeDialog() {
     this.dialogRef.close({ event: 'close' });
-  }
+  };
 
 
 

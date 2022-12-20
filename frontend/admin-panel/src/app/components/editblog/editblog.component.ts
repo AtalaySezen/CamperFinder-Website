@@ -13,6 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class EditblogComponent implements OnInit {
   blogData: Array<any> = [];
   blogsHtml: Array<any> = [];
+  loadingTable: boolean = false;
 
   constructor(@Inject(MAT_DIALOG_DATA) public dialogRef: MatDialogRef<EditblogComponent>,
     private snack: MatSnackBar,
@@ -28,15 +29,24 @@ export class EditblogComponent implements OnInit {
 
 
   getBlogs() {
+    this.loadingTable = true;
     this.placesapi.GetBlogs().subscribe(data => {
       this.blogData = data;
       this.blogData.map(x => {
         console.log(x, "x")
         this.blogsHtml.push(x);
+        this.loadingTable = false;
       })
     })
   };
 
+  editBlog() {
+
+  };
+
+  deleteBlog(id: number) {
+
+  };
 
 
 

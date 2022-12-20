@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   loginHref() {
     let localUser = localStorage.getItem('username');
     let localPass = localStorage.getItem('password');
@@ -52,11 +51,10 @@ export class LoginComponent implements OnInit {
         this.warnMessage = 'Your username or password is wrong '
       }
     }
-  }
+  };
 
   showPass() {
     this.password = 'text'
-
-  }
+  };
 
 }

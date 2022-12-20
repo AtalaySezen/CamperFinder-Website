@@ -1,21 +1,25 @@
+<app-navbar></app-navbar>
+<app-loader *ngIf="loadingTable"></app-loader>
 <div class="flex-cards">
-    <ng-container  *ngFor="let item of blogsHtml">
+    <ng-container *ngFor="let item of blogsHtml">
         <mat-card class="example-card">
-            <mat-card-header >
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
                 <mat-card-title>{{item.num}}</mat-card-title>
-                <mat-card-title>{{item.blogHeader}}</mat-card-title>
+                <mat-card-subtitle>{{item.blogHeader}}</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image src="{{item.image}}" alt="CamperFinder Eksik Fotoğraf">
+            <img mat-card-image src="{{item.image}}" alt="Photo of a Shiba Inu" referrerpolicy="no-referrer">
             <mat-card-content>
                 <p>
                     {{item.html}}
                 </p>
             </mat-card-content>
-            <!-- <mat-card-actions>
-                <button mat-raised-button color="primary"
-                    (click)="openDialog(item._id,item.num,item.info,item.image,item.alt,item.campPlaceName)">Düzenle</button>
-                <button mat-raised-button color="warn" [value]="item.id" (click)="deletePlace(item._id)">Sil</button>
-            </mat-card-actions> -->
+            <mat-card-actions>
+                <!-- <button mat-stroked-button color="primary" matTooltip="Kamp Alanını Düzenle"
+                    (click)="editBlog(item._id,item.num,item.info,item.image,item.alt,item.campPlaceName)">Düzenle</button> -->
+                <button mat-raised-button color="warn" matTooltip="Kamp Alanı Sil" [value]="item.id"
+                    (click)="deleteBlog(item._id)">Sil</button>
+            </mat-card-actions>
         </mat-card>
     </ng-container>
 </div>

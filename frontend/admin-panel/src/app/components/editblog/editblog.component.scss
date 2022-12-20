@@ -1,0 +1,16 @@
+.example-card {
+    max-width: 400px;
+    margin: 2rem 1rem;
+}
+
+.example-card img {
+    min-height: 300px !important;
+    max-height: 300px !important;
+}
+.flex-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,21 +1,26 @@
 <app-navbar></app-navbar>
 <app-loader *ngIf="loadingTable"></app-loader>
-<div style="display:flex; justify-content:space-between; align-items:center; margin:5px 1.5rem;">
-<div>
-    <mat-label>
-    <p class="last-item">
-        En Son Eklenen Kart Numarası
-    </p>
-    </mat-label>
-    <div *ngFor="let item of placesData; let last=last">
-        <span class="last-item" *ngIf="last">{{item.num}}</span>
+<div class="add-flex">
+    <div>
+        <mat-label>
+            <p class="last-item" matTooltip='Bir Sonraki Numara Bir Fazlası Olmalı'>
+                En Son Eklenen Kart Numarası
+            </p>
+            <div *ngFor="let item of placesData; let last=last">
+                <span class="last-item" *ngIf="last">{{item.num}}</span>
+            </div>
+        </mat-label>
     </div>
-</div>
-<div style="margin:1rem 0;" *ngFor="let item of placesData|slice:0:1">
-    <button mat-raised-button color="primary"
-        (click)="addNewPlace(item.id,item.city,item.alt,item.district,item.image,item.campPlaceName,item.info,item.coordinate1,item.coordinate2)">Yeni
-        Yer Ekle</button>
-</div>
+    <div style="margin:1rem 0;" *ngFor="let item of placesData|slice:0:1">
+        <button color="primary" type="button" matTooltip="Yeni Kamp Alanı Ekle"
+            (click)="addNewPlace(item.id,item.city,item.alt,item.district,item.image,item.campPlaceName,item.info,item.coordinate1,item.coordinate2)"
+            class="mat-focus-indicator mat-tooltip-trigger ml-4 flex-none ng-tns-c188-21 mat-mini-fab mat-button-base mat-primary"><span
+                class="mat-button-wrapper"><mat-icon role="img" svgicon="mat:add"
+                    class="mat-icon notranslate mat-icon-no-color" data-mat-icon-type="svg"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24">
+                        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+                    </svg></mat-icon></span></button>
+    </div>
 </div>
 <div class="select-container">
     <select class="select-city" name="Cities" (change)="changeCity($event)">
@@ -30,20 +35,22 @@
     <ng-container *ngFor="let item of selectedData">
         <mat-card class="example-card">
             <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
                 <mat-card-title>{{item.num}}</mat-card-title>
-                <mat-card-title>{{item.city}}</mat-card-title>
-                <mat-card-subtitle>{{item.campPlaceName}}</mat-card-subtitle>
+                <mat-card-subtitle>{{item.city}}</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image src="{{item.image}}" alt="CamperFinder Eksik Fotoğraf">
+            <img mat-card-image src="{{item.image}}" alt="Photo of a Shiba Inu" referrerpolicy="no-referrer">
             <mat-card-content>
+                <mat-card-title class="camp-header">{{item.campPlaceName}}</mat-card-title>
                 <p>
                     {{item.info}}
                 </p>
             </mat-card-content>
             <mat-card-actions>
-                <button mat-raised-button color="primary"
-                    (click)="openDialog(item._id,item.num,item.info,item.image,item.alt,item.campPlaceName)">Düzenle</button>
-                <button mat-raised-button color="warn" [value]="item.id" (click)="deletePlace(item._id)">Sil</button>
+                <button mat-stroked-button color="primary" matTooltip="Kamp Alanını Düzenle"
+                    (click)="editPlace(item._id,item.num,item.info,item.image,item.alt,item.campPlaceName)">Düzenle</button>
+                <button mat-raised-button color="warn" matTooltip="Kamp Alanı Sil" [value]="item.id"
+                    (click)="deletePlace(item._id)">Sil</button>
             </mat-card-actions>
         </mat-card>
     </ng-container>

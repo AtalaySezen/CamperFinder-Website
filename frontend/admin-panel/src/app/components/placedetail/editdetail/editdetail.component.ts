@@ -34,10 +34,9 @@ export class EditdetailComponent implements OnInit {
         toilet: new FormControl(this.data.toilet, Validators.required)
       })
     }
-  }
-
-  ngOnInit(): void {
   };
+
+  ngOnInit(): void {};
 
   openSnackBar() {
     this.snack.openFromComponent(CustomsnackComponent, {

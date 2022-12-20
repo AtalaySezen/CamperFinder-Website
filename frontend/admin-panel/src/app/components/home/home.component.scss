@@ -1,44 +1,60 @@
- .flex-cards{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-.example-card{
-    max-width: 350px;
-    margin: 3rem 1rem;
-    min-height: 630px;
-    max-height: 630px;
-}
-.example-card img{
-    min-height: 350px;
-    width: 100%;
-    height: 100%;
-    max-height: 300px;
-    min-width: 325px;
-}
-// .select-city{
-//     width: 100%;
-//     height: 50px;
-//     margin-top: 8px;
-//     border-radius: 5px;
-// }
-.last-item{
-    font-weight: 500;
-    font-size: 1rem;
-}
-.select-container{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.select-city{
-    width: 90%;
-    text-align: center;
-    height: 45px;
-    border-radius: 20px;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
+ .add-flex {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin: 5px 7rem;
+ }
+
+ .flex-cards {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .last-item {
+     color: rgb(40, 64, 12);
+     text-decoration: underline;
+     font-weight: 550;
+ }
+
+ .select-container {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .select-city {
+     width: 90%;
+     text-align: center;
+     height: 45px;
+     border-radius: 20px;
+     font-size: 1.1rem;
+     color: rgb(40, 64, 12);
+     font-weight: 550;
+     border: 2px solid rgb(40, 64, 12);
+ }
+
+ .example-card {
+     max-width: 400px;
+     margin: 2rem 1rem;
+ }
+
+ .example-card img {
+     min-height: 300px !important;
+     max-height: 300px !important;
+ }
+
+ .example-header-image {
+     background-image: url('https://i.ibb.co/16FDmVC/camperfinderlogo.png');
+     background-size: cover;
+ }
+
+ .camp-header {
+     font-size: 1rem;
+     color: rgb(40, 64, 12);
+     font-weight: 550;
+
+ }

@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
         this.selectedData.push(x);
       }
     })
-  }
+  };
 
   places() {
     this.loadingTable = true;
@@ -62,12 +62,14 @@ export class HomeComponent implements OnInit {
       })
 
     })
-  }
+  };
+
   openSnackBar() {
     this.snack.openFromComponent(CustomsnackComponent, {
       duration: this.durationInSeconds * 1000,
     });
-  }
+  };
+
   deletePlace(id: any) {
     this.http.delete(`https://camperfinder.org/node/node2/${id}`).subscribe(() => {
       this.snack.open('Başarıyla Silindi', 'Ok', {
@@ -80,12 +82,11 @@ export class HomeComponent implements OnInit {
         });
       }
     )
-  }
+  };
 
 
 
-  //??
-  openDialog(id: number, num: number, info: string, image: string, alt: string, campPlaceName: string) {
+  editPlace(id: number, num: number, info: string, image: string, alt: string, campPlaceName: string) {
     console.log(id, info, image)
     const dialogRef = this.dialog.open(DialoghomeComponent, {
       width: '600px',
@@ -103,7 +104,7 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe(data => {
       this.places();
     })
-  }
+  };
 
   addNewPlace(num: any, city: any, alt: any, district: any, image: any, campPlaceName: any, info: any, coordinate1: any, coordinate2: any) {
     const dialogRef = this.dialog.open(AddnewplaceComponent, {
@@ -125,7 +126,7 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe(data => {
       this.places();
     })
-  }
+  };
 
 
 

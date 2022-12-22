@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
 <app-loader *ngIf="loadingTable"></app-loader>
-<ng-container *ngFor="let element of placesData|slice:0:1">
-    <div class="add-new">
-        <button
+    <ng-container *ngFor="let element of placesData|slice:0:1">
+        <div class="add-new">
+            <button
             (click)="newDetail(element.adress,element.alt,element.image1,element.image2,element.image3,element.internet,element.market,element.num,element.shower,element.toilet)"
             mat-raised-button color="primary" matTooltip="Yeni Detay Alanı">
             Yeni Alan Ekle

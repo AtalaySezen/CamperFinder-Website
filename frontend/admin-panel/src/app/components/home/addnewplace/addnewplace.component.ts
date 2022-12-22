@@ -18,7 +18,6 @@ export class AddnewplaceComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA)
     public data: any,
     private snack: MatSnackBar,
-
   ) {
     {
       this.Form = new FormGroup({

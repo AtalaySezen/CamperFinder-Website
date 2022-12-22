@@ -7,18 +7,21 @@ import { PlacedetailComponent } from './components/placedetail/placedetail.compo
 import { SettingsComponent } from './components/settings/settings.component';
 import { AuthGuard } from './guards/auth.guard';
 
-const routes: Routes = [
-  {path:'home',component:HomeComponent,title:'Kamp Alanları',canActivate:[AuthGuard]},
-  {path:'blog',component:EditblogComponent,title:'Blog',canActivate:[AuthGuard]},
-  {path:'placedetail',component:PlacedetailComponent,title:'Kamp Detay',canActivate:[AuthGuard]},
-  {path:'settings',component:SettingsComponent,title:'Ayarlar',canActivate:[AuthGuard]},
-  {path:'',component:LoginComponent,title:'CamperFinder Yönetim Paneli'},
 
+const routes: Routes = [
+  { path: 'home', component: HomeComponent, title: 'Kamp Alanları', canActivate: [AuthGuard] },
+  { path: 'blog', component: EditblogComponent, title: 'Blog', canActivate: [AuthGuard] },
+  { path: 'placedetail', component: PlacedetailComponent, title: 'Kamp Detay', canActivate: [AuthGuard] },
+  { path: 'settings', component: SettingsComponent, title: 'Ayarlar', canActivate: [AuthGuard] },
+  { path: '', component: LoginComponent, title: 'CamperFinder Yönetim Paneli' },
 ];
 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
-})
+}) 
+
 export class AppRoutingModule { }
+
+

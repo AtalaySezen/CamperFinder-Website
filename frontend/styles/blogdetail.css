@@ -8,6 +8,9 @@
     margin: 3rem 0;
     padding: 3rem;
 }
+.detail-header{
+    margin-bottom: 1rem;
+}
 
 .main-blog {
     display: flex;
@@ -30,10 +33,15 @@
     font-size: 1.3rem;
     font-weight: 550;
 }
+.main-blog p, ul, li{
+    color: black;
+    font-size: 1.2rem;
+}
 
 @media(max-width:900px) {
     .detail-header {
         font-size: 1.3rem;
+        margin-bottom: 5px;
     }
 
     .main-blog {

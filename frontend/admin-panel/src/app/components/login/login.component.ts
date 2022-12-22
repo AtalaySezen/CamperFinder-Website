@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,52 +12,34 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  userName: string;
-  password: string;
-  user: string = "admin";
-  pass: string = "12345";
-  warnPass = 'none';
-  counter: number = 0;
-  maxTry: number = 3
-  warnTry = 'none';
-  warnMessage: string = ''
-  constructor( private router: Router) { }
+  username: string = 'admin';
+  password: any = 'admin123';
 
-  ngOnInit(): void {
-  }
+  constructor(private router: Router, private fb: FormBuilder, private snack: MatSnackBar) { }
+
+  ngOnInit(): void { }
+
+  loginForm = this.fb.group({
+    password: (['', [Validators.required, Validators.minLength(4)]]),
+    username: (['', [Validators.required, Validators.maxLength(5)]])
+  });
+
+  get f(): { [key: string]: AbstractControl } {  //this.loginForm.control
+    return this.loginForm.controls;
+  };
 
   loginHref() {
-    let localUser = localStorage.getItem('username');
-    let localPass = localStorage.getItem('password');
-    console.log(this.userName, this.password)
-    if (this.userName == this.user && this.password == this.pass) {
-      localStorage.setItem('isLogged', 'true')
-      this.router.navigate(['home']);
-    } else if (localUser === this.userName && this.password == localPass) {
-      localStorage.setItem('isLogged', 'true')
-      this.router.navigate(['home']);
-    }
-    else if (this.userName !== this.user && this.password != this.pass && ++this.counter) {
-      this.warnPass = 'show';
-      this.warnMessage = 'Your username or password is wrong '
-      console.log(this.counter)
-      console.log(this.maxTry)
-      if (this.counter > this.maxTry) {
-        this.warnTry = 'warnTry'
-        localStorage.setItem('username', 'admin2');
-        localStorage.setItem('password', '123456');
-        setTimeout(() => {
-          location.reload()
-        }, 800);
-      } else if (localPass!=this.password || this.userName != this.user) {
-        this.warnPass = 'show';
-        this.warnMessage = 'Your username or password is wrong '
-      }
+    let username = this.loginForm.get('username')?.value;
+    let password = this.loginForm.get('password')?.value;
+    if (this.username == username&&this.password == password) {
+      localStorage.setItem('isLogged', 'true');
+      this.snack.open('Eşleşti', 'Hoşgeldin');
+      this.router.navigate(['/home']);
+    } else {
+      localStorage.setItem('isLogged', 'false');
+      this.snack.open('Hatalı Şifre Ya Da Kullanıcı Adı', 'Anladım');
     }
   };
 
-  showPass() {
-    this.password = 'text'
-  };
 
 }

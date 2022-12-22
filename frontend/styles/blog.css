@@ -90,6 +90,13 @@
     border-radius: 15px;
 }
 
+.blogs{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 
 /*MOBİLE */
 @media(max-width:900px) {

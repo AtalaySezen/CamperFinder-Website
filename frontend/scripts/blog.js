@@ -14,9 +14,11 @@ function showBlogs(data) {
       <div class="cards-blog" onclick="goDetail(${x.num})">
       <img class="camper-image" src="${x.image}" alt="">
       <h1 class="blogcard-header">${x.blogHeader}</h1>
+      <div class="blogs">
       <p class="blog-infos">
-        ${x.html}
+      ${x.html}
       </p>
+      </div>
       <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>
       </div>`;
     document.getElementById('blogs').innerHTML = html;

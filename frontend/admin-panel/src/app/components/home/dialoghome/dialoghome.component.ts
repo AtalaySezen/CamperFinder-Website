@@ -26,7 +26,7 @@ export class DialoghomeComponent {
         alt: new FormControl(this.data.alt, Validators.required)
       });
     }
-  };
+  }
 
   saveDialog() {
     let id = this.Form.get('id')?.value;
@@ -52,11 +52,11 @@ export class DialoghomeComponent {
         });
       }
     })
-  };
+  }
 
   closeDialog() {
     this.dialogRef.close({ event: 'close' });
-  };
+  }
 
 
 

@@ -20,7 +20,7 @@ export class CustomsnackComponent implements OnInit {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
     });
-  };
+  }
 
 
 

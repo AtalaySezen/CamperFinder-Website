@@ -26,7 +26,7 @@ export class EditblogdialogComponent implements OnInit {
         alt: new FormControl(this.data.alt, Validators.required)
       });
     }
-  };
+  }
 
   ngOnInit(): void {
   }
@@ -55,12 +55,12 @@ export class EditblogdialogComponent implements OnInit {
         });
       }
     })
-  };
+  }
 
 
   closeDialog() {
     this.dialogRef.close({ event: 'close' });
-  };
+  }
 
 
 

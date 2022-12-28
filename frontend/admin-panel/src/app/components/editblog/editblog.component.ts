@@ -41,7 +41,7 @@ export class EditblogComponent implements OnInit {
         this.loadingTable = false;
       })
     })
-  };
+  }
 
   deleteBlog(id: any) {
     this.http.delete(`https://camperfinder.org/node2/node3/${id}`).subscribe(() => {
@@ -55,7 +55,7 @@ export class EditblogComponent implements OnInit {
         });
       }
     )
-  };
+  }
 
   editBlog(id: number, num: number, blogHeader: string, image: string, html: string, alt: string) {
     console.log(id, blogHeader, image, html);
@@ -75,7 +75,7 @@ export class EditblogComponent implements OnInit {
     dialogRef.afterClosed().subscribe(data => {
       this.getBlogs();
     })
-  };
+  }
 
   addNewBlog(id: number, num: number, blogHeader: string, image: string, html: string, alt: string) {
     const dialogRef = this.dialog.open(NewblogdialogComponent, {
@@ -94,7 +94,7 @@ export class EditblogComponent implements OnInit {
     dialogRef.afterClosed().subscribe(data => {
       this.getBlogs();
     })
-  };
+  }
 
 
 

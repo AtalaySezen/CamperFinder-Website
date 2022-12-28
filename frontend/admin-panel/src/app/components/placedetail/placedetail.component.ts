@@ -35,13 +35,13 @@ export class PlacedetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.places();
-  };
+  }
 
   openSnackBar() {
     this.snack.openFromComponent(CustomsnackComponent, {
       duration: this.durationInSeconds * 1000,
     });
-  };
+  }
 
 
   deletePlace(id: any) {
@@ -57,7 +57,7 @@ export class PlacedetailComponent implements OnInit {
         });
       }
     )
-  };
+  }
 
 
   places() {
@@ -68,7 +68,7 @@ export class PlacedetailComponent implements OnInit {
       this.dataSource = new MatTableDataSource(data);
       console.log(data);
     })
-  };
+  }
 
 
   newDetail(adress: any, alt: any, image1: any, image2: any, image3: any, internet: any, market: any, num: any, shower: any, toilet: any) {
@@ -92,7 +92,7 @@ export class PlacedetailComponent implements OnInit {
     dialogRef.afterClosed().subscribe(data => {
       this.places();
     })
-  };
+  }
 
 
   editPlace(_id: any, adress: any, num: any, alt: any, image1: any, image2: any, image3: any, internet: any, market: any, shower: any, toilet: any) {
@@ -113,13 +113,13 @@ export class PlacedetailComponent implements OnInit {
         shower: shower,
         toilet: toilet
       },
-    });
+    })
 
     
     dialogRef.afterClosed().subscribe(data => {
       this.places();
     })
-  };
+  }
 
 
 

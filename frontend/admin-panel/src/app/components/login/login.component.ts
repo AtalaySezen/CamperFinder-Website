@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('isLogged', 'false');
       this.snack.open('Hatalı Şifre Ya Da Kullanıcı Adı', 'Anladım');
     }
-  };
+  }
 
 
 }

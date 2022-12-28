@@ -43,7 +43,7 @@ export class DialognewdetailComponent implements OnInit {
     this.snack.openFromComponent(CustomsnackComponent, {
       duration: this.durationInSeconds * 1000,
     });
-  };
+  }
 
 
   saveDialog() {
@@ -78,14 +78,14 @@ export class DialognewdetailComponent implements OnInit {
         });
       }
     })
-  };
+  }
 
   closeDialog() {
     this.dialogRef.close({ event: 'close' });
-  };
+  }
 
 
 
-  
+
 
 }

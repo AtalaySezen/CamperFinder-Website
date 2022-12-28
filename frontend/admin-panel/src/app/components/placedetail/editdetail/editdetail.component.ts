@@ -41,7 +41,7 @@ export class EditdetailComponent implements OnInit {
   openSnackBar() {
     this.snack.openFromComponent(CustomsnackComponent, {
     });
-  };
+  }
 
 
   saveDialog() {
@@ -78,11 +78,11 @@ export class EditdetailComponent implements OnInit {
         });
       }
     })
-  };
+  }
 
   closeDialog() {
     this.dialogRef.close({ event: 'close' });
-  };
+  }
 
 
 }

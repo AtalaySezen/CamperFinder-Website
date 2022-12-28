@@ -20,6 +20,7 @@ async function showPlaces(data) {
     let turkishChar = "Kırklareli"
     for (let x of data) {
         if (x.city == capitalizedTurkish || turkishChar) {
+            document.title = 'CamperFinder | ' + capitalizedTurkish +' Kamp Alanları';
             html += `
       <div class="card-flex" onclick="goDetail(${x.num})">
       <div class="places-card" style="background-image:url('${x.image}');">

@@ -8,8 +8,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/ms-icon-70x70.png">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>CamperFinder | Detay</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/detailpage.css">
+    <link rel="stylesheet" href="./styles/minify/style.min.css">
+    <link rel="stylesheet" href="./styles/minify/detailpage.min.css">
+    <!-- <link rel="stylesheet" href="./styles/detailpage.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 
@@ -136,16 +137,16 @@
                 <div class="footer-cities">
                     <h3 class="footer-about">Kamp Alanları</h3>
                     <div class="href-cities">
-                        <a class="footer-a" href="./istanbul.html">İstanbul</a>
-                        <a class="footer-a" href="./ankara.html">Ankara</a>
-                        <a class="footer-a" href="./antalya.html">Antalya</a>
-                        <a class="footer-a" href="./izmir.html">İzmir</a>
-                        <a class="footer-a" href="./Bursa.html">Bursa</a>
-                        <a class="footer-a" href="./edirne.html">Edirne</a>
-                        <a class="footer-a" href="./eskisehir.html">Eskişehir</a>
-                        <a class="footer-a" href="./tekirdag.html">Tekirdağ</a>
-                        <a class="footer-a" href="./kirklareli.html">Kırklareli</a>
-                        <a class="footer-a" href="./sakarya.html">Sakarya</a>
+                        <a class="footer-a" onclick="goCity(id)" id="istanbul">İstanbul</a>
+                        <a class="footer-a" onclick="goCity(id)" id="ankara">Ankara</a>
+                        <a class="footer-a" onclick="goCity(id)" id="antalya">Antalya</a>
+                        <a class="footer-a" onclick="goCity(id)" id="izmir">İzmir</a>
+                        <a class="footer-a" onclick="goCity(id)" id="bursa">Bursa</a>
+                        <a class="footer-a" onclick="goCity(id)" id="edirne">Edirne</a>
+                        <a class="footer-a" onclick="goCity(id)" id="eskişehir">Eskişehir</a>
+                        <a class="footer-a" onclick="goCity(id)" id="tekirdağ">Tekirdağ</a>
+                        <a class="footer-a" onclick="goCity(id)" id="kırklareli">Kırklareli</a>
+                        <a class="footer-a" onclick="goCity(id)" id="sakarya">Sakarya</a>
                     </div>
                 </div>
             </div>
@@ -156,7 +157,7 @@
         </footer>
         <script src="./scripts/main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-        <script src="./scripts/detailplace.js"></script>
+        <script src="./scripts/minify/detailplace.min.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCTNQWPGSH"></script>
         <script>
             window.dataLayer = window.dataLayer || [];

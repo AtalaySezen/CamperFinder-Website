@@ -20,5 +20,12 @@ function goLink(event) {
   window.location.href = `${event}.html`
 };
 
+function goCity(city) {
+  // window.location.href = `${event}.html`
+  let params = new URLSearchParams(`city=${city}`);
+  params.get(city);
+  window.location.href = ('kampyerleri.html' + '?' + params);
+};
+
 //Footer Year:
 document.getElementById('year').appendChild(document.createTextNode(new Date().getFullYear()));

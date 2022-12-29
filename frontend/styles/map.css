@@ -107,6 +107,14 @@
     font-weight: 550;
     color: var(--green) !important;
 }
+.hint-text{
+    color: var(--green);
+    font-size: 1.2rem;
+    font-weight: 550;
+    text-align: center;
+}
+
+
 
 /*MOBİLE */
 @media(max-width:900px) {
@@ -121,5 +129,8 @@
 
     .subheader-ist {
         font-size: 0.9rem;
+    }
+    .hint-text{
+        font-size: 1rem;
     }
 }

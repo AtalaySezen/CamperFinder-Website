@@ -42,7 +42,7 @@ function getCurrentSeason() {
     return day < 22 ? 'fall' : 'winter';
   }
 
-  console.error('Unable to calculate current season');
+  console.error('Mevsim Hesaplanamadı');
 }
 
 //Start seasons function
@@ -53,10 +53,11 @@ let apiBlogs = 'http://camperfinder.org/node2/node3';
 
 async function blogsApi(url) {
   const response = await fetch(url);
-
   data = await response.json();
   showBlogs(data);
 }
+
+
 function showBlogs(data) {
   let html = ``;
   let slicedArray = data.slice(0, 3);
@@ -77,7 +78,6 @@ function showBlogs(data) {
 }
 
 blogsApi(apiBlogs);
-//Blog Detail Page
 function goDetail(id) {
   let params = new URLSearchParams(`id=${id}`);
   params.get('?id');
@@ -170,6 +170,7 @@ function showSuggestions(list) {
   }
   resultBox.innerHTML = listData;
 }
+
 
 function select(id) {
   let lowerId = id.toLocaleLowerCase();

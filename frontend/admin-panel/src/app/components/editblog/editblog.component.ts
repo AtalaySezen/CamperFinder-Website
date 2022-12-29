@@ -36,7 +36,6 @@ export class EditblogComponent implements OnInit {
       this.blogsHtml = [];
       this.blogData = data;
       this.blogData.map(x => {
-        console.log(x, "x")
         this.blogsHtml.push(x);
         this.loadingTable = false;
       })

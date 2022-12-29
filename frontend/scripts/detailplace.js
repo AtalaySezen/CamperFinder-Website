@@ -55,7 +55,6 @@ function detailInfo() {
         .then(data =>
             data.map(a => {
                 for (let y of data) {
-                    console.log(y);
                     if (name == y.num) {
                         html += `
                         <div class="swiper-slide">
@@ -68,7 +67,6 @@ function detailInfo() {
                         <img src="${y.image3}" alt="${y.alt}">
                         </div>`;
                         document.getElementById('swiper').innerHTML = html;
-                        console.log(y)
                         if (y.toilet == true) {
                             document.getElementById('icon-toilet').innerHTML = `
                         <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">

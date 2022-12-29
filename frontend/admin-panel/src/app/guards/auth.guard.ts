@@ -14,10 +14,11 @@ export class AuthGuard implements CanActivate {
 
   canActivate() {
     if (this.auth.IsLoggedIn()) {
-      return true;}
+      return true;
+    }
     this.router.navigate(['login']);
     return false;
-  };
+  }
 
 
   isAuthenticated() {
@@ -27,12 +28,12 @@ export class AuthGuard implements CanActivate {
     } else if (local == 'false') {
       this.isAuth == false;
     }
-  };
+  }
 
 
   logOut() {
     this.isAuth = false;
-  };
+  }
 
 
 

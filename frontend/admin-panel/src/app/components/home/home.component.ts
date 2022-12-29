@@ -34,7 +34,6 @@ export class HomeComponent implements OnInit {
   }
 
   changeCity(event: any) {
-    console.log(event.target.value)
     this.loadingTable = true;
     this.placesData.map(x => {
       this.loadingTable = false;

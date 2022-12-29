@@ -2,39 +2,39 @@
 <app-loader *ngIf="loadingTable"></app-loader>
 <div class="container">
     <div class="add-blog">
-    <mat-label>Yeni Blog Ekle</mat-label>
-    <ng-container *ngFor="let item of blogsHtml|slice:0:1">
-        <button color="primary" type="button" matTooltip="Yeni Kamp Alanı Ekle"
-        (click)="addNewBlog(item._id,item.num,item.blogHeader,item.image,item.html,item.alt)"
-        class="mat-focus-indicator mat-tooltip-trigger ml-4 flex-none ng-tns-c188-21 mat-mini-fab mat-button-base mat-primary"><span
-            class="mat-button-wrapper"><mat-icon role="img" svgicon="mat:add"
-                class="mat-icon notranslate mat-icon-no-color" data-mat-icon-type="svg"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24">
-                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
-                </svg></mat-icon></span></button>
-            </ng-container>
-        </div>
-            <div class="flex-cards">
-    <ng-container *ngFor="let item of blogsHtml">
-        <mat-card class="example-card">
-            <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>{{item.num}}</mat-card-title>
-                <mat-card-subtitle>{{item.blogHeader}}</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="{{item.image}}" alt="Photo of a Shiba Inu" referrerpolicy="no-referrer">
-            <mat-card-content>
-                <p class="html">
-                    {{item.html}}
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-stroked-button color="primary" matTooltip="Kamp Alanını Düzenle"
-                    (click)="editBlog(item._id,item.num,item.blogHeader,item.image,item.html,item.alt)">Düzenle</button>
-                <button mat-raised-button color="warn" matTooltip="Kamp Alanı Sil" [value]="item.id"
-                    (click)="deleteBlog(item._id)">Sil</button>
-            </mat-card-actions>
-        </mat-card>
-    </ng-container>
-</div>
+        <mat-label>Yeni Blog Ekle</mat-label>
+        <ng-container *ngFor="let item of blogsHtml|slice:0:1">
+            <button color="primary" type="button" matTooltip="Yeni Kamp Alanı Ekle"
+                (click)="addNewBlog(item._id,item.num,item.blogHeader,item.image,item.html,item.alt)"
+                class="mat-focus-indicator mat-tooltip-trigger ml-4 flex-none ng-tns-c188-21 mat-mini-fab mat-button-base mat-primary"><span
+                    class="mat-button-wrapper"><mat-icon role="img" svgicon="mat:add"
+                        class="mat-icon notranslate mat-icon-no-color" data-mat-icon-type="svg"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+                        </svg></mat-icon></span></button>
+        </ng-container>
+    </div>
+    <div class="flex-cards">
+        <ng-container *ngFor="let item of blogsHtml">
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>{{item.num}}</mat-card-title>
+                    <mat-card-subtitle>{{item.blogHeader}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="{{item.image}}" alt="Photo of a Shiba Inu" referrerpolicy="no-referrer">
+                <mat-card-content>
+                    <p class="html">
+                        {{item.html}}
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-stroked-button color="primary" matTooltip="Kamp Alanını Düzenle"
+                        (click)="editBlog(item._id,item.num,item.blogHeader,item.image,item.html,item.alt)">Düzenle</button>
+                    <button mat-raised-button color="warn" matTooltip="Kamp Alanı Sil" [value]="item.id"
+                        (click)="deleteBlog(item._id)">Sil</button>
+                </mat-card-actions>
+            </mat-card>
+        </ng-container>
+    </div>
 </div>

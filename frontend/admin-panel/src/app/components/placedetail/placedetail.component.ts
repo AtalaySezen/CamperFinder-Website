@@ -45,7 +45,6 @@ export class PlacedetailComponent implements OnInit {
 
 
   deletePlace(id: any) {
-    console.log(id);
     this.http.delete(`http://camperfinder.org/node3/node4/${id}`).subscribe(() => {
       this.snack.open('Başarıyla Silindi', 'Ok', {
       });
@@ -66,7 +65,6 @@ export class PlacedetailComponent implements OnInit {
       this.loadingTable = false;
       this.placesData = data;
       this.dataSource = new MatTableDataSource(data);
-      console.log(data);
     })
   }
 

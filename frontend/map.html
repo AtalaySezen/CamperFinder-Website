@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/ms-icon-70x70.png">
     <title>CamperFinder | Kamp Alanları Haritası</title>
     <link rel="stylesheet" href="./styles/minify/style.min.css">
-    <link rel="stylesheet" href="./styles/minify/map.min.css">
+    <link rel="stylesheet" href="./styles/map.css">
     <!-- <link rel="stylesheet" href="./styles/map.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
         integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
@@ -50,7 +50,12 @@
                     çadırını ve çantanı hazırlamak sana kalır.
                 </p>
             </div>
+            <div class="loader-spin" id="showLoader">Kamp Alanları Haritası Sizin İçin Hazırlanıyor</div>
+            <p id="map-hint" class="hint-text">Haritada ilgini çeken alana tıklayarak bu alan hakkında daha fazla bilgi
+                sahibi olabilirsin.</p>
+          
             <div id="map"></div>
+
             <a class="join-us" href="./kampalanlari.html" style="padding-top:3rem;">Kamp Alanlarına Geri Dön</a>
         </div>
     </div>

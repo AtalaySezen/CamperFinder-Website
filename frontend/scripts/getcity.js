@@ -19,17 +19,17 @@ async function showPlaces(data) {
     let capitalizedTurkish = capitalized.replace('g', 'ğ');
     let turkishChar = "Kırklareli"
     for (let x of data) {
-        if (x.city == capitalizedTurkish || turkishChar) {
-            document.title = 'CamperFinder | ' + capitalizedTurkish +' Kamp Alanları';
+        if (x.city == capitalizedTurkish && turkishChar) {
+            document.title = 'CamperFinder | ' + capitalizedTurkish + ' Kamp Alanları';
             html += `
-      <div class="card-flex" onclick="goDetail(${x.num})">
-      <div class="places-card" style="background-image:url('${x.image}');">
-      </div>
-      <h1 class="header-place">${x.campPlaceName}</h1>
-      <p class="info-place">${x.info}</p>
-      <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>
-      </div>`;
-        }
+             <div class="card-flex" onclick="goDetail(${x.num})">
+             <div class="places-card" style="background-image:url('${x.image}');">
+             </div>
+             <h1 class="header-place">${x.campPlaceName}</h1>
+             <p class="info-place">${x.info}</p>
+             <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>
+             </div>`;
+        };
         cardsDiv.innerHTML = html;
         document.getElementById('header-camp').innerHTML = `${capitalized} Kamp Alanları`
         loader.style.display = 'none';

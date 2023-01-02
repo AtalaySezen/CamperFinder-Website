@@ -57,7 +57,6 @@ async function blogsApi(url) {
   showBlogs(data);
 }
 
-
 function showBlogs(data) {
   let html = ``;
   let slicedArray = data.slice(0, 3);
@@ -114,7 +113,6 @@ async function showPlaces(data) {
 
 placesApi(apiPlaces);
 
-
 let suggestions = [
   "İzmir",
   "Ankara",
@@ -152,6 +150,7 @@ input.onkeyup = (e) => {
     let allList = resultBox.querySelectorAll("li");
     for (let i = 0; i < allList.length; i++) {
       allList[i].setAttribute("onclick", "select(id)");
+      
     }
   } else {
     searchInput.classList.add("none"); //hide 
@@ -173,8 +172,10 @@ function showSuggestions(list) {
 
 
 function select(id) {
-  let lowerId = id.toLocaleLowerCase();
-  window.location.href = `${lowerId}.html`
+  let params = new URLSearchParams(`city=${city}`);
+  params.get(city);
+  window.location.href = ('kampyerleri.html' + '?' + lowerId);
+
 }
 
 

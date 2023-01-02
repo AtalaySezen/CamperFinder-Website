@@ -14,6 +14,8 @@ let apiCoordinates = 'https://camperfinder.org/node/node2';
 
 async function getData() {
   let loader = document.getElementById('showLoader');
+  let hintText = document.getElementById('map-hint');
+  hintText.style.display = "none";
   document.getElementById('map').style.display = "none";
 
   const response = await fetch(apiCoordinates);
@@ -33,6 +35,12 @@ async function getData() {
     marker.bindPopup(infoText);
     loader.style.display = "none";
     document.getElementById('map').style.display = "block";
+    let storageTutorial = localStorage.getItem('tutorial');
+    if (storageTutorial == "true") {
+      hintText.style.display = "none";
+    } else {
+      hintText.style.display = "block";
+    }
   }
 };
 
@@ -46,11 +54,12 @@ function showHint() {
     hintText.style.display = "none";
   }
   map.addEventListener('mouseenter', () => {
-    console.log("girdi");
   })
   map.addEventListener('mouseleave', () => {
     localStorage.setItem('tutorial', 'true');
-    hintText.style.display = "none"
+    setTimeout(() => {
+      hintText.style.display = "none"
+    }, 2000);
   })
 }
 

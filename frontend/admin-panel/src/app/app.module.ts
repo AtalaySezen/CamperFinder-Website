@@ -35,6 +35,8 @@ import { CustomsnackComponent } from './components/customsnack/customsnack.compo
 import { FooterComponent } from './shared/footer/footer.component';
 import { EditblogdialogComponent } from './components/editblog/editblogdialog/editblogdialog.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { CreateArticleComponent } from './components/create-article/create-article.component';
 
 
 @NgModule({
@@ -54,7 +56,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     CustomsnackComponent,
     FooterComponent,
     EditblogdialogComponent,
-    SettingsComponent
+    SettingsComponent,
+    CreateArticleComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -62,6 +65,7 @@ import { SettingsComponent } from './components/settings/settings.component';
     ReactiveFormsModule,
     MatToolbarModule,
     MatSnackBarModule,
+    AngularEditorModule,
     MatFormFieldModule,
     MatInputModule,
     MatTooltipModule,

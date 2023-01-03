@@ -59,7 +59,7 @@ export class EditblogComponent implements OnInit {
   editBlog(id: number, num: number, blogHeader: string, image: string, html: string, alt: string) {
     console.log(id, blogHeader, image, html);
     const dialogRef = this.dialog.open(EditblogdialogComponent, {
-      width: '600px',
+      width: '100%',
       height: 'auto',
       data: {
         title: 'Edit Blog',

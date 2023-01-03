@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateArticleComponent } from './components/create-article/create-article.component';
 import { EditblogComponent } from './components/editblog/editblog.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -14,13 +15,14 @@ const routes: Routes = [
   { path: 'placedetail', component: PlacedetailComponent, title: 'Kamp Detay', canActivate: [AuthGuard] },
   { path: 'settings', component: SettingsComponent, title: 'Ayarlar', canActivate: [AuthGuard] },
   { path: '', component: LoginComponent, title: 'CamperFinder Yönetim Paneli' },
+  { path: 'create-article', component: CreateArticleComponent, title: 'Blog Editör' }
 ];
 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
-}) 
+})
 
 export class AppRoutingModule { }
 

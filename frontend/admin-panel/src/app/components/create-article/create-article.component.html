@@ -1,4 +1,5 @@
-<button style="margin-bottom: 1rem;" mat-button color="primary" routerLink="create-article">Blog Editörü</button>
+<app-navbar></app-navbar>
+
 <form [formGroup]="Form" class="form-column">
     <p>
         <mat-form-field appearance="outline">
@@ -18,15 +19,6 @@
     </p>
     <p>
         <mat-form-field appearance="outline">
-            <mat-label>Blog Metini</mat-label>
-            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
-                cdkAutosizeMaxRows="5" placeholder={{data.html}} type="text" formControlName="html"
-                placeholder="html"></textarea>
-            <mat-hint>Blog Metini</mat-hint>
-        </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field appearance="outline">
             <mat-label>Blog Alt Tag</mat-label>
             <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
                 cdkAutosizeMaxRows="5" placeholder={{data.alt}} type="text" formControlName="alt"
@@ -41,8 +33,8 @@
             <mat-hint>Görsel Linki</mat-hint>
         </mat-form-field>
     </p>
+    <angular-editor formControlName="html" [config]="editorConfig" ></angular-editor>
 </form>
 <div mat-dialog-actions class="button-flex">
-    <button mat-raised-button color="warn" translate (click)="closeDialog()">Cancel</button>
     <button mat-raised-button color="primary" (click)="saveDialog()" translate>Save</button>
 </div>

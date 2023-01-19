@@ -17,9 +17,11 @@ async function showPlaces(data) {
     let name = params.get("city");
     let capitalized = name.charAt(0).toLocaleUpperCase() + name.slice(1);
     let capitalizedTurkish = capitalized.replace('g', 'ğ');
-    let turkishChar = "Kırklareli"
+    let turkishChar = "Kırklareli";
+    let turkishChar2 = "İstanbul"
+
     for (let x of data) {
-        if (x.city == capitalizedTurkish && turkishChar) {
+        if (x.city == capitalizedTurkish || turkishChar || turkishChar2) {
             document.title = 'CamperFinder | ' + capitalizedTurkish + ' Kamp Alanları';
             html += `
              <div class="card-flex" onclick="goDetail(${x.num})">
@@ -36,6 +38,7 @@ async function showPlaces(data) {
     };
 
 };
+
 //Start APİ
 placesApi(apiPlaces);
 

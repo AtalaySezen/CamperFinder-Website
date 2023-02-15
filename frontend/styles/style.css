@@ -601,3 +601,7 @@ footer {
 }
 
 /*FOOTER*/
+
+.hide-card{
+  display: none !important;
+}

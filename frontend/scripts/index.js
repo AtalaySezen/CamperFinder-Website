@@ -172,12 +172,12 @@ function showSuggestions(list) {
 
 
 function select(id) {
-  let params = new URLSearchParams(`city=${city}`);
-  params.get(city);
-  window.location.href = ('kampyerleri.html' + '?' + lowerId);
+  console.log(id);
+  let params = new URLSearchParams(`city=${id}`);
+  params.get(id);
+  window.location.href = ('kampyerleri.html' + '?city=' + id);
 
 }
-
 
 
 

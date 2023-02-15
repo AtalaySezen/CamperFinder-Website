@@ -131,3 +131,29 @@
     }
 
 }
+
+.btn-alls {
+    background-color: var(--red);
+    border-radius: 15px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    font-size: 20px;
+    font-weight: 550;
+    letter-spacing: 0px;
+    line-height: 21px;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 305px;
+    justify-content: center;
+    height: 65px;
+    margin-top: 1rem;
+}
+
+.btn-alls:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: white;
+    color: var(--red);
+}

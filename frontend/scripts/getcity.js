@@ -39,10 +39,12 @@ async function showPlaces(data) {
         loader.style.display = 'none';
         let cards = document.querySelectorAll('.card-flex');
         let btnShowMore = document.getElementById('show-more');
+        btnShowMore.classList.remove('none');
         btnShowMore.addEventListener('click', () => {
             for (var i = 9; i < cards.length; i++) {
                 cards[i].classList.remove('hide-card');
                 btnShowMore.classList.add('hide-card');
+
             }
         })
 
@@ -50,7 +52,7 @@ async function showPlaces(data) {
             for (var i = 6; i < cards.length; i++) {
                 cards[i].classList.add('hide-card');
             }
-        } 
+        }
     }
 }
 

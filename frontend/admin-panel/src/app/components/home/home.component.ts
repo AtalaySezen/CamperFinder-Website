@@ -88,7 +88,7 @@ export class HomeComponent implements OnInit {
   editPlace(id: number, num: number, info: string, image: string, alt: string, campPlaceName: string) {
     console.log(id, info, image)
     const dialogRef = this.dialog.open(DialoghomeComponent, {
-      width: '600px',
+      width: '800px',
       height: 'auto',
       data: {
         title: 'Edit Place',

@@ -1,41 +1,36 @@
-<form [formGroup]="Form" class="form-column">
+<form [formGroup]="Form" class="form-column w-full">
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Kamp Alanı İsmi</mat-label>
                 <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
                 cdkAutosizeMaxRows="5" placeholder={{data.campPlaceName}} type="text" formControlName="campPlaceName"
                 placeholder="campPlaceName"></textarea>
-            <mat-hint>Kamp Alanı İsmi</mat-hint>
         </mat-form-field>
     </p>
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Kamp Alanı Numarası</mat-label>
             <input matInput placeholder={{data.num}} type="text" formControlName="num" placeholder="num">
-            <mat-hint>Kamp Alanı Numarası</mat-hint>
         </mat-form-field>
     </p>
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Açıklama</mat-label>
             <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
-                cdkAutosizeMaxRows="5" placeholder={{data.info}} type="text" formControlName="info"
+                cdkAutosizeMaxRows="10" placeholder={{data.info}} type="text" formControlName="info"
                 placeholder="info"></textarea>
-            <mat-hint>Kamp Alanı Açıklaması</mat-hint>
         </mat-form-field>
     </p>
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Görsel Linki</mat-label>
             <input matInput placeholder={{data.image}} type="text" formControlName="image" placeholder="image">
-            <mat-hint>Görsel Linki</mat-hint>
         </mat-form-field>
     </p>
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Görsel Alt Tagi</mat-label>
             <input matInput placeholder={{data.alt}} type="text" formControlName="alt" placeholder="alt">
-            <mat-hint>Görsel Alt Tagi</mat-hint>
         </mat-form-field>
     </p>
 </form>

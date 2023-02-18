@@ -71,7 +71,7 @@ header a:hover {
   position: relative;
   width: 100%;
   z-index: 3;
-  height: 80px;
+  height: 70px;
 }
 
 .header ul {
@@ -86,6 +86,7 @@ header a:hover {
   display: block;
   padding: 25px 20px;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .header li a:hover,

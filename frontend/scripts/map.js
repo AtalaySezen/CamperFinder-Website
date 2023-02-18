@@ -25,9 +25,8 @@ async function getData() {
     loader.style.display = "flex"
     loader.innerHTML = "Bir Hata İle Karşılaştık Lütfen İnternet Bağlantınızı Kontrol Edin Ya Da Bize Bildirin ";
   })
-
-  for (item of data) {
-    const marker = await L.marker([item.coordinate1, item.coordinate2]).addTo(map);
+  data.map(item => {
+    const marker = L.marker([item.coordinate1, item.coordinate2]).addTo(map);
     const infoText = `
     <a href="detailplace.html?id=${item.num}" class="map-text">
     ${item.campPlaceName}
@@ -41,7 +40,8 @@ async function getData() {
     } else {
       hintText.style.display = "block";
     }
-  }
+  })
+
 };
 
 getData();

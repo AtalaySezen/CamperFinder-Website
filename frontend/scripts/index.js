@@ -54,27 +54,27 @@ let apiBlogs = 'http://camperfinder.org/node2/node3';
 async function blogsApi(url) {
   const response = await fetch(url);
   data = await response.json();
-  showBlogs(data);
+  // showBlogs(data);
 }
 
-function showBlogs(data) {
-  let html = ``;
-  let slicedArray = data.slice(0, 3);
-  slicedArray.map(x => {
-    if (x.image == null) {
-      x.image = "https://i.ibb.co/xSRXKHw/pexels-photo-1118785.jpg"
-    }
-    html += `
-    <div class="cards blogs" onclick="goDetail(${x.num})"> 
-    <img class="blog-image" src="${x.image}">
-    <h1 class="blog-header">${x.blogHeader}</h1>
-    <div class="blog-html">
-    ${x.html}
-    </div>
-    </div>`;
-    document.getElementById('blog-cards').innerHTML = html;
-  })
-}
+// function showBlogs(data) {
+//   let html = ``;
+//   let slicedArray = data.slice(0, 3);
+//   slicedArray.map(x => {
+//     if (x.image == null) {
+//       x.image = "https://i.ibb.co/xSRXKHw/pexels-photo-1118785.jpg"
+//     }
+//     html += `
+//     <div class="cards blogs" onclick="goDetail(${x.num})"> 
+//     <img class="blog-image" src="${x.image}">
+//     <h1 class="blog-header">${x.blogHeader}</h1>
+//     <div class="blog-html">
+//     ${x.html}
+//     </div>
+//     </div>`;
+//     document.getElementById('blog-cards').innerHTML = html;
+//   })
+// }
 
 blogsApi(apiBlogs);
 function goDetail(id) {

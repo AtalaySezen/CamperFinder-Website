@@ -113,7 +113,7 @@ export class PlacedetailComponent implements OnInit {
       },
     })
 
-    
+
     dialogRef.afterClosed().subscribe(data => {
       this.places();
     })

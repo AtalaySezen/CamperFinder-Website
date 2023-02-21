@@ -54,34 +54,34 @@ let apiBlogs = 'http://camperfinder.org/node2/node3';
 async function blogsApi(url) {
   const response = await fetch(url);
   data = await response.json();
-  // showBlogs(data);
+  showBlogs(data);
 }
 
-// function showBlogs(data) {
-//   let html = ``;
-//   let slicedArray = data.slice(0, 3);
-//   slicedArray.map(x => {
-//     if (x.image == null) {
-//       x.image = "https://i.ibb.co/xSRXKHw/pexels-photo-1118785.jpg"
-//     }
-//     html += `
-//     <div class="cards blogs" onclick="goDetail(${x.num})"> 
-//     <img class="blog-image" src="${x.image}">
-//     <h1 class="blog-header">${x.blogHeader}</h1>
-//     <div class="blog-html">
-//     ${x.html}
-//     </div>
-//     </div>`;
-//     document.getElementById('blog-cards').innerHTML = html;
-//   })
-// }
+function showBlogs(data) {
+  let html = ``;
+  let slicedArray = data.slice(0,3);
+  slicedArray.map(x => {
+    if (x.image == null) {
+      x.image = "https://i.ibb.co/xSRXKHw/pexels-photo-1118785.jpg"
+    }
+    html += `
+    <div class="cards blogs" onclick="goDetail(${x.num})"> 
+    <img class="blog-image" src="${x.image}">
+    <h1 class="blog-header">${x.blogHeader}</h1>
+    <div class="blog-html">
+    ${x.html}
+    </div>
+    </div>`;
+    document.getElementById('blog-cards').innerHTML = html;
+  })
+}
 
 blogsApi(apiBlogs);
 function goDetail(id) {
   let params = new URLSearchParams(`id=${id}`);
   params.get('?id');
   params.get(id);
-  window.location.href = ('blogdetail.html' + "?" + params)
+  window.location.href = ('blogdetail.html' + "?" + params);
   //1-Detay sayfasına yönlendirilecek 
   //2-Detay sayfasında query`de idyi verecek. 
   //3-Detay sayfası yüklenirken, idye bakılacak. O id ile get atılacak. (Detay Sayfası Yükleme Fonksiyonudur
@@ -130,6 +130,7 @@ const searchInput = document.querySelector(".searchInput");
 const input = document.getElementById('input');
 const resultBox = searchInput.querySelector(".resultBox");
 const icon = searchInput.querySelector(".icon");
+let textSearch = document.getElementById('text-search');
 let linkTag = searchInput.querySelector("a");
 let webLink;
 
@@ -144,19 +145,18 @@ input.onkeyup = (e) => {
     emptyArray = emptyArray.map((data) => {
       return data = `<li id=${data}>` + data + `</li>`;
     });
-    document.getElementById('text-search').innerHTML = "CamperFinder'a hoşgeldin aradığın şehri kolayca bul!"
+    textSearch.innerHTML = "CamperFinder'a hoşgeldin aradığın şehri kolayca bul!"
     searchInput.classList.remove("none"); //show 
     showSuggestions(emptyArray);
     let allList = resultBox.querySelectorAll("li");
     for (let i = 0; i < allList.length; i++) {
       allList[i].setAttribute("onclick", "select(id)");
-      
     }
   } else {
     searchInput.classList.add("none"); //hide 
-    document.getElementById('text-search').innerHTML = "CamperFinder"
-
+    textSearch.innerHTML = "CamperFinder"
   }
+
 }
 
 function showSuggestions(list) {
@@ -172,7 +172,6 @@ function showSuggestions(list) {
 
 
 function select(id) {
-  console.log(id);
   let params = new URLSearchParams(`city=${id}`);
   params.get(id);
   window.location.href = ('kampyerleri.html' + '?city=' + id);

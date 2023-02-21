@@ -11,13 +11,14 @@ async function blogDetailApi(url) {
 async function showPlaces(data) {
     let html = ``;
     for (let x of data) {
+        console.log(x.html)
         let params = (new URL(document.location)).searchParams;
         let name = params.get("id");
         if (name == x.num) {
             html += `
             <div class="header-blog">
             <h1 class="detail-header"> ${x.blogHeader}</h1>
-            <img class="camper-image" src="${x.image}" alt="${x.alt}">
+            <img class="detail-image" src="${x.image}" alt="${x.alt}">
             </div>
             <div class="main-blog">
             ${x.html}

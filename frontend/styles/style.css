@@ -71,7 +71,7 @@ header a:hover {
   position: relative;
   width: 100%;
   z-index: 3;
-  height: 70px;
+  height: 71px;
 }
 
 .header ul {
@@ -603,6 +603,32 @@ footer {
 
 /*FOOTER*/
 
-.hide-card{
+.hide-card {
   display: none !important;
+}
+
+
+.social-medias {
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 35px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green);
+  transition: 1s;
 }

@@ -90,18 +90,36 @@
     border-radius: 15px;
 }
 
-.blogs{
+.blogs {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    min-height: 90px;
+    max-height: 90px;
 }
+
+.blog-image {
+    width: 100%;
+    min-height: 350px;
+    max-height: 350px;
+    border-radius: 30px;
+}
+
+.blogs h1 {
+    display: none;
+}
+
 
 /*MOBİLE */
 @media(max-width:900px) {
     .header-blog {
         font-size: 1.4rem;
+    }
+
+    .blogs {
+        min-height: auto;
     }
 
     .subheader-blog {
@@ -113,5 +131,11 @@
     .blogcard-header {
         text-align: center;
         margin: 5px 0;
+    }
+
+    .blog-image {
+        min-height: 200px;
+        max-height: 200px;
+        border-radius: 30px;
     }
 }

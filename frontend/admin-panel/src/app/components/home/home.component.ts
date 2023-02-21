@@ -101,7 +101,6 @@ export class HomeComponent implements OnInit {
       },
     });
     dialogRef.afterClosed().subscribe(data => {
-      this.places();
     })
   }
 

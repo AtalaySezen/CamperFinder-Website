@@ -8,15 +8,21 @@
     margin: 3rem 0;
     padding: 3rem;
 }
-.detail-header{
-    margin-bottom: 1rem;
+
+.detail-header {
+    margin: 3px 0;
+    font-size: 1.8rem;
+}
+
+.header-blog {
+    margin: 1rem 0;
 }
 
 .main-blog {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    margin-top: 2rem;
+    width: 100%;
 }
 
 .blog-text {
@@ -25,6 +31,14 @@
 }
 
 .blog-subcontainer {
+    margin: 1rem 0;
+}
+
+.detail-image {
+    min-height: 250px;
+    max-height: 500px;
+    max-width: 80%;
+    border-radius: 15px;
     margin-top: 1rem;
 }
 
@@ -33,9 +47,20 @@
     font-size: 1.3rem;
     font-weight: 550;
 }
-.main-blog p, ul, li{
+
+.main-blog p {
+    text-align: left;
+    font-size: 1.2rem;
+    color: black;
+    padding: 0 4rem;
+    margin-left: 2rem;
+}
+
+.main-blog ul li {
     color: black;
     font-size: 1.2rem;
+    text-align: left;
+    margin: 20px auto;
 }
 
 @media(max-width:900px) {
@@ -52,5 +77,19 @@
     .text-subcontainer {
         text-align: center;
         font-size: 1.1rem;
+    }
+
+    .detail-image {
+        width: 100%;
+        min-height: auto;
+        max-width: none;
+        min-width: auto;
+    }
+
+    .main-blog p ul li {
+        color: black;
+        font-size: 0.9rem;
+        text-align: left;
+        margin: 10px 0;
     }
 }

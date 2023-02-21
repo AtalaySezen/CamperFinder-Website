@@ -13,15 +13,13 @@ async function showPlaces(data) {
     let html = ``;
     let cardsDiv = document.getElementById('istanbul');
     let loader = document.getElementById('showLoader');
+    let headerCamp = document.getElementById('header-camp');
     let params = (new URL(document.location)).searchParams;
     let name = params.get("city");
     let capitalized = name.charAt(0).toLocaleUpperCase() + name.slice(1);
     let capitalizedTurkish = capitalized.replace('g', 'ğ').replace('I', 'İ');
 
-    let turkishChar = "Kırklareli";
-    let turkishChar2 = "İstanbul"
-
-    for (let x of data) {
+    data.map(x => {
         if (x.city == capitalizedTurkish) {
             document.title = 'CamperFinder | ' + capitalizedTurkish + ' Kamp Alanları';
             html += `
@@ -33,18 +31,18 @@ async function showPlaces(data) {
              <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>
              </div>`;
         };
-
         cardsDiv.innerHTML = html;
-        document.getElementById('header-camp').innerHTML = `${capitalized} Kamp Alanları`
         loader.style.display = 'none';
+        headerCamp.innerHTML = `${capitalized} Kamp Alanları`
         let cards = document.querySelectorAll('.card-flex');
         let btnShowMore = document.getElementById('show-more');
+
+        console.log(cards.length)
         btnShowMore.classList.remove('none');
         btnShowMore.addEventListener('click', () => {
             for (var i = 9; i < cards.length; i++) {
                 cards[i].classList.remove('hide-card');
                 btnShowMore.classList.add('hide-card');
-
             }
         })
 
@@ -53,8 +51,12 @@ async function showPlaces(data) {
                 cards[i].classList.add('hide-card');
             }
         }
-    }
+    })
+
+
 }
+
+
 
 //Start APİ
 placesApi(apiPlaces);

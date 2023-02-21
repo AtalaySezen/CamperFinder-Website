@@ -1,10 +1,12 @@
-var map = L.map('map').setView([40.24654854352209, 29.52250964965878], 6.5);
+let mapHtml = document.getElementById('map');
+let map = L.map('map').setView([40.24654854352209, 29.52250964965878], 6.5);
+
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-var polygon = L.polygon([
+let polygon = L.polygon([
   [51.509, -0.08],
   [51.503, -0.06],
   [51.51, -0.047]
@@ -15,16 +17,18 @@ let apiCoordinates = 'https://camperfinder.org/node/node2';
 async function getData() {
   let loader = document.getElementById('showLoader');
   let hintText = document.getElementById('map-hint');
+
   hintText.style.display = "none";
-  document.getElementById('map').style.display = "none";
+  mapHtml.style.display = "none";
 
   const response = await fetch(apiCoordinates);
   const data = await response.json().catch((err) => {
     console.log(err);
-    document.getElementById('map').style.display = "none";
-    loader.style.display = "flex"
+    mapHtml.style.display = "none";
+    loader.style.display = "flex";
     loader.innerHTML = "Bir Hata İle Karşılaştık Lütfen İnternet Bağlantınızı Kontrol Edin Ya Da Bize Bildirin ";
   })
+
   data.map(item => {
     const marker = L.marker([item.coordinate1, item.coordinate2]).addTo(map);
     const infoText = `
@@ -33,7 +37,7 @@ async function getData() {
     </a>`;
     marker.bindPopup(infoText);
     loader.style.display = "none";
-    document.getElementById('map').style.display = "block";
+    mapHtml.style.display = "block";
     let storageTutorial = localStorage.getItem('tutorial');
     if (storageTutorial == "true") {
       hintText.style.display = "none";
@@ -48,14 +52,14 @@ getData();
 
 function showHint() {
   let hintText = document.getElementById('map-hint');
-  let map = document.getElementById('map');
   let storageTutorial = localStorage.getItem('tutorial');
   if (storageTutorial == "true") {
     hintText.style.display = "none";
   }
-  map.addEventListener('mouseenter', () => {
+  mapHtml.addEventListener('mouseenter', () => {
+
   })
-  map.addEventListener('mouseleave', () => {
+  mapHtml.addEventListener('mouseleave', () => {
     localStorage.setItem('tutorial', 'true');
     setTimeout(() => {
       hintText.style.display = "none"

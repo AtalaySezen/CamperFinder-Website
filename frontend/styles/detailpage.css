@@ -204,4 +204,8 @@
     .icon-cross {
         width: 15px;
     }
+    .swiper-slide{
+        min-height: 350px;
+        max-height: 350px;
+    }
 }

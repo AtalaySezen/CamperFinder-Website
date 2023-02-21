@@ -12,7 +12,7 @@ function showBlogs(data) {
   for (let x of data) {
     html += `
       <div class="cards-blog" onclick="goDetail(${x.num})">
-      <img class="camper-image" src="${x.image}" alt="">
+      <img class="blog-image" src="${x.image}" alt="">
       <h1 class="blogcard-header">${x.blogHeader}</h1>
       <div class="blogs">
       <p class="blog-infos">

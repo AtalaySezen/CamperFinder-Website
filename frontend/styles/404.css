@@ -1,0 +1,68 @@
+.page-container {
+    width: 100%;
+    height: 100vh;
+    padding: 4rem 3rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.notfound-header {
+    font-size: 3rem;
+    color: rgb(224, 80, 40);
+}
+
+.svg-text {
+    display: flex;
+
+}
+
+.page-container a {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    text-decoration: underline;
+    color: black;
+    font-weight: 550;
+}
+
+.compass-icon {
+    width: 45px;
+    fill: rgb(40, 64, 12);
+    position: relative;
+    right: 1rem;
+    animation: mymove 5s infinite;
+
+}
+
+@keyframes mymove {
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+@media(max-width:900px) {
+    .notfound-header {
+        font-size: 1.7rem;
+        color: rgb(224, 80, 40);
+        TEXT-ALIGN: center;
+    }
+
+    .page-container a {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .svg-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .compass-icon{
+        right: 0;
+        bottom: 1rem;
+    }
+
+}

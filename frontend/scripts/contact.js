@@ -46,6 +46,9 @@ buttonSend.addEventListener('click', (e) => {
     checkEmail();
     validateName();
 
+    let status = false;
+    let subject = "CamperFinder";
+    let type = "iletişim Sayfası";
     if (validateName() == true && checkEmail() == true) {
         fetch("https://camperfinder.org/mail1/mail", {
             method: "POST",
@@ -54,6 +57,8 @@ buttonSend.addEventListener('click', (e) => {
                 subject: subject,
                 sender: mailInput.value,
                 message: messageArea.value,
+                type: type,
+                status: status
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8",

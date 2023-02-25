@@ -21,7 +21,7 @@ function showBlogs(data) {
       </div>
       <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>
       </div>`;
-    document.getElementById('blogs').innerHTML = html;
+    document.getElementById("blogs").innerHTML = html;
   }
 };
 

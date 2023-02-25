@@ -45,7 +45,7 @@ export class PlacedetailComponent implements OnInit {
 
 
   deletePlace(id: any) {
-    this.http.delete(`http://camperfinder.org/node3/node4/${id}`).subscribe(() => {
+    this.http.delete(`https://camperfinder.org/node3/node4/${id}`).subscribe(() => {
       this.snack.open('Başarıyla Silindi', 'Ok', {
       });
       this.places();

@@ -1,5 +1,5 @@
-<button style="margin-bottom: 1rem;" mat-button color="primary" routerLink="create-article">Blog Editörü</button>
-<form [formGroup]="Form" class="form-column">
+<form [formGroup]="Form" class="form-newblog">
+    <mat-label style="margin:1rem 0;">Yeni Blog</mat-label>
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Blog İsmi</mat-label>
@@ -17,10 +17,10 @@
         </mat-form-field>
     </p>
     <p>
-        <mat-form-field appearance="outline">
+        <mat-form-field style="min-width:500px;" appearance="outline">
             <mat-label>Blog Metini</mat-label>
-            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
-                cdkAutosizeMaxRows="5" placeholder={{data.html}} type="text" formControlName="html"
+            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="10"
+                cdkAutosizeMaxRows="3" placeholder={{data.html}} type="text" formControlName="html"
                 placeholder="html"></textarea>
             <mat-hint>Blog Metini</mat-hint>
         </mat-form-field>

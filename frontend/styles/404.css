@@ -16,7 +16,8 @@
 
 .svg-text {
     display: flex;
-
+    flex-direction: column;
+    align-items: center;
 }
 
 .page-container a {
@@ -60,7 +61,8 @@
         flex-direction: column;
         align-items: center;
     }
-    .compass-icon{
+
+    .compass-icon {
         right: 0;
         bottom: 1rem;
     }

@@ -36,7 +36,7 @@
             <ul class="menu">
                 <li><a href="./index.html">Anasayfa</a></li>
                 <li><a href="./kampalanlari.html">Kamp Alanları</a></li>
-                <li><a href="./blog.html">Blog</a></li>
+                <!-- <li><a href="./blog.html">Blog</a></li> -->
                 <li><a href="./hakkimizda.html">Hakkımızda</a></li>
                 <li><a href="./map.html">Harita</a></li>
                 <li><a href="./contact.html">İletişim</a></li>
@@ -44,11 +44,10 @@
         </nav>
     </header>
     <section>
-        <div class="search-container" id="search-bg" style="background-color: black;">
+        <div class="search-container bg-4" id="search-bg">
             <div class="mainpage-header">
                 <h1 class="header-main">Kamp Yerlerini Kolayca Bul</h1>
                 <p class="subheader-main" id="text-search">CamperFinder</p>
-                <p class="subheader-main" style="margin-top: 10px;">Geçmiş Olsun Türkiye!</p>
             </div>
             <div class="search container">
                 <input autocomplete="off" class="search-input" id="input" type="text" placeholder="Şehir ara   ">
@@ -61,9 +60,9 @@
     <div class="wrapper">
         <section class="container-places">
             <div class="header-places">
-                <h1 class="places-info">
+                <h2 class="places-info">
                     Dilediğin Şehirde Kamp Alanlarını Kolayca Bul
-                </h1>
+                </h2>
                 <a class="join-us" href="./contributeus.html">Bize Katkıda Bulunun</a>
             </div>
             <div class="card-places">
@@ -72,7 +71,7 @@
                         <img src="https://i.ibb.co/pWXcvbT/istanbul-kamp-alanlari-1.png" alt="İstanbul Kamp Alanları">
                     </div>
                     <div class="sub-card">
-                        <h1 class="sub-header">İstanbul</h1>
+                        <h3 class="sub-header">İstanbul</h3>
                         <div class="buttonContainer">
                             <p class="sub-info">İstanbul'da kamp alanlarını keşfet ve hazırlanmaya başla!</p>
                             <button class="btn-show red-btn" onclick="goCity(id)">
@@ -86,7 +85,7 @@
                         <img src="https://i.ibb.co/kK7zXc2/ankara-kamp-alanlari-1.png" alt="Ankara Kamp Alanları">
                     </div>
                     <div class="sub-card">
-                        <h1 class="sub-header">Ankara</h1>
+                        <h3 class="sub-header">Ankara</h3>
                         <div class="buttonContainer">
                             <p class="sub-info">Ankara'da kamp alanlarını keşfet ve hazırlanmaya başla!</p>
                             <button class="btn-show red-btn" onclick="goCity(id)">
@@ -100,7 +99,7 @@
                         <img src="https://i.ibb.co/By3yfnz/izmir-kamp-alanlari-1.png" alt="İzmir Kamp Alanları">
                     </div>
                     <div class="sub-card">
-                        <h1 class="sub-header">İzmir</h1>
+                        <h3 class="sub-header">İzmir</h3>
                         <div class="buttonContainer">
                             <p class="sub-info">İzmir'de kamp alanlarını keşfet ve hazırlanmaya başla!</p>
                             <button class="btn-show red-btn" onclick="goCity(id)">
@@ -114,7 +113,7 @@
                         <img src="https://i.ibb.co/7kHNNdX/Ulucami-Bursa-panoramio-1.jpg" alt="Bursa Kamp Alanları">
                     </div>
                     <div class="sub-card">
-                        <h1 class="sub-header">Bursa</h1>
+                        <h3 class="sub-header">Bursa</h3>
                         <div class="buttonContainer">
                             <p class="sub-info">Bursa'da kamp alanlarını keşfet ve hazırlanmaya başla!</p>
                             <button class="btn-show red-btn" onclick="goCity(id)">
@@ -131,7 +130,7 @@
         </section>
         <section class="camper-infos">
             <div class="camping-container">
-                <h1 class="camper-header">CamperFinder kamp yerlerini bulmanın en kolay yolu!</h1>
+                <h2 class="camper-header">CamperFinder kamp yerlerini bulmanın en kolay yolu!</h2>
                 <p class="camper-info">Aradığın kamp yerini kısa sürede bulmanda sana yardımcı olur.</p>
                 <div class="camper-cards">
                     <div class="cards">
@@ -167,9 +166,9 @@
                 <h2 class="seasons-header" id="seasons"></h2>
             </div>
         </section>
-         <section class="camper-blog">
+        <!-- <section class="camper-blog">
             <div class="camping-container">
-                <h1 class="camper-header">Kampa Gideceksin Fakat Soruların Mı Var?</h1>
+                <h2 class="camper-header">Kampa Gideceksin Fakat Soruların Mı Var?</h2>
                 <p class="camper-info">O zaman bloglarımızı incelemelisin. Burada sadece kamp alanları değil, bloglarda
                     var.</p>
                 <div class="camper-cards" id="blog-cards">
@@ -184,7 +183,7 @@
                 </div>
                 <a class="join-us" href="./blog.html" style="padding-top:3rem;">Tüm Bloglar</a>
             </div>
-        </section> 
+        </section> -->
         <footer>
             <div class="footer-camper">
                 <div class="footer-info">
@@ -230,16 +229,16 @@
                 <div class="footer-cities">
                     <h3 class="footer-about">Kamp Alanları</h3>
                     <div class="href-cities">
-                        <a class="footer-a" onclick="goCity(id)" id="istanbul">İstanbul</a>
-                        <a class="footer-a" onclick="goCity(id)" id="ankara">Ankara</a>
-                        <a class="footer-a" onclick="goCity(id)" id="antalya">Antalya</a>
-                        <a class="footer-a" onclick="goCity(id)" id="izmir">İzmir</a>
-                        <a class="footer-a" onclick="goCity(id)" id="bursa">Bursa</a>
-                        <a class="footer-a" onclick="goCity(id)" id="edirne">Edirne</a>
-                        <a class="footer-a" onclick="goCity(id)" id="eskişehir">Eskişehir</a>
-                        <a class="footer-a" onclick="goCity(id)" id="tekirdağ">Tekirdağ</a>
-                        <a class="footer-a" onclick="goCity(id)" id="kırklareli">Kırklareli</a>
-                        <a class="footer-a" onclick="goCity(id)" id="sakarya">Sakarya</a>
+                        <a class="footer-a" href="javascript:void" onclick="goCity(id)" id="istanbul">İstanbul</a>
+                        <a class="footer-a" href="javascript:void" onclick="goCity(id)" id="ankara">Ankara</a>
+                        <a class="footer-a" href="javascript:void" onclick="goCity(id)" id="antalya">Antalya</a>
+                        <a class="footer-a" href="javascript:void" onclick="goCity(id)" id="izmir">İzmir</a>
+                        <a class="footer-a" href="javascript:void" onclick="goCity(id)" id="bursa">Bursa</a>
+                        <a class="footer-a" href="javascript:void" onclick="goCity(id)" id="edirne">Edirne</a>
+                        <a class="footer-a" href="javascript:void" onclick="goCity(id)" id="eskişehir">Eskişehir</a>
+                        <a class="footer-a" href="javascript:void" onclick="goCity(id)" id="tekirdağ">Tekirdağ</a>
+                        <a class="footer-a" href="javascript:void" onclick="goCity(id)" id="kırklareli">Kırklareli</a>
+                        <a class="footer-a" href="javascript:void" onclick="goCity(id)" id="sakarya">Sakarya</a>
                     </div>
                 </div>
             </div>

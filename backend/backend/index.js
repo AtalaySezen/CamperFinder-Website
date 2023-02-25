@@ -5,7 +5,6 @@ const placesRouter = require("./routes/places"); //places.js importu.
 const mongoose = require("mongoose");
 require("dotenv/config");
 
-require("dotenv/config");
 process.env.DATA
 const cors = require("cors");
 const app = express();

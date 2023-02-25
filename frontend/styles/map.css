@@ -107,7 +107,8 @@
     font-weight: 550;
     color: var(--green) !important;
 }
-.hint-text{
+
+.hint-text {
     color: var(--green);
     font-size: 1.2rem;
     font-weight: 550;
@@ -130,7 +131,8 @@
     .subheader-ist {
         font-size: 0.9rem;
     }
-    .hint-text{
+
+    .hint-text {
         font-size: 1rem;
     }
 }

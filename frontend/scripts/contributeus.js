@@ -62,7 +62,7 @@ buttonSend.addEventListener("click", (e) => {
       },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json)),
+      .then((json) => json()),
       (err) => console.log(err);
     buttonSend.innerHTML = "Teşekkürler";
     setTimeout(() => {

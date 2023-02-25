@@ -1,4 +1,4 @@
-<form [formGroup]="Form" class="form-column">
+<form [formGroup]="Form" class="form-editblog">
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Blog İsmi</mat-label>
@@ -16,7 +16,7 @@
         </mat-form-field>
     </p>
     <p>
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" style="min-width:500px;">
             <mat-label>Blog Metini</mat-label>
             <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="2"
                 cdkAutosizeMaxRows="15" placeholder={{data.html}} type="text" formControlName="html"

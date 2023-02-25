@@ -1,7 +1,7 @@
-let mapHtml = document.getElementById('map');
-let map = L.map('map').setView([40.24654854352209, 29.52250964965878], 6.5);
+let mapHtml = document.getElementById("map");
+let map = L.map("map").setView([40.24654854352209, 29.52250964965878], 6.5);
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
@@ -15,8 +15,8 @@ let polygon = L.polygon([
 let apiCoordinates = 'https://camperfinder.org/node/node2';
 
 async function getData() {
-  let loader = document.getElementById('showLoader');
-  let hintText = document.getElementById('map-hint');
+  let loader = document.getElementById("showLoader");
+  let hintText = document.getElementById("map-hint");
 
   hintText.style.display = "none";
   mapHtml.style.display = "none";
@@ -38,7 +38,7 @@ async function getData() {
     marker.bindPopup(infoText);
     loader.style.display = "none";
     mapHtml.style.display = "block";
-    let storageTutorial = localStorage.getItem('tutorial');
+    let storageTutorial = localStorage.getItem("tutorial");
     if (storageTutorial == "true") {
       hintText.style.display = "none";
     } else {
@@ -51,12 +51,12 @@ async function getData() {
 getData();
 
 function showHint() {
-  let hintText = document.getElementById('map-hint');
-  let storageTutorial = localStorage.getItem('tutorial');
+  let hintText = document.getElementById("map-hint");
+  let storageTutorial = localStorage.getItem("tutorial");
   if (storageTutorial == "true") {
     hintText.style.display = "none";
   }
-  mapHtml.addEventListener('mouseenter', () => {
+  mapHtml.addEventListener("mouseenter", () => {
 
   })
   mapHtml.addEventListener('mouseleave', () => {

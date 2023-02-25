@@ -10,6 +10,7 @@
     <title>CamperFinder | Detay</title>
     <link rel="stylesheet" href="./styles/minify/style.min.css">
     <!-- <link rel="stylesheet" href="./styles/minify/detailpage.min.css"> -->
+    <link rel="stylesheet" href="./styles/campplaces.css">
     <link rel="stylesheet" href="./styles/detailpage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
@@ -35,7 +36,7 @@
             <ul class="menu">
                 <li><a href="./index.html">Anasayfa</a></li>
                 <li><a href="./kampalanlari.html">Kamp Alanları</a></li>
-                <li><a href="./blog.html">Blog</a></li>
+                <!-- <li><a href="./blog.html">Blog</a></li> -->
                 <li><a href="./hakkimizda.html">Hakkımızda</a></li>
                 <li><a href="./map.html">Harita</a></li>
                 <li><a href="./contact.html">İletişim</a></li>
@@ -43,23 +44,32 @@
         </nav>
     </header>
     <div class="wrapper">
+
         <div class="detail-flex">
+            <div class="svg-text" id="loaderCompass">
+                <svg class="compass-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                        d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm306.7 69.1L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" />
+                </svg>
+                <h1 class="loader-header">Kamp Alanı Hazırlanıyor</h1>
+            </div>
             <div id="detail-header">
+
             </div>
             <div class="swiper mySwiper">
-                <div class="swiper-wrapper" id="swiper">
-                    
+                <div class="swiper-wrapper none" id="swiper">
+
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
             <div class="detail-page" id="detail-page">
-                <div class="detailHead" id="details-info">
-                    <div class="loader-spin" id="showLoader">Kamp Alanları Sizin İçin Hazırlanıyor</div>
+                <div class="detailHead none" id="details-info">
+
 
                 </div>
-                <div class="container-row">
+                <div class="container-row none" id="icons-group">
                     <div class="container-detail">
                         <h1 class="check-header">
                             İmkanlar
@@ -89,8 +99,16 @@
                         </div>
                     </div>
                 </div>
+
+                <a class="join-us" onclick="backToPlaces()">Kamp Alanlarına Geri Dön</a>
             </div>
-            <a class="join-us" onclick="history.back()">Kamp Alanlarına Geri Dön</a>
+
+        </div>
+        <div class="detail-flex none" id="suggest-area">
+            <h2 class="header-detail">Diğer Tavsiye Ettiğimiz Kamp Alanları</h2>
+            <div id="suggestion-cards">
+
+            </div>
         </div>
         <footer>
             <div class="footer-camper">

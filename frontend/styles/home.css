@@ -400,6 +400,7 @@
     color: var(--red);
     text-align: center;
     font-size: 1rem;
+    width: 100%;
 }
 
 .blog-html {

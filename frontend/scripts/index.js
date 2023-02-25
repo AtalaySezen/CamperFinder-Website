@@ -1,7 +1,7 @@
-let searchButton = document.getElementById('searchButton');
+let searchButton = document.getElementById("searchButton");
 
 //Text According To Seasons
-let seasonsText = document.getElementById('seasons');
+let seasonsText = document.getElementById("seasons");
 function getCurrentSeason() {
   const now = new Date();
   const month = now.getMonth() + 1;
@@ -59,7 +59,7 @@ async function blogsApi(url) {
 
 function showBlogs(data) {
   let html = ``;
-  let slicedArray = data.slice(0,3);
+  let slicedArray = data.slice(0, 3);
   slicedArray.map(x => {
     if (x.image == null) {
       x.image = "https://i.ibb.co/xSRXKHw/pexels-photo-1118785.jpg"
@@ -79,9 +79,9 @@ function showBlogs(data) {
 blogsApi(apiBlogs);
 function goDetail(id) {
   let params = new URLSearchParams(`id=${id}`);
-  params.get('?id');
+  params.get("?id");
   params.get(id);
-  window.location.href = ('blogdetail.html' + "?" + params);
+  window.location.href = ("blogdetail.html" + "?" + params);
   //1-Detay sayfasına yönlendirilecek 
   //2-Detay sayfasında query`de idyi verecek. 
   //3-Detay sayfası yüklenirken, idye bakılacak. O id ile get atılacak. (Detay Sayfası Yükleme Fonksiyonudur
@@ -127,10 +127,10 @@ let suggestions = [
 ];
 
 const searchInput = document.querySelector(".searchInput");
-const input = document.getElementById('input');
+const input = document.getElementById("input");
 const resultBox = searchInput.querySelector(".resultBox");
 const icon = searchInput.querySelector(".icon");
-let textSearch = document.getElementById('text-search');
+let textSearch = document.getElementById("text-search");
 let linkTag = searchInput.querySelector("a");
 let webLink;
 
@@ -174,7 +174,7 @@ function showSuggestions(list) {
 function select(id) {
   let params = new URLSearchParams(`city=${id}`);
   params.get(id);
-  window.location.href = ('kampyerleri.html' + '?city=' + id);
+  window.location.href = ("kampyerleri.html" + "?city=" + id);
 
 }
 

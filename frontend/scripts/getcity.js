@@ -11,9 +11,9 @@ async function placesApi(url) {
 //Show Data HTML;
 async function showPlaces(data) {
     let html = ``;
-    let cardsDiv = document.getElementById('istanbul');
-    let loader = document.getElementById('showLoader');
-    let headerCamp = document.getElementById('header-camp');
+    let cardsDiv = document.getElementById("istanbul");
+    let loader = document.getElementById("showLoader");
+    let headerCamp = document.getElementById("header-camp");
     let params = (new URL(document.location)).searchParams;
     let name = params.get("city");
     let capitalized = name.charAt(0).toLocaleUpperCase() + name.slice(1);
@@ -32,23 +32,22 @@ async function showPlaces(data) {
              </div>`;
         };
         cardsDiv.innerHTML = html;
-        loader.style.display = 'none';
         headerCamp.innerHTML = `${capitalized} Kamp Alanları`
-        let cards = document.querySelectorAll('.card-flex');
-        let btnShowMore = document.getElementById('show-more');
+        loader.style.display = "none";
+        let cards = document.querySelectorAll(".card-flex");
+        let btnShowMore = document.getElementById("show-more");
 
-        console.log(cards.length)
-        btnShowMore.classList.remove('none');
-        btnShowMore.addEventListener('click', () => {
-            for (var i = 9; i < cards.length; i++) {
-                cards[i].classList.remove('hide-card');
-                btnShowMore.classList.add('hide-card');
+        btnShowMore.classList.remove("none");
+        btnShowMore.addEventListener("click", () => {
+            for (let i = 9; i < cards.length; i++) {
+                cards[i].classList.remove("hide-card");
+                btnShowMore.classList.add("hide-card");
             }
         })
 
         if (cards.length > 6) {
-            for (var i = 6; i < cards.length; i++) {
-                cards[i].classList.add('hide-card');
+            for (let i = 6; i < cards.length; i++) {
+                cards[i].classList.add("hide-card");
             }
         }
     })
@@ -65,7 +64,7 @@ function goDetail(num) {
     let params = new URLSearchParams(`id=${num}`);
     params.get('?id');
     params.get(num);
-    window.location.href = ('detailplace.html' + "?" + params)
+    window.location.href = ("detailplace.html" + "?" + params)
 };
 
 

@@ -56,7 +56,7 @@ export class EditdetailComponent implements OnInit {
     let market = this.Form.get('market')?.value;
     let shower = this.Form.get('shower')?.value;
     let toilet = this.Form.get('toilet')?.value;
-    this.http.put<any>(`http://camperfinder.org/node3/node4/${id}`, {
+    this.http.put<any>(`https://camperfinder.org/node3/node4/${id}`, {
       id: id,
       num: num,
       adress: adress,

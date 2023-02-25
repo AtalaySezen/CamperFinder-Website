@@ -25,7 +25,7 @@ function validateName() {
 
 //
 function checkEmail() {
-    var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!filter.test(mailInput.value)) {
         errorMail.textContent = "Lütfen Geçerli Bir E-Posta Adresi Giriniz";
         mailInput.classList.add('red-border');
@@ -45,10 +45,8 @@ buttonSend.addEventListener('click', (e) => {
     e.preventDefault();
     checkEmail();
     validateName();
-
     let status = false;
     let subject = "CamperFinder";
-    let type = "iletişim Sayfası";
     if (validateName() == true && checkEmail() == true) {
         fetch("https://camperfinder.org/mail1/mail", {
             method: "POST",
@@ -56,9 +54,9 @@ buttonSend.addEventListener('click', (e) => {
                 nameSurname: nameInput.value,
                 subject: subject,
                 sender: mailInput.value,
+                status: status,
                 message: messageArea.value,
-                type: type,
-                status: status
+                type: "İletişim Sayfası",
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
@@ -66,7 +64,7 @@ buttonSend.addEventListener('click', (e) => {
         })
             .then((response) =>
                 response.json())
-            .then((json) => console.log(json)),
+            .then((json) => json()),
             (err) => console.log(err);
         buttonSend.innerHTML = "Teşekkürler";
         setTimeout(() => {

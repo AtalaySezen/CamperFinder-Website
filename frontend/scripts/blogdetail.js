@@ -23,7 +23,7 @@ async function showPlaces(data) {
             <div class="main-blog">
             ${x.html}
             </div>`
-            document.getElementById('details-info').innerHTML = html;
+            document.getElementById("details-info").innerHTML = html;
         }
     }
 };

@@ -14,8 +14,11 @@ function randomEmoji() {
   return emoji[random];
 };
 
-console.log("%c Camperfinder%s!', 'background: rgb(40, 64, 12); color: white; ", randomEmoji());
-
+console.log(
+  "%c Camperfinder%s!",
+  "background: rgb(40, 64, 12); color: white; ",
+  randomEmoji()
+)
 //Card Href Link
 function goLink(event) {
   window.location.href = `${event}.html`

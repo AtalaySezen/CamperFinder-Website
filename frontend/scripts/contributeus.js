@@ -60,14 +60,17 @@ buttonSend.addEventListener("click", (e) => {
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
-    })
-      .then((response) => response.json())
-      .then((json) => json()),
+    }).then((response) => {
+      if (response.status == 200) {
+        buttonSend.innerHTML = "Teşekkürler";
+        setTimeout(() => {
+          formGroup.style.display = "none";
+          thanksDiv.classList.remove("none");
+        }, 500);
+      } else {
+        buttonSend.innerHTML = "Bir Hata Oluştu Lütfen Tekrar Dene";
+      }
+    }),
       (err) => console.log(err);
-    buttonSend.innerHTML = "Teşekkürler";
-    setTimeout(() => {
-      formGroup.style.display = "none";
-      thanksDiv.classList.remove("none");
-    }, 500);
   }
 });

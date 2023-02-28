@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
+import { FormControl, FormGroupDirective, NgForm, UntypedFormGroup } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-login',
@@ -12,34 +13,33 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class LoginComponent implements OnInit {
 
-  username: string = 'admin';
-  password: any = 'admin123';
+  form: UntypedFormGroup;
 
-  constructor(private router: Router, private fb: FormBuilder, private snack: MatSnackBar) { }
+  constructor(private router: Router, private fb: FormBuilder, private snack: MatSnackBar, public fireAuth: AngularFireAuth) { }
+  ngOnInit() {
+    this.form = this.fb.group({
+      username: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]]
+    });
+  }
 
-  ngOnInit(): void { }
-
-  loginForm = this.fb.group({
-    password: (['', [Validators.required, Validators.minLength(4)]]),
-    username: (['', [Validators.required, Validators.maxLength(5)]])
-  });
 
   get f(): { [key: string]: AbstractControl } {  //this.loginForm.control
-    return this.loginForm.controls;
+    return this.form.controls;
   };
 
+
   loginHref() {
-    let username = this.loginForm.get('username')?.value;
-    let password = this.loginForm.get('password')?.value;
-    if (this.username == username&&this.password == password) {
-      localStorage.setItem('isLogged', 'true');
-      this.snack.open('Eşleşti', 'Hoşgeldin');
+    this.fireAuth.signInWithEmailAndPassword(this.form.value.username, this.form.value.password).then(() => {
+      localStorage.setItem('token', 'true'); //Token
       this.router.navigate(['/home']);
-    } else {
-      localStorage.setItem('isLogged', 'false');
-      this.snack.open('Hatalı Şifre Ya Da Kullanıcı Adı', 'Anladım');
-    }
+    }, err => {
+      this.router.navigate(['']);
+      console.log(err);
+    })
+
   }
+
 
 
 }

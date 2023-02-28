@@ -37,7 +37,8 @@ import { EditblogdialogComponent } from './components/editblog/editblogdialog/ed
 import { SettingsComponent } from './components/settings/settings.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { CreateArticleComponent } from './components/create-article/create-article.component';
-
+import { AngularFireModule } from '@angular/fire/compat';
+import {firebaseconfig} from 'src/environments/firebaseconfig.prod'
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { CreateArticleComponent } from './components/create-article/create-artic
   ],
   imports: [
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(firebaseconfig),
     BrowserModule,
     ReactiveFormsModule,
     MatToolbarModule,

@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="example-form" [formGroup]="loginForm">
+  <form class="example-form" [formGroup]="form">
     <mat-form-field class="example-full-width">
       <mat-label>Username</mat-label>
       <input name="username" matInput formControlName="username">
@@ -18,6 +18,6 @@
         <span *ngIf="f['password'].errors&&f['password'].errors['minlength']">Şifre En Az 4 Karakterli Olmalı</span>
       </mat-error>
     </mat-form-field>
-    <button mat-raised-button color="accent" [disabled]="loginForm.invalid" (click)="loginHref()">Login</button>
+    <button mat-raised-button color="accent" [disabled]="form.invalid" (click)="loginHref()">Login</button>
   </form>
 </div>

@@ -3,3 +3,4 @@ export const environment = {
   placesUrl:"https://camperfinder.org/node/node2",
   detailsUrl:"https://camperfinder.org/node3/node4"
 };
+

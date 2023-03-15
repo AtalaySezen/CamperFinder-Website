@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --green: rgb(40, 64, 12);
+    --red: rgb(224, 80, 40);
+    --bg-white: rgb(243, 242, 239);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.example-card {
+    max-width: 350px;
+    min-width: 350px;
+    min-height: 450px;
+    max-height: 450px;
+}
+
+.example-card img {
+    max-width: 350px;
+    min-width: 350px;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.header {
+    color: var(--green);
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+
+.three-dots {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

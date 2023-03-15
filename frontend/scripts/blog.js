@@ -16,7 +16,7 @@ function showBlogs(data) {
       <h1 class="blogcard-header">${x.blogHeader}</h1>
       <div class="blogs">
       <p class="blog-infos">
-      ${x.html}
+      ${x.blogExplain}
       </p>
       </div>
       <a class="read-all" onclick="goDetail(${x.num})">Devamını Oku</a>

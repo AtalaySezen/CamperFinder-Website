@@ -1,0 +1,64 @@
+<div class="container  py-10 px-3">
+    <div>
+        <h1 class="text-lg">Edit Camp Place </h1>
+    </div>
+    <form [formGroup]="Form" class="flex flex-col my-5 w-full">
+        <p>
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Camp Place Name</mat-label>
+                <input type="text" placeholder={{data.campPlaceName}} formControlName="campPlaceName" matInput>
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('campPlaceName')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+        <p>
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>City</mat-label>
+                <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10"
+                    placeholder={{data.city}} type="text" formControlName="city"></textarea>
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('city')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+
+        <p>
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Description</mat-label>
+                <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10"
+                    placeholder={{data.info}} type="text" formControlName="info" placeholder="info"></textarea>
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('info')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+
+        <p>
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Image Link</mat-label>
+                <input matInput placeholder={{data.image}} type="text" formControlName="image" placeholder="image">
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('image')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+
+        <p>
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Image Seo Description</mat-label>
+                <input matInput placeholder={{data.alt}} type="text" formControlName="alt" placeholder="alt">
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('alt')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+    </form>
+    <div class="flex flex-row w-full items-center justify-center">
+        <button mat-raised-button color="warn" class="mx-2" translate (click)="closeDialog()">Cancel</button>
+        <button mat-raised-button color="primary" [disabled]="Form.invalid" class="mx-2" (click)="saveDialog()"
+            translate>Save</button>
+    </div>
+    {{Form.invalid}}
+
+</div>

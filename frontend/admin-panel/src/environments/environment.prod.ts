@@ -1,6 +1,7 @@
 export const environment = {
-  production: false,
+  production: true,
   placesUrl:"https://camperfinder.org/node/node2",
-  detailsUrl:"https://camperfinder.org/node3/node4"
+  detailsUrl:"https://camperfinder.org/node3/node4",
+  blogsUrl:"https://camperfinder.org/node2/node3"
 };
 

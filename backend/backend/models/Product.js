@@ -1,19 +1,17 @@
 const mongoose = require('mongoose');
 
 const ProductSchema = new mongoose.Schema({
-    nameSurname: { type: String, required: true },
-    subject: { type: String, required: true },
-    sender: { type: String, required: true },
-    status: { type: Boolean, required: true },
-    message: { type: String, required: false },
-    note: { type: String, required: false },
-    type: { type: String, required: false },
+    num: { type: Number, required: false },
+    blogExplain: { type: String, required: true },
+    html: { type: String, required: true },
+    blogHeader:{type:String,required:true},
+    image:{type:String,required:true},
+    alt:{type:String,required:true},
     createdAt: {
         type: Date,
-        timestamps: true, 
-        default:new Date()
+        default: Date.now()
     }
 });
 
 
-module.exports = mongoose.model("mails", ProductSchema); 
+module.exports = mongoose.model("newblogs", ProductSchema); //Database table adı bu 

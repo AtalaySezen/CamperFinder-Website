@@ -1,0 +1,120 @@
+<div class="h-full py-10 px-5 overflow-auto">
+    <div>
+        <h1 class="text-lg">Place Detail</h1>
+    </div>
+    <form [formGroup]="Form" class="flex flex-col my-5 w-full">
+        <p>
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Num</mat-label>
+                <input type="text" placeholder={{data.number}} formControlName="number" matInput>
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('number')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+        <p>
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>City</mat-label>
+                <input type="text" placeholder={{data.city}} formControlName="city" matInput>
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('city')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+        <p>
+            <img *ngIf="data.image3!=null" [src]="data.image1"
+                class="w-full h-full max-w-[20rem] max-h-[20rem] mx-auto my-5">
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Image1</mat-label>
+                <input matInput placeholder={{data.image1}} type="text" formControlName="image1">
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('image1')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+
+        <p>
+            <img *ngIf="data.image3!=null" [src]="data.image2"
+                class="w-full h-full max-w-[20rem] max-h-[20rem] mx-auto my-5">
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Image2</mat-label>
+                <input matInput placeholder={{data.image2}} type="text" formControlName="image2">
+                {{newImage}}
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('image2')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+
+        <p>
+            <img *ngIf="data.image3!=null" [src]="data.image3"
+                class="w-full h-full max-w-[20rem] max-h-[20rem] mx-auto my-5">
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Image3</mat-label>
+                <input matInput placeholder={{data.image3}} type="text" formControlName="image3">
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('image3')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+
+        <p>
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Internet</mat-label>
+                <input matInput placeholder={{data.internet}} type="text" formControlName="internet">
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('internet')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+
+
+        <p>
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Market</mat-label>
+                <input matInput placeholder={{data.market}} type="text" formControlName="market">
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('market')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+
+
+        <p>
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Shower</mat-label>
+                <input matInput placeholder={{data.shower}} type="text" formControlName="shower">
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('shower')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+
+        <p>
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Toilet</mat-label>
+                <input matInput placeholder={{data.toilet}} type="text" formControlName="toilet">
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('toilet')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+
+
+        <p>
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Image Seo Description</mat-label>
+                <input matInput placeholder={{data.alt}} type="text" formControlName="alt" placeholder="alt">
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('alt')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
+    </form>
+    <div class="flex flex-row w-full items-center justify-center">
+        <button mat-raised-button color="warn" class="mx-2" translate (click)="closeDialog()">Cancel</button>
+        <button mat-raised-button color="primary" [disabled]="Form.invalid" class="mx-2" (click)="saveDialog()"
+            translate>Save</button>
+    </div>
+
+</div>

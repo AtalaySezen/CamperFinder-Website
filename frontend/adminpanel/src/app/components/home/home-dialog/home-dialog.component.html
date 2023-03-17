@@ -2,7 +2,21 @@
     <div>
         <h1 class="text-lg">Edit Camp Place </h1>
     </div>
+
     <form [formGroup]="Form" class="flex flex-col my-5 w-full">
+        <div *ngFor="let item of placesData; let last=last"
+            matTooltip="En Son Eklenen verinin id numarasını hatırlamanı sağlar.">
+            <span class="text-lg font-semibold" *ngIf="last">{{item.num}}</span>
+        </div>
+        <p *ngIf="newplaceForm">
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Number</mat-label>
+                <input type="text" placeholder={{data.num}} formControlName="num" matInput>
+            </mat-form-field>
+            <mat-error class="mb-5" *ngIf="Form.get('num')?.invalid">
+                Please Fill This Area
+            </mat-error>
+        </p>
         <p>
             <mat-form-field class="w-full" appearance="fill">
                 <mat-label>Camp Place Name</mat-label>
@@ -59,6 +73,5 @@
         <button mat-raised-button color="primary" [disabled]="Form.invalid" class="mx-2" (click)="saveDialog()"
             translate>Save</button>
     </div>
-    {{Form.invalid}}
 
 </div>

@@ -12,7 +12,8 @@ import { HomeService } from 'src/app/services/home.service';
 })
 export class HomeDialogComponent {
   Form: FormGroup;
-
+  placesData: any[] = [];
+  newplaceForm:boolean = false;
 
   constructor(public dialogRef: MatDialogRef<HomeDialogComponent>,
     private http: HttpClient,
@@ -20,7 +21,12 @@ export class HomeDialogComponent {
     private snack: MatSnackBar,
     private placeService: HomeService) {
     if (this.data.title == 'New Place') {
+      this.placeService.getPlaces().subscribe(data => {
+        this.placesData = data;
+        this.newplaceForm = true;
+      })
       this.Form = new FormGroup({
+        num: new FormControl("", Validators.required),
         city: new FormControl("", Validators.required),
         alt: new FormControl("", Validators.required),
         image: new FormControl("", Validators.required),
@@ -36,38 +42,8 @@ export class HomeDialogComponent {
         image: new FormControl(this.data.image, Validators.required),
         alt: new FormControl(this.data.alt, Validators.required)
       })
-
     }
-
   }
-
-  // saveDialog() {
-  //   let id = this.Form.get('id')?.value;
-  //   let info = this.Form.get('info')?.value;
-  //   let city = this.Form.get('city')?.value;
-  //   let image = this.Form.get('image')?.value;
-  //   let alt = this.Form.get('alt')?.value;
-  //   let campPlaceName = this.Form.get('campPlaceName')?.value;
-
-  //   this.http.put<any>(`https://camperfinder.org/node/node2/${id}`, {
-  //     info: info,
-  //     city: city,
-  //     image: image,
-  //     alt: alt,
-  //     campPlaceName: campPlaceName
-  //   }).subscribe(data => {
-  //     if (data) {
-  //       this.dialogRef.close({ event: 'success' });
-  //       this.snack.open('Başarıyla Kaydedildi', 'Ok', {
-  //       });
-  //     } else {
-  //       console.log("hata")
-  //       this.snack.open('Başarıyla Silindi', 'Ok', {
-  //       });
-  //     }
-  //   })
-  // }
-
 
 
   saveDialog() {
@@ -82,6 +58,7 @@ export class HomeDialogComponent {
     }
 
     let postData = {
+      num:this.Form.get('num')?.value,
       city: this.Form.get('city')?.value,
       alt: this.Form.get('alt')?.value,
       image: this.Form.get('image')?.value,
@@ -90,31 +67,30 @@ export class HomeDialogComponent {
     }
 
     if (this.data.title == 'Edit Place') {
-      console.log("edit place çalıştı")
       this.placeService.putPlace(id, myData).subscribe(res => {
         if (res.status == 200) {
           this.dialogRef.close({ event: 'success' });
+          this.snack.open('Edited Successfully', 'Ok');
         } else {
           console.log(res)
-          this.snack.open('Bir Hata Oluştu', res.status);
+          this.snack.open('Something went wrong', res.status);
         }
       }), (err: any) => {
         console.error(err);
-        this.snack.open('Bir hata oluştu!', 'Error');
+        this.snack.open('Something went wrong!', 'Error');
       }
     } else if (this.data.title == 'New Place') {
-      console.log("new place çalıştı")
       this.placeService.postPlace(postData).subscribe(res => {
         if (res.status == 200) {
-          this.snack.open('Başarıyla Eklendi');
+          this.snack.open('Added Successfully', 'Ok');
           this.dialogRef.close({ event: 'success' });
         } else {
           console.log(res)
-          this.snack.open('Bir Hata Oluştu', res.status);
+          this.snack.open('Something went wrong', res.status);
         }
       }), (err: any) => {
         console.error(err);
-        this.snack.open('Bir hata oluştu!', 'Error');
+        this.snack.open('Something went wrong!', 'Error');
       }
     }
   }

@@ -3,39 +3,31 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { BlogService } from 'src/app/services/blog.service';
+import { MailService } from 'src/app/services/mail.service';
+
 
 @Component({
-  selector: 'app-blog-dialog',
-  templateUrl: './blog-dialog.component.html',
-  styleUrls: ['./blog-dialog.component.scss']
+  selector: 'app-mail-dialog',
+  templateUrl: './mail-dialog.component.html',
+  styleUrls: ['./mail-dialog.component.scss']
 })
-export class BlogDialogComponent {
-
+export class MailDialogComponent {
   Form: FormGroup;
 
   constructor(
-    public dialogRef: MatDialogRef<BlogDialogComponent>,
+    public dialogRef: MatDialogRef<MailDialogComponent>,
     private http: HttpClient,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private snack: MatSnackBar,
-    private blogService: BlogService) {
+    private mailService: MailService) {
     if (this.data.title == 'New Blog') {
       this.Form = new FormGroup({
-        blogHeader: new FormControl("", Validators.required),
-        blogText: new FormControl("", Validators.required),
-        blogExplain: new FormControl("", Validators.required),
-        alt: new FormControl("", Validators.required),
-        image: new FormControl("", Validators.required)
+        note: new FormControl("", Validators.required),
       })
     } else {
       this.Form = new FormGroup({
         id: new FormControl(this.data.id),
-        blogHeader: new FormControl(this.data.blogHeader, Validators.required),
-        blogText: new FormControl(this.data.blogText, Validators.required),
-        blogExplain: new FormControl(this.data.blogExplain, Validators.required),
-        image: new FormControl(this.data.image, Validators.required),
-        alt: new FormControl(this.data.alt, Validators.required)
+        note: new FormControl(this.data.alt, Validators.required)
       })
     }
   }
@@ -47,23 +39,15 @@ export class BlogDialogComponent {
     let id = this.Form.get('id')?.value;
 
     let editData = {
-      html: this.Form.get('blogText')?.value,
-      image: this.Form.get('image')?.value,
-      alt: this.Form.get('alt')?.value,
-      blogExplain: this.Form.get('blogExplain')?.value,
-      blogHeader: this.Form.get('blogHeader')?.value
+      note: this.Form.get('note')?.value,
     }
 
     let postData = {
-      html: this.Form.get('blogText')?.value,
-      image: this.Form.get('image')?.value,
-      alt: this.Form.get('alt')?.value,
-      blogExplain: this.Form.get('blogExplain')?.value,
-      blogHeader: this.Form.get('blogHeader')?.value
+      note: this.Form.get('note')?.value
     }
 
     if (this.data.title == 'Edit Blog') {
-      this.blogService.putBlog(id, editData).subscribe(res => {
+      this.mailService.putNote(id, editData).subscribe(res => {
         if (res.status == 200) {
           this.dialogRef.close({ event: 'success' });
           this.snack.open('Edited Successfully', 'Ok');
@@ -76,7 +60,7 @@ export class BlogDialogComponent {
         this.snack.open('Something went wrong!', 'Error');
       }
     } else if (this.data.title == 'New Blog') {
-      this.blogService.postBlog(postData).subscribe(res => {
+      this.mailService.postNote(postData).subscribe(res => {
         if (res.status == 200) {
           this.snack.open('Added Successfully', 'Ok');
           this.dialogRef.close({ event: 'success' });
@@ -95,7 +79,5 @@ export class BlogDialogComponent {
   closeDialog() {
     this.dialogRef.close({ event: 'close' });
   }
-
-
 
 }

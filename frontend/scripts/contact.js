@@ -68,7 +68,7 @@ buttonSend.addEventListener("click", (e) => {
           thanksDiv.classList.remove("none");
         }, 500);
       } else {
-        buttonSend.innerHTML = "Bir Hata Oluştu Lütfen Tekrar Dene";
+        buttonSend.innerHTML = "Something went wrong Lütfen Tekrar Dene";
       }
     }),
       (err) => console.log(err);

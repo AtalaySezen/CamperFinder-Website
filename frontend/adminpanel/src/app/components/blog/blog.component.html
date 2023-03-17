@@ -1,12 +1,13 @@
-<div class="w-full container z-10 flex">
 
+<div class="w-full mx-auto h-full" *ngIf="loadingSpinner">
+    <app-loader></app-loader>
+</div>
+ <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar" *ngIf="!loadingSpinner">
     <app-sidebar></app-sidebar>
-    <div class="w-full mx-auto h-full" *ngIf="loadingSpinner">
-        <app-loader></app-loader>
-    </div>
-    <div *ngIf="!loadingSpinner">
-
-        <div class="flex flex-col w-full mt-5">
+ </aside>
+ <div class="p-4 sm:ml-64">
+    <div>
+        <div class="flex flex-col w-full">
             <h1 class="text-3xl font-normal m-0 header ">
                 CamperFinder
             </h1>
@@ -15,41 +16,28 @@
                     Add New Place
                 </button>
             </div>
-
         </div>
-
-        <section class=" flex flex-row flex-wrap mt-20">
+    </div>
+    <section class=" flex flex-row flex-wrap w-full h-full ">
             <div *ngFor="let item of blogsArray">
                 <div class="flex flex-row flex-wrap justify-start items-start h-full mt-14 w-full">
                     <mat-card class="example-card mx-2">
                         <mat-card-header>
-                            <div mat-card-avatar class="example-header-image"></div>
-                            <mat-card-title>{{item.blogHeader}}</mat-card-title>
-                            <mat-card-subtitle>{{item.createdAt}}</mat-card-subtitle>
+                            <mat-card-title class="header-blog">{{item.blogHeader}}</mat-card-title>
+                            <mat-card-subtitle></mat-card-subtitle>
                         </mat-card-header>
                         <img mat-card-image [src]="item.image" [alt]="item.alt">
                         <mat-card-content>
-                            <p class="three-dots py-3">
-                                {{item.html|slice:0:140}}
-                            </p>
+                            <p class="three-dots">{{item.blogExplain}}</p>
                         </mat-card-content>
                         <mat-card-actions>
-                            <button color="primary" mat-raised-button
-                                (click)="openDialog(item._id,item.city,item.campPlaceName,item.image,item.alt,item.info)">Edit</button>
-                            <button color="warn" mat-raised-button (click)="deletePlace(item._id)">Delete</button>
+                            <button color="primary" class="mx-1" mat-raised-button
+                                (click)="openDialog(item._id,item.html,item.blogHeader,item.blogExplain,item.image,item.alt)">Edit</button>
+                            <button color="warn" mat-raised-button (click)="deleteBlog(item._id)">Delete</button>
                         </mat-card-actions>
                     </mat-card>
                 </div>
-
             </div>
-        </section>
-
-
-    </div>
-
-
-
-
-
-
-</div>
+    </section>
+ </div>
+ 

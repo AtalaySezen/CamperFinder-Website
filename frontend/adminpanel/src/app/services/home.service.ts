@@ -21,9 +21,6 @@ export class HomeService {
     return this.http.delete<Response>(environment.placesApi + `/${id}`, { observe: 'response' });
   }
 
-  // putPlace(_id: any, data: any): Observable<any> {
-  //   return this.http.put<any>(environment.placesApi + '/' + _id, { data });
-  // }
 
   putPlace(id: any, data: any): Observable<any> {
     return this.http.put<Response>(environment.placesApi + `/${id}`, data, { observe: 'response' });

@@ -8,17 +8,23 @@ import { environment } from 'src/environments/environments.prod';
 })
 export class BlogService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-
-  
   getBlogs() {
     return this.http.get<any>(environment.blogsApi)
   }
 
-  
   deleteBlog(id: number) {
-    return this.http.delete<any>(environment.blogsApi + { id });
+    return this.http.delete<Response>(environment.blogsApi + `/${id}`, { observe: 'response' });
+  }
+
+
+  putBlog(id: any, data: any): Observable<any> {
+    return this.http.put<Response>(environment.blogsApi + `/${id}`, data, { observe: 'response' });
+  }
+
+  postBlog(data: any): Observable<any> {
+    return this.http.post<Response>(environment.blogsApi, data, { observe: 'response' });
   }
 
 

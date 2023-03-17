@@ -1,29 +1,23 @@
-<mat-drawer-container class="example-container mr-16" autosize>
-    <mat-drawer #drawer class="example-sidenav " mode="side">
+<mat-drawer-container class="example-container md:mr-2 mr-0 " autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
         <div class="flex flex-col max-h-[50px] justify-between">
             <button type="button" mat-button (click)="drawer.toggle()">
-                <mat-icon class="font-semibold text-lg py-5 mb-5 w-16" aria-hidden="false"
+                <mat-icon aria-hidden="false"
                     aria-label="Example home icon" fontIcon="close"></mat-icon>
             </button>
             <div class="flex flex-col justify-between items-center mt-2">
                 <a class="py-2 text-lg font-semibold" routerLink="/home">Home</a>
                 <a class="py-2 text-lg font-semibold" routerLink="/blog">Blog</a>
-                <a class="py-2 text-lg font-semibold" routerLink="/blog">Place Detail</a>
-                <a class="py-2 text-lg font-semibold" routerLink="/blog">Settings</a>
-                <a class="py-2 text-lg font-semibold" routerLink="/blog">Logout</a>
+                <a class="py-2 text-lg font-semibold" routerLink="/placedetail">Place Detail</a>
+                <a class="py-2 text-lg font-semibold" routerLink="/mail">Mail</a>
+                <a class="py-2 text-lg font-semibold" routerLink="/login" (click)="logOut()">Logout</a>
             </div>
         </div>
-        <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-            <button (click)="showFiller = !showFiller" mat-raised-button>
-                Toggle extra text
-            </button> -->
-
     </mat-drawer>
 
-    <div class="example-sidenav-content">
+    <div class="example-sidenav-content mt-10 text-center">
         <button type="button" mat-button (click)="drawer.toggle()">
-            <mat-icon class="font-semibold text-2xl py-5 mb-5 w-16" aria-hidden="false" aria-label="Example home icon"
-                fontIcon="menu"></mat-icon>
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu"></mat-icon>
         </button>
     </div>
 

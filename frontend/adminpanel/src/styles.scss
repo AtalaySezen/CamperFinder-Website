@@ -29,8 +29,7 @@ body {
 .example-card {
     max-width: 350px;
     min-width: 350px;
-    min-height: 450px;
-    max-height: 450px;
+    min-height: 450px;max-height: 450px;
 }
 
 .example-card img {
@@ -54,6 +53,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    min-height: 110px;
 }

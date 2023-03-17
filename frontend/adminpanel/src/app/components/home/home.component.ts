@@ -12,16 +12,18 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class HomeComponent {
 
-  constructor(private placesService: HomeService, private dialog: MatDialog, private snack: MatSnackBar) { }
   placesArray: any[] = [];
   cityArray: any[] = [];
   uniqueArray: any[] = [];
+  numbersArray: any[] = [];
   loadingSpinner: boolean = true;
 
-  ngOnInit() {
+  constructor(
+    private placesService: HomeService,
+    private dialog: MatDialog,
+    private snack: MatSnackBar) {
     this.getPlacesData();
   }
-
 
   getPlacesData() {
     this.placesArray = [];
@@ -31,7 +33,6 @@ export class HomeComponent {
         this.placesArray.push(element);
       })
       this.loadingSpinner = false;
-      // console.log(this.placesArray);
       this.placesArray.map(x => {
         this.cityArray.push(x.city)
         this.uniqueArray = [...new Set(this.cityArray)]; //remove duplicate cities from data.
@@ -75,6 +76,7 @@ export class HomeComponent {
         campPlaceName: campPlaceName
       },
     });
+
     dialogRef.afterClosed().subscribe(result => {
       if (result && result.event == 'success') {
         this.loadingSpinner = true;
@@ -90,24 +92,22 @@ export class HomeComponent {
   openNewDialog() {
     const dialogRef = this.dialog.open(HomeDialogComponent, {
       width: '800px',
-      height: 'auto',
+      height: '700px',
       data: {
         title: "New Place"
       },
     });
+
     dialogRef.afterClosed().subscribe(result => {
       if (result && result.event == 'success') {
         this.loadingSpinner = true;
         this.placesArray = [];
         this.getPlacesData();
-        this.loadingSpinner = false;
       }
       else if (result && result.event == 'close') {
-        console.log("kapat ulayn")
         return
       }
     });
-
   }
 
 
@@ -118,7 +118,7 @@ export class HomeComponent {
     this.placesService.deletePlace(id).subscribe(response => {
       if (response.status == 200) {
         this.getPlacesData();
-        this.snack.open("Başarıyla Silindi");
+        this.snack.open("Successfully Deleted", 'Ok');
         this.loadingSpinner = false;
       } else {
         this.snack.open("Silinemedi, bir hata var.");

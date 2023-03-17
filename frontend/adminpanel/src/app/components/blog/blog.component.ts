@@ -16,47 +16,42 @@ export class BlogComponent {
     this.getBlogData();
   }
 
-  placesArray: any[] = [];
 
   blogsArray: any[] = [];
-
-  cityArray: any[] = [];
-  uniqueArray: any[] = [];
   loadingSpinner: boolean = true;
 
 
   getBlogData() {
+    this.blogsArray = [];
+    this.loadingSpinner = true;
     this.blogService.getBlogs().subscribe(data => {
       data.map((element: any) => {
         this.blogsArray.push(element);
       })
-
+      this.loadingSpinner = false;
     })
   }
 
 
-
-
-
-  openDialog(_id: any, city: any, campPlaceName: any, image: any, alt: any, info: any) {
+  openDialog(_id: any, blogText: any, blogHeader: any, blogExplain: any, image: any, alt: any) {
     const dialogRef = this.dialog.open(BlogDialogComponent, {
       width: '800px',
       height: 'auto',
       data: {
-        title: 'Edit Place',
+        title: 'Edit Blog',
         id: _id,
-        city: city,
-        info: info,
+        blogText: blogText,
+        blogExplain: blogExplain,
         image: image,
         alt: alt,
-        campPlaceName: campPlaceName
+        blogHeader: blogHeader
       },
     });
+    
     dialogRef.afterClosed().subscribe(result => {
       if (result && result.event == 'success') {
-        this.loadingSpinner = true;
-        this.placesArray = [];
-        // this.getPlacesData();
+        this.blogsArray = [];
+        this.getBlogData();
       } else if (result && result.event == 'close') {
         return
       }
@@ -69,48 +64,34 @@ export class BlogComponent {
       width: '800px',
       height: 'auto',
       data: {
-        title: "New Place"
+        title: "New Blog"
       },
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result && result.event == 'success') {
-        this.loadingSpinner = true;
-        this.placesArray = [];
-        this.loadingSpinner = false;
+        this.getBlogData();
       }
       else if (result && result.event == 'close') {
-        console.log("kapat ulayn")
         return
       }
     });
-
   }
 
 
 
-
-
-  deletePlace(id: any) {
+  deleteBlog(id: any) {
     if (!confirm('Are you sure?')) return;
     this.loadingSpinner = true;
     this.blogService.deleteBlog(id).subscribe(response => {
       if (response.status == 200) {
-
-        this.snack.open("Başarıyla Silindi");
+        this.getBlogData();
+        this.snack.open("Successfully Deleted", 'Ok');
         this.loadingSpinner = false;
       } else {
-        this.snack.open("Silinemedi, bir hata var.");
+        this.snack.open("Silinemedi, bir hata var.", 'Ok');
       }
     })
   }
-
-
-
-
-
-
-
-
 
 
 

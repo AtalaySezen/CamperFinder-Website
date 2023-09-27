@@ -12,7 +12,8 @@ let polygon = L.polygon([
   [51.51, -0.047]
 ]).addTo(map);
 
-let apiCoordinates = 'https://camperfinder.org/node/node2';
+let apiCoordinates = `https://camperfinder.org/api/camperFinder/get`;
+
 
 async function getData() {
   let loader = document.getElementById("showLoader");

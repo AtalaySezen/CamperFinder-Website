@@ -1,32 +1,29 @@
 //Swiper Start
 let swiper = new Swiper(".mySwiper", {
-    pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+  navigation: {
+    nedatatEl: ".swiper-button-nedatat",
+    prevEl: ".swiper-button-prev",
+  },
 });
-
-//DOMS
-let iconCheck = `<svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-</svg>`;
-let iconCross = `<svg class="icon-cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
-</svg>`;
-let detailPlaces = "https://camperfinder.org/node/node2/";
+let iconCheck = `<svg class="icon-check" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>`;
+let iconCross = `
+<svg class="icon-cross" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg>`;
+let params = new URL(document.location).searchParams;
+let selectedId = params.get("id");
 let loader = document.getElementById("loaderCompass");
 let iconsDiv = document.getElementById("icons-group");
 let detailsHtml = document.getElementById("details-info");
+let detailPlaces = `https://camperfinder.org/api/camperFinder/get/${selectedId}`;
 
 async function placesApi(url) {
-    const response = await fetch(url);
-    data = await response.json();
-    detailInfo();
-    showPlaces(data);
-    shuffleData();
+  const response = await fetch(url);
+  data = await response.json();
+  showPlaces(data);
+  // shuffleData();
 }
 
 placesApi(detailPlaces);
@@ -34,134 +31,104 @@ placesApi(detailPlaces);
 let choosenCity;
 
 async function showPlaces() {
-    let html2 = ``;
-    let params = new URL(document.location).searchParams;
-    let name = params.get("id");
-    let html = ``;
-    let suggestionCards = document.getElementById("suggestion-cards");
-
-    await data.map((x) => {
-        if (name == x.num) {
-            document.title = "CamperFinder | " + x.campPlaceName;
-            html2 += `
-            <h1 class="header-detail">${x.campPlaceName} Hakkında</h1>
-            <p class="detail-subheader">${x.info}</p>
+  let swiperHtml = document.getElementById("swiper");
+  let iconToilet = document.getElementById("icon-toilet");
+  let iconInternet = document.getElementById("icon-internet");
+  let iconMarket = document.getElementById("icon-market");
+  let iconShower = document.getElementById("icon-shower");
+  let html2 = ``;
+  choosenCity = data.city;
+  let html = ``;
+  document.title = "CamperFinder | " + data.campPlaceName;
+  if(data.placeDetail.length != 0 ){
+  html2 += `
+            <h1 class="header-detail">${data.campPlaceName} Hakkında</h1>
+            <p class="detail-subheader">${data.info}</p>
             </div> `;
-            detailsHtml.innerHTML = html2;
-            choosenCity = x.city;
-        } else {
-            return false;
-        }
-    });
+  detailsHtml.innerHTML = html2;
+  html += `
+  <div class="swiper-slide">
+   <img src="${data.placeDetail[0]?.image1}" alt="${data.placeDetail[0]?.alt}">
+   </div>
+   <div class="swiper-slide">
+   <img src="${data.placeDetail[0]?.image2}" alt="${data.placeDetail[0]?.alt}">
+   </div>
+  <div class="swiper-slide">
+  <img src="${data.placeDetail[0]?.image3}"  alt="${data.placeDetail[0]?.alt}">
+  </div>`;
 
-    await splicedCity.slice(0, 3).map(y => {
-        html += `
-     <div class="card-flex" onclick="goDetail(${y.num})">
-     <div class="places-card" style="background-image:url('${y.image}');">
-     </div>
-     <h1 class="header-place2">${y.campPlaceName}</h1>
-     <p class="info-place">${y.info}</p>
-     <a class="read-all" onclick="goDetail(${y.num})">Devamını Oku</a>
-     </div>`;
-        suggestionCards.innerHTML = html;
-    })
+  swiperHtml.innerHTML = html;
+  swiperHtml.classList.remove("none");
+  detailsHtml.classList.remove("none");
+  iconsDiv.classList.remove("none");
+  if (data.placeDetail[0].toilet == true) {
+    iconToilet.innerHTML = iconCheck;
+  } else {
+    iconToilet.innerHTML = iconCross;
+  }
+  if ((data.placeDetail[0].internet == true)) {
+    iconInternet.innerHTML = iconCheck;
+  } else {
+    iconInternet.innerHTML = iconCross;
+  }
+  if (data.placeDetail[0].market == true) {
+    iconMarket.innerHTML = iconCheck;
+  } else {
+    console.log("else");
+    iconMarket.innerHTML = iconCross;
+  }
+  if (data.placeDetail[0].shower == true) {
+    iconShower.innerHTML = iconCheck;
+  } else {
+    iconShower.innerHTML = iconCross;
+  }
+  loader.style.display = "none";
+  console.log(loader);
+
+}else{
+  loader.style.display = "none";
+ document.getElementById('none-data').innerHTML = "Çok Yakında!"
+}
 
 }
+
+// await splicedCity.slice(0, 3).map(data.placeDetail[0] => {
+//     html += `
+//  <div class="card-fledata" onclick="goDetail(${data.placeDetail[0].num})">
+//  <div class="places-card" style="background-image:url('${data.placeDetail[0].image}');">
+//  </div>
+//  <h1 class="header-place2">${data.placeDetail[0].campPlaceName}</h1>
+//  <p class="info-place">${data.placeDetail[0].info}</p>
+//  <a class="read-all" onclick="goDetail(${data.placeDetail[0].num})">Devamını Oku</a>
+//  </div>`;
+//     suggestionCards.innerHTML = html;
+// })
 
 let splicedCity = [];
-//Get Random Data 
-function shuffleData() {
-    let shuffledArray = [];
-    shuffledArray = data.sort(() => 0.52 - Math.random());
-    shuffledArray.map(y => {
-        if (choosenCity == y.city) {
-            splicedCity.push(y);
-        }
-    })
-
-}
-
-
-
-
-let detailInfoApi = "http://camperfinder.org/node3/node4";
-
-async function detailInfo() {
-    let html = ``;
-    //Get Params ID
-    let params = new URL(document.location).searchParams;
-    let name = params.get("id");
-    let swiperHtml = document.getElementById("swiper");
-    let iconToilet = document.getElementById("icon-toilet");
-    let iconInternet = document.getElementById("icon-internet");
-    let iconMarket = document.getElementById("icon-market");
-    let iconShower = document.getElementById("icon-shower");
-
-    fetch(detailInfoApi)
-        .then((response) => response.json())
-        .then((data) =>
-            data.map((y) => {
-                if (y.num == name) {
-                    html += `
-                        <div class="swiper-slide">
-                         <img src="${y.image1}" alt="${y.alt}">
-                         </div>
-                         <div class="swiper-slide">
-                         <img src="${y.image2}" alt="${y.alt}">
-                         </div>
-                        <div class="swiper-slide">
-                        <img src="${y.image3}"  alt="${y.alt}">
-                        </div>`;
-
-                    swiperHtml.innerHTML = html;
-                    swiperHtml.classList.remove("none");
-                    detailsHtml.classList.remove("none");
-                    iconsDiv.classList.remove("none");
-
-                    if (y.toilet == true) {
-                        iconToilet.innerHTML = iconCheck;
-                    } else {
-                        iconToilet.innerHTML = iconCross;
-                    }
-                    if (y.internet == true) {
-
-                        iconInternet.innerHTML = iconCheck;
-                    } else {
-                        iconInternet.innerHTML = iconCross;
-                    }
-                    if (y.market == true) {
-                        iconMarket.innerHTML = iconCheck;
-                    } else {
-                        iconMarket.innerHTML = iconCross;
-                    }
-                    if (y.shower == true) {
-                        iconShower.innerHTML = iconCheck;
-                    } else {
-                        iconShower.innerHTML = iconCross;
-                    }
-
-                }
-                //Show Datas On HTML
-                loader.style.display = "none";
-                document.getElementById("suggest-area").classList.remove("none");
-            })
-        );
-}
+//Get Random Data
+// function shuffleData() {
+//     let shuffledArray = [];
+//     shuffledArray = data.sort(() => 0.52 - Math.random());
+//     shuffledArray.map(data.placeDetail[0] => {
+//         if (choosenCity == data.placeDetail[0].city) {
+//             splicedCity.push(data.placeDetail[0]);
+//         }
+//     })
+// }
 
 //Start APİ
 
 //Detail page of random data
 function goDetail(num) {
-    let params = new URLSearchParams(`id=${num}`);
-    params.get("?id");
-    params.get(num);
-    window.location.href = ("detailplace.html" + "?" + params);
-};
+  let params = new URLSearchParams(`id=${num}`);
+  params.get("?id");
+  params.get(num);
+  window.location.href = "detailplace.html" + "?" + params;
+}
 
 //go back to your current city page
 function backToPlaces() {
-    let params = new URLSearchParams(`city=${choosenCity}`);
-    params.get(choosenCity);
-    window.location.href = ("kampyerleri.html" + "?" + params);
+  let params = new URLSearchParams(`city=${choosenCity}`);
+  params.get(choosenCity);
+  window.location.href = "kampyerleri.html" + "?" + params;
 }
-

@@ -511,7 +511,24 @@ footer {
   top: 174rem;
 } */
 
-@media(max-width:900px) {
+@media(max-width:1400px) {
+  .header .logo {
+    font-size: 1.3em;
+    padding: 15px 10px;
+  }
+
+  .header li a {
+    font-size: 0.9rem;
+    padding: 20px 20px;
+  }
+
+  .navbar-logo {
+    width: 20px;
+  }
+
+}
+
+@media(max-width:1000px) {
   .loader-spin {
     font-size: 20px;
     color: var(--green);
@@ -531,6 +548,7 @@ footer {
 
   .info-year {
     left: 0;
+    bottom: 1rem;
   }
 
   .footer-about {

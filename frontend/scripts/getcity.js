@@ -21,7 +21,6 @@ async function showPlaces(data) {
   let capitalizedTurkish = capitalized.replace("g", "ğ").replace("I", "İ");
 
   data.map((x) => {
-    console.log(x._id)
     document.title = "CamperFinder | " + capitalizedTurkish + " Kamp Alanları";
     html += `
              <div class="card-flex " onclick="goDetail('${x._id}')">

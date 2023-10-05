@@ -74,7 +74,6 @@ async function showPlaces() {
   if (data.placeDetail[0].market == true) {
     iconMarket.innerHTML = iconCheck;
   } else {
-    console.log("else");
     iconMarket.innerHTML = iconCross;
   }
   if (data.placeDetail[0].shower == true) {
@@ -83,7 +82,6 @@ async function showPlaces() {
     iconShower.innerHTML = iconCross;
   }
   loader.style.display = "none";
-  console.log(loader);
 
 }else{
   loader.style.display = "none";
@@ -92,33 +90,8 @@ async function showPlaces() {
 
 }
 
-// await splicedCity.slice(0, 3).map(data.placeDetail[0] => {
-//     html += `
-//  <div class="card-fledata" onclick="goDetail(${data.placeDetail[0].num})">
-//  <div class="places-card" style="background-image:url('${data.placeDetail[0].image}');">
-//  </div>
-//  <h1 class="header-place2">${data.placeDetail[0].campPlaceName}</h1>
-//  <p class="info-place">${data.placeDetail[0].info}</p>
-//  <a class="read-all" onclick="goDetail(${data.placeDetail[0].num})">Devamını Oku</a>
-//  </div>`;
-//     suggestionCards.innerHTML = html;
-// })
 
-let splicedCity = [];
-//Get Random Data
-// function shuffleData() {
-//     let shuffledArray = [];
-//     shuffledArray = data.sort(() => 0.52 - Math.random());
-//     shuffledArray.map(data.placeDetail[0] => {
-//         if (choosenCity == data.placeDetail[0].city) {
-//             splicedCity.push(data.placeDetail[0]);
-//         }
-//     })
-// }
 
-//Start APİ
-
-//Detail page of random data
 function goDetail(num) {
   let params = new URLSearchParams(`id=${num}`);
   params.get("?id");

@@ -1,6 +1,5 @@
 //Loader Function
 const myPreloader = document.querySelector(".preloader");
-const yearFooter = document.getElementById("year");
 
 document.addEventListener('DOMContentLoaded', () => {
   myPreloader.style.display = "none";
@@ -30,8 +29,7 @@ function goCity(city) {
   window.location.href = ("kampyerleri.html" + "?" + params);
 };
 
-//Footer Year:
-yearFooter.appendChild(document.createTextNode(new Date().getFullYear()));
+
 
 
 

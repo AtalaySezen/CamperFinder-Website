@@ -12,7 +12,15 @@
     <title>CamperFinder | Anasayfa</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCTNQWPGSH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-WCTNQWPGSH');
+    </script>
 </head>
+
 <body>
     <div class="preloader">
         <div id="loader">
@@ -34,7 +42,6 @@
             <ul class="menu">
                 <li><a href="./index.html">Anasayfa</a></li>
                 <li><a href="./kampalanlari.html">Kamp Alanları</a></li>
-                <!-- <li><a href="./blog.html">Blog</a></li>  -->
                 <li><a href="./hakkimizda.html">Hakkımızda</a></li>
                 <li><a href="./map.html">Harita</a></li>
                 <li><a href="./contact.html">İletişim</a></li>
@@ -164,24 +171,6 @@
                 <h2 class="seasons-header" id="seasons"></h2>
             </div>
         </section>
-        <!-- <section class="camper-blog">
-            <div class="camping-container">
-                <h2 class="camper-header">Kampa Gideceksin Fakat Soruların Mı Var?</h2>
-                <p class="camper-info">O zaman bloglarımızı incelemelisin. Burada sadece kamp alanları değil, bloglarda
-                    var.</p>
-                <div class="camper-cards" id="blog-cards">
-                    <div class="cards">
-                        <img class="camper-image"
-                            src="https://images.pexels.com/photos/7563672/pexels-photo-7563672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            alt="İstanbul Yakınlarında Kamp Yerleri">
-                        <p class="image-infos">
-                            CamperFinder ile aradığın kamp yerini kısa sürede bul.
-                        </p>
-                    </div>
-                </div>
-                <a class="join-us" href="./blog.html" style="padding-top:3rem;">Tüm Bloglar</a>
-            </div>
-        </section> -->
         <footer>
             <div class="footer-camper">
                 <div class="footer-info">
@@ -236,19 +225,13 @@
             </div>
             <div class="info-year">
                 <span class="year-brand">CamperFinder <small id="year" class="year">
-                    </small></span>
+                    2023</small></span>
             </div>
         </footer>
     </div>
     <script src="./scripts/minify/index.min.js"></script>
     <script src="./scripts/minify/main.min.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCTNQWPGSH"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-WCTNQWPGSH');
-    </script>
+
 </body>
 
 </html>

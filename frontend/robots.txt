@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow:https://camperfinder.org/map.html
-Sitemap: https://camperfinder.org/sitemap.xml

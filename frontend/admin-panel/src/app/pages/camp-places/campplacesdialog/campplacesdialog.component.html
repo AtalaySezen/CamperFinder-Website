@@ -1,0 +1,119 @@
+<div class="w-full h-full py-10 px-5 overflow-hidden">
+    <div>
+        <h1 class="text-lg">Camp Place</h1>
+    </div>
+
+    <form class="form-flex w-full" [formGroup]="Form">
+        <mat-dialog-content>
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Camp Place Name</mat-label>
+                    <input matInput type="text" formControlName="campPlaceName" placeholder="campPlaceName">
+                </mat-form-field>
+            </div>
+            <!----->
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>City</mat-label>
+                    <input matInput type="text" formControlName="city" placeholder="City">
+                </mat-form-field>
+
+            </div>
+            <!----->
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Coordinate 1</mat-label>
+                    <input matInput type="text" formControlName="coordinate1" placeholder="Coordinate 1">
+                </mat-form-field>
+            </div>
+            <!----->
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Coordinate 2</mat-label>
+                    <input matInput type="text" formControlName="coordinate2" placeholder="Coordinate 2">
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>District</mat-label>
+                    <input matInput type="text" formControlName="district" placeholder="District">
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Info Text</mat-label>
+                    <input matInput type="text" formControlName="infotext" placeholder="Info Text">
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Image</mat-label>
+                    <input matInput type="text" formControlName="image" placeholder="Image">
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Image 1</mat-label>
+                    <input matInput type="text" formControlName="image1" placeholder="Image1">
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Image 2</mat-label>
+                    <input matInput type="text" formControlName="image2" placeholder="Image2">
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Image 3</mat-label>
+                    <input matInput type="text" formControlName="image3" placeholder="Image3">
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Internet</mat-label>
+                    <input matInput type="text" formControlName="internet" placeholder="internet">
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Market</mat-label>
+                    <input matInput type="text" formControlName="market" placeholder="market">
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Shower</mat-label>
+                    <input matInput type="text" formControlName="shower" placeholder="shower">
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Toilet</mat-label>
+                    <input matInput type="text" formControlName="toilet" placeholder="toilet">
+                </mat-form-field>
+            </div>
+
+            <div class="flex flex-row items-center w-full">
+                <mat-form-field appearance="fill" class="w-full">
+                    <mat-label>Seo Tag</mat-label>
+                    <input matInput type="text" formControlName="alt" placeholder="alt">
+                </mat-form-field>
+            </div>
+        </mat-dialog-content>
+    </form>
+    <div class="flex flex-row items-center justify-center w-full py-4">
+        <button mat-raised-button color="warn" class="mx-2" (click)="closeDialog()">Cancel</button>
+        <button mat-raised-button color="primary" (click)="saveDialog()" [disabled]="!Form.valid ">Save</button>
+    </div>
+</div>
